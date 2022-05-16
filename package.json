@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --config build/webpack.dev.js",
+    "start": "node index"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,9 @@
     "i18next": "^21.8.2",
     "lodash": "^4.17.21",
     "nodemon": "^2.0.16",
+    "postcss-loader": "^6.2.1",
+    "sass": "^1.51.0",
+    "sass-loader": "^12.6.0",
     "scss": "^0.2.4",
     "style-loader": "^3.3.1",
     "url-loader": "^4.1.1",
@@ -35,5 +39,8 @@
     "vuex": "^4.0.2",
     "webpack": "^5.72.1",
     "webpack-cli": "^4.9.2"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0"
   }
 }

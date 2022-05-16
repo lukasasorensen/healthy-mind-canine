@@ -1,5 +1,5 @@
 <template lang="html">
-    <div id="app">
+    <div class="app">
         <div class="nav-bar">
             <a>Home</a>
             <a>About</a>
@@ -15,7 +15,7 @@ export default {
 </script>
 <style lang="scss">
     .nav-bar {
-        position: fixed:
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;

@@ -2,26 +2,23 @@
 
 let path = require("path");
 let webpack = require("webpack");
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
+const { VueLoaderPlugin } = require('vue-loader')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: {
 		app: ["./client/app/main.js"],
 	},
-
 	output: {
-		path: path.resolve(__dirname, "..", "server", "public", "app"),
-		publicPath: "/app/",
+		path: path.resolve(__dirname, "..", "dist"),
 		filename: "[name].js",
 		chunkFilename: "[chunkhash].js"
 	},
-
 	module: {
-		noParse: /es6-promise\.js$/, // avoid webpack shimming process
 		rules: [
 			{
 				test: /\.css$/,
-				loaders: ["style-loader", "css-loader"]
+				use: ["style-loader", "css-loader"]
 			},
 			// ES6/7 syntax and JSX transpiling out of the box
 			{
@@ -53,15 +50,13 @@ module.exports = {
 		mainFiles: ["index"],
 		alias: {
 			"images": path.resolve(__dirname, "..", "client", "images"),
-			"vue$": "vue/dist/vue.common.js"
+			'vue': '@vue/runtime-dom'
 		}
 	},
-
-	performance: {
-		hints: false
-	},
-
 	plugins: [
-		new VueLoaderPlugin()
+		new VueLoaderPlugin(),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, "..", "client/app/index.html")
+        })
 	]
 };
