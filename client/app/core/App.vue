@@ -1,11 +1,12 @@
 <template lang="html">
     <div class="app">
         <div class="nav-bar">
-            <a>Home</a>
-            <a>About</a>
-            <a>FAQ</a>
-            <a>Contact</a>
+            <router-link to="/">Home</router-link>
+            <router-link to="/about">About</router-link>
+            <router-link to="/faq">FAQ</router-link>
+            <router-link to="/contact">Contact</router-link>
         </div>
+        <router-view></router-view>
     </div>
 </template>
 <script>
