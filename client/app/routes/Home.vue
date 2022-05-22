@@ -9,11 +9,10 @@
             <div class="section-1-bg"></div>
         </section>
         <section class="section section-2">
-            <p class="home-mission">
-                Here at <strong>Healthy Mind Canine</strong>, our mission is to provide safe and humane treatment for dogs with separation anxiety. 
-                We use the most effective training methods that are available for separation anxiety. We strive to promote a healthier mindset about being home alone for both dogs and their people. 
-                Not to mention FREEDOM!
-            </p>
+            <div class="home-mission">
+                <h4>Our Mission</h4>
+                <p>To provide safe and humane treatment for dogs with separation anxiety. We use the most effective training methods that are available for separation anxiety. We strive to promote a healthier mindset about being home alone for both dogs and their people. Not to mention FREEDOM!</p>
+            </div>
         </section>
     </div>
 </template>
@@ -82,9 +81,18 @@ export default {
                 transform: translate(-50%, -50%);
                 z-index: 1;
                 font-size: 20px;
-                line-height: 50px;
                 pointer-events: none;
-                color: white;
+
+                h4 {
+                    color: $primary-color;
+                    font-size: 35px;
+                    margin-bottom: 15px;
+                }
+
+                p {
+                    color: white;
+                    line-height: 50px;
+                }
             }
         }
     }
