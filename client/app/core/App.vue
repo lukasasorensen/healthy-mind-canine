@@ -52,6 +52,7 @@ export default {
         top: 0;
         left: 0;
         overflow: auto;
+        scroll-behavior: smooth;
     }
 
     .nav-bar {
@@ -63,6 +64,7 @@ export default {
         padding: 30px;
         box-sizing: border-box;
         background-color: $primary-bg;
+        z-index: 999999;
 
         .nav-bar-buttons {
             margin: auto;
@@ -76,6 +78,5 @@ export default {
 
     a {
         text-decoration: none;
-
     }
 </style>
