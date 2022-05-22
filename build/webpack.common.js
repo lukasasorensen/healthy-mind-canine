@@ -12,7 +12,8 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, "..", "dist"),
 		filename: "[name].js",
-		chunkFilename: "[chunkhash].js"
+		chunkFilename: "[chunkhash].js",
+		clean: true,
 	},
 	module: {
 		rules: [
@@ -26,31 +27,35 @@ module.exports = {
 				loader: "babel-loader",
 				exclude: [/node_modules/, /vendor/]
 			},
-			// required for font-awesome icons
-			{
-				test: /\.(woff2?|svg)$/,
-				loader: "url-loader",
-				options: {
-					limit: 10000,
-					prefix: "font/"
-				}
-			},
 			{
 				test: /\.(ttf|eot)$/,
 				loader: "file-loader",
 				options: {
 					prefix: "font/"
 				}
+			},
+			{
+				test: /\.scss$/,
+				use: [
+					"style-loader", 
+					"css-loader", 
+					"postcss-loader", 
+					"sass-loader"
+				]
+			},
+			{
+				test: /\.vue$/,
+				loader: "vue-loader"
 			}
-		]
+		],
 	},
 
 	resolve: {
 		extensions: [".vue", ".js", ".json"],
 		mainFiles: ["index"],
 		alias: {
-			"images": path.resolve(__dirname, "..", "client", "images"),
-			'vue': '@vue/runtime-dom'
+			"assets": path.resolve(__dirname, "..", "client", "assets"),
+			'@': path.resolve(__dirname, "..", "client", "app")
 		}
 	},
 	plugins: [

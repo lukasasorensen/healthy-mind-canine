@@ -1,12 +1,16 @@
 <template lang="html">
     <div class="app">
         <div class="nav-bar">
-            <router-link to="/">Home</router-link>
-            <router-link to="/about">About</router-link>
-            <router-link to="/faq">FAQ</router-link>
-            <router-link to="/contact">Contact</router-link>
+            <div class="nav-bar-buttons">
+                <router-link to="/">Home</router-link>
+                <router-link to="/about">About</router-link>
+                <router-link to="/faq">FAQ</router-link>
+                <router-link to="/contact">Contact</router-link>
+            </div>
         </div>
-        <router-view></router-view>
+        <div class="router-view-container">
+            <router-view></router-view>
+        </div>
     </div>
 </template>
 <script>
@@ -15,12 +19,57 @@ export default {
 }
 </script>
 <style lang="scss">
+    @import "@/scss/_variables";
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+    $nav-height: 100px;
+
+    a,p,h1,h2,h3,h4,h5,h6,div,header,article,section,table,input,form {
+        font-family: 'Open Sans', sans-serif;
+    }
+
+    p, a, h1, h2, h3 {
+        color: $primary-color;
+    }
+
+    body {
+        width: 100vw;
+        height: 100vh;
+        background: $primary-bg;
+    }
+
+    .router-view-container {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .route {
+        width: 100%;
+        height: 100%;
+    }
+
     .nav-bar {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 200px;
-        background: white;
+        height: $nav-height;
+        padding: 30px;
+        box-sizing: border-box;
+        background-color: $primary-bg;
+
+        .nav-bar-buttons {
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            max-width: 800px;
+            font-size: 20px;
+        }
+    }
+
+    a {
+        text-decoration: none;
+
     }
 </style>
