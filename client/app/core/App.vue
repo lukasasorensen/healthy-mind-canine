@@ -22,10 +22,11 @@ export default {
     @import "@/scss/_variables";
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
-    $nav-height: 100px;
+    $nav-height: 90px;
 
     a,p,h1,h2,h3,h4,h5,h6,div,header,article,section,table,input,form {
         font-family: 'Open Sans', sans-serif;
+        margin: 0;
     }
 
     p, a, h1, h2, h3 {
@@ -36,6 +37,7 @@ export default {
         width: 100vw;
         height: 100vh;
         background: $primary-bg;
+        overflow: hidden;
     }
 
     .router-view-container {
@@ -46,6 +48,10 @@ export default {
     .route {
         width: 100%;
         height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: auto;
     }
 
     .nav-bar {
