@@ -38,6 +38,8 @@ export default {
         height: 100vh;
         background: $primary-bg;
         overflow: hidden;
+        margin: 0;
+        padding: 0;
     }
 
     .router-view-container {

@@ -17,27 +17,32 @@
                 </p>
             </div>
         </section>
+        <Footer></Footer>
     </div>
 </template>
 <script>
 import debounce from 'lodash/debounce';
+import Footer from "../components/Footer";
+
 export default {
     name: 'Home',
     data() {
         return {
-            scrollPercent: Number
+            scrollDistance: Number
         }
+    },
+    components: {
+        Footer
     },
     methods: {
         registerScrollEventListener: function () {
             let ticking = false;
             document.querySelector('.route.home').addEventListener('scroll', event => {
                 let lastKnownScrollPosition = event.target.scrollTop;
-                let scrollPercent = lastKnownScrollPosition / event.target.clientHeight;
 
                 if (!ticking) {
                     window.requestAnimationFrame(() => {
-                        this.onScroll(scrollPercent);
+                        this.onScroll(lastKnownScrollPosition);
                         ticking = false;
                     });
 
@@ -45,15 +50,15 @@ export default {
                 }
             });
         },
-        onScroll: function (scrollPercent) {
-            this.scrollPercent = scrollPercent;
+        onScroll: function (scrollDistance) {
+            this.scrollDistance = scrollDistance;
             console.log(this.homeLogoOpacity);
         }
     },
     computed: {
         homeLogoOpacity() {
-            if (!this.scrollPercent) return 1;
-            return 1 - this.scrollPercent;
+            if (!this.scrollDistance) return 1;
+            return 1 - this.scrollDistance / window.innerHeight;
         }
     },
     mounted() {
@@ -111,6 +116,7 @@ export default {
 
     .section-2 {
         background: $secondary-bg;
+        height: 150%;
 
         .home-mission {
             position: fixed;
