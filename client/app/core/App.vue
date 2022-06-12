@@ -21,6 +21,7 @@ export default {
 <style lang="scss">
     @import "@/scss/_variables";
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    @import "@/vendor/css/bootstrap.min.css";
 
     $nav-height: 90px;
 
@@ -31,6 +32,11 @@ export default {
 
     p, a, h1, h2, h3 {
         color: $primary-color;
+    }
+
+    p {
+        font-size: 17px;
+        line-height: 30px;
     }
 
     body {

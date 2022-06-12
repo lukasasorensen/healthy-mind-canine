@@ -19,6 +19,8 @@ export default {
         background: white;
         padding: 65px;
         box-sizing: border-box;
+        z-index: 2147483647;
+        position: absolute;
     }
 
     .cert {

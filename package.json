@@ -19,6 +19,7 @@
   "homepage": "https://github.com/lukasasorensen/healthy-mind-canine#readme",
   "dependencies": {
     "babel-loader": "^8.2.5",
+    "bootstrap-css-only": "^4.4.1",
     "bootstrap-vue": "^2.22.0",
     "css-loader": "^6.7.1",
     "express": "^4.18.1",
