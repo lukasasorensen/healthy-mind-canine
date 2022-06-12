@@ -1,15 +1,40 @@
 <template lang="html">
     <div class="route about">
-        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasionally circumstances occur in which toil and pain can procure him some great pleasure. To take a trivial example, which of us ever undertakes laborious physical exercise, except to obtain some advantage from it? But who has any right to find fault with a man who chooses to enjoy a pleasure that has no annoying consequences, or one who avoids a pain that produces no resultant pleasure?</p>
+        <div class="about-container">
+            <h1 class="about-header">About The Trainer</h1>
+            <p class="about-text">
+                Lauren is a 2016 participant of the Karen Pryor Academy for professional dog trainers. She is also a
+                Certified Pet Dog Trainer (CPDT-KA), Fear-Free Certified Trainer, and certified Separation Anxiety Pro
+                Trainer (SAPT). Lauren started out her early dog training career doing dog training classes and private
+                lessons while mentoring with experienced dog trainers. She then transitioned into a job as a behavior
+                specialist at a large animal shelter for both cats and dogs. After years in that position, she saw a great
+                need for separation anxiety trainers, and decided to pursue a certification to specialize in SA. She values
+                continuing education so she can bring clients the most effective methods available. She is committed to
+                using humane science based training practices. This means that she will never do anything that hurts or
+                scares your dog! Her favorite thing about dog training is seeing the relationship between dog and owner
+                flourish through fear-free training methods.
+            </p>
+        </div>
     </div>
 </template>
 <script>
 export default {
     name: 'About'
-}
+};
 </script>
 <style lang="scss">
-    .about.route {
+@import "../scss/_variables.scss";
 
+.about.route {
+    .about-container {
+        margin: 50px auto;
+        width: 100%;
+        max-width: 700px;
+        padding: 20px;
+
+        .about-header {
+            margin-bottom: 40px;
+        }
     }
+}
 </style>

@@ -49,9 +49,9 @@ export default {
 
     .route {
         width: 100%;
-        height: 100%;
+        height: calc(100% - $nav-height);
         position: absolute;
-        top: 0;
+        top: $nav-height;
         left: 0;
         overflow: auto;
         scroll-behavior: smooth;
