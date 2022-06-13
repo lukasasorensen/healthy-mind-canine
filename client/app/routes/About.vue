@@ -2,7 +2,8 @@
     <div class="route about">
         <div class="section">
             <div class="about-container">
-                <h1 class="about-header">About The Trainer</h1>
+                <h1 class="about-header">Lauren Sorensen</h1>
+                <p class="certifications">SAPT • CPDT-KA • Fear-Free Certified</p>
                 <div class="about-pic-and-text-container row">
                     <div class="about-pic col-md-4 col-xs-12"></div>
                     <p class="about-text col-md-8 col-xs-12">
@@ -50,7 +51,11 @@ export default {
         height: 100%;
 
         .about-header {
-            margin-bottom: 30px;
+        }
+
+        .certifications {
+            color: $secondary-color;
+            font-size: 16px;
         }
 
         .about-pic-and-text-container {
@@ -60,6 +65,7 @@ export default {
                 background-image: url('assets/ABOUT_PIC.JPG');
                 height: 100%;
                 margin-bottom: 50px;
+                margin-top: 20px;
             }
 
             .about-text {
@@ -87,10 +93,13 @@ export default {
             margin: 0 auto;
             .about-header {
                 text-align: center;
-                margin-bottom: 40px;
+            }
+            .certifications {
+                width: 100%;
+                text-align: center;
             }
             .about-pic-and-text-container {
-                div.about-pic {
+                .about-pic {
                     height: 200px;
                     margin-bottom: 20px;
                 }

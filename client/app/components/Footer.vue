@@ -40,4 +40,11 @@ export default {
     .fear-free {
         background-image: url("assets/FEAR_FREE_CERT.png");
     }
+
+    @media (max-width: $screen-md) {
+        footer {
+            height: 120px;
+            padding: 20px 40px;
+        }
+    }
 </style>
