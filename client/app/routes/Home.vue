@@ -58,7 +58,7 @@ export default {
     computed: {
         homeLogoOpacity() {
             if (!this.scrollDistance) return 1;
-            return 1 - this.scrollDistance / window.innerHeight;
+            return 0.8 - this.scrollDistance / window.innerHeight;
         }
     },
     mounted() {
@@ -78,6 +78,7 @@ export default {
         position: fixed;
         pointer-events: none;
         z-index: 1001;
+        
         .home-logo {
             margin: auto;
             width: 90%;

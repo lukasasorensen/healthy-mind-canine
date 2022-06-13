@@ -10,10 +10,14 @@
                         Lauren is a 2016 participant of the Karen Pryor Academy for professional dog trainers. She is
                         also a Certified Pet Dog Trainer (CPDT-KA), Fear-Free Certified Trainer, and certified
                         Separation Anxiety Pro Trainer (SAPT). Lauren started out her early dog training career doing
-                        dog training classes and private lessons while mentoring with experienced dog trainers. She then
+                        dog training classes and private lessons while mentoring with experienced dog trainers. 
+                        <br><br>
+                        She then
                         transitioned into a job as a behavior specialist at a large animal shelter for both cats and
                         dogs. After years in that position, she saw a great need for separation anxiety trainers, and
-                        decided to pursue a certification to specialize in SA. She values continuing education so she
+                        decided to pursue a certification to specialize in SA. 
+                        <br><br>
+                        She values continuing education so she
                         can bring clients the most effective methods available. She is committed to using humane science
                         based training practices. This means that she will never do anything that hurts or scares your
                         dog! Her favorite thing about dog training is seeing the relationship between dog and owner
@@ -76,19 +80,17 @@ export default {
         }
     }
 
-    @media (min-width: $screen-md) {
+    @media (min-width: $screen-lg) {
         .about-container {
-            position: fixed;
-            left: 50%;
-            transform: translateX(-50%);
             max-height: 400px;
+            height: 100%;
         }
         .section {
             height: 100%;
         }
     }
 
-    @media (max-width: $screen-md) {
+    @media (max-width: $screen-lg) {
         .about-container {
             margin: 0 auto;
             .about-header {
