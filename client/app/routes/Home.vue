@@ -2,7 +2,7 @@
     <div class="route home">
         <div class="home-logo-container" :style="{'opacity': homeLogoOpacity }">
             <div class="home-logo"></div>
-            <h3 class="tag-line">Separation Anxiety Training</h3>
+            <h3 class="tag-line">Separation Anxiety Trainings</h3>
         </div>
         <section class="section section-1">
             <div class="section-1-bg"></div>
@@ -78,7 +78,7 @@ export default {
         position: fixed;
         pointer-events: none;
         z-index: 1001;
-        
+
         .home-logo {
             margin: auto;
             width: 90%;
