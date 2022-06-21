@@ -4,11 +4,11 @@
             <div class="separation-anxiety-header-container">
                 <h2 class="separation-anxiety-header">What is Separation Anxiety?</h2>
                 <div class="separation-anxiety-learn-more-button-container">
-                    <button class="btn btn-lg btn-primary">Learn More</button>
+                    <button @click="scrollTo('section-2')" class="btn btn-lg btn-primary">Learn More</button>
                 </div>
             </div>
         </section>
-        <section class="section section-2">
+        <section ref="section-2" class="section section-2">
             <div class="separation-anxiety-info-container">
                 <h1 class="separation-anxiety-info-header">What is Separation Anxiety?</h1>
                 <p class="separation-anxiety-info-text">
@@ -48,7 +48,14 @@
 </template>
 <script>
 export default {
-    name: 'services'
+    name: 'services',
+    methods: {
+        scrollTo: function(refName) {
+            var element = this.$refs[refName];
+            var top = element.offsetTop;
+            document.querySelector('.route').scrollTo(0, top);
+        }
+    }
 };
 </script>
 <style lang="scss">
@@ -74,6 +81,8 @@ export default {
             background-position: center;
             color: #fff;
             text-align: center;
+            box-shadow: inset 0 0 0 2000px rgb(34 34 34 / 30%);
+
             .separation-anxiety-header {
                 font-size: 5em;
                 padding-top: 7%;
@@ -113,7 +122,6 @@ export default {
     }
 
     .section-3 {
-
         .how-does-training-work-container {
             @include bgimage;
             background-size: cover;
@@ -151,7 +159,48 @@ export default {
                     }
                 }
             }
+        }
+    }
 
+    @media (max-width: $screen-md) {
+        .section {
+        }
+
+        .section-1 {
+            .separation-anxiety-header-container {
+                .separation-anxiety-header {
+                    font-size: 3.5em;
+                }
+            }
+
+            .separation-anxiety-learn-more-button-container {
+            }
+        }
+
+        .section-2 {
+            .separation-anxiety-info-container {
+                .separation-anxiety-info-header {
+                }
+
+                .separation-anxiety-info-text {
+                }
+            }
+        }
+
+        .section-3 {
+            .how-does-training-work-container {
+                .how-does-training-work-info-container {
+                    .how-does-training-work-header-container {
+                        .how-does-training-work-header {
+                        }
+                    }
+
+                    .how-does-training-work-text-container {
+                        .how-does-training-work-text {
+                        }
+                    }
+                }
+            }
         }
     }
 }
