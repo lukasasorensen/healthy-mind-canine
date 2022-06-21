@@ -21,6 +21,7 @@ export default {
         box-sizing: border-box;
         z-index: 2147483647;
         position: absolute;
+        scroll-snap-align: end;
     }
 
     .cert {

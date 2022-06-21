@@ -68,7 +68,9 @@ export default {
 </script>
 <style lang="scss">
 @import '@/scss/_variables.scss';
-
+.route {
+    scroll-snap-type: y mandatory;
+}
 .home.route {
     .home-logo-container {
         width: 100%;
@@ -99,6 +101,7 @@ export default {
     .section {
         width: 100%;
         height: 100%;
+        scroll-snap-align: start;
     }
 
     .section-1 {

@@ -41,6 +41,13 @@ export default {
 <style lang="scss">
 @import '../scss/_variables.scss';
 @import '../scss/_mixins.scss';
+.route {
+    scroll-snap-type: none;
+}
+
+footer {
+    scroll-snap-align: none !important;
+}
 
 .about.route {
     .section {

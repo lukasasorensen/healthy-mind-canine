@@ -1,13 +1,28 @@
 <template lang="html">
     <div class="app">
+    <div class="nav-bar-buttons mobile col-xs-8" :class="{ open: isNavBarOpen }">
+        <router-link @click="onNavigation" to="/">Home</router-link>
+        <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
+        <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
+        <router-link @click="onNavigation" to="/contact">Contact</router-link>
+    </div>
         <div class="nav-bar">
             <div class="nav-bar-inner row">
-                <div class="nav-bar-logo col-xs-4"></div>
-                <div class="nav-bar-buttons col-xs-8">
-                    <router-link to="/">Home</router-link>
-                    <router-link to="/about">Meet the Trainer</router-link>
-                    <router-link to="/faq">FAQ</router-link>
-                    <router-link to="/contact">Contact</router-link>
+                <router-link to="/">
+                    <div class="nav-bar-logo col-xs-4"></div>
+                </router-link>
+                <div class="nav-bar-buttons col-xs-8 hidden-xs">
+                    <router-link @click="onNavigation" to="/">Home</router-link>
+                    <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
+                    <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
+                    <router-link @click="onNavigation" to="/contact">Contact</router-link>
+                </div>
+                <div class="navbar-toggle visible-xs">
+                    <button class="hamburger hamburger--squeeze" :class="{ 'is-active': isNavBarOpen }" @click="toggleNavBar" type="button">
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -18,7 +33,26 @@
 </template>
 <script>
 export default {
-    name: 'App'
+    name: 'App',
+    data() {
+        return {
+            isNavBarOpen: false
+        }
+    },
+    methods: {
+        openNavBar: function() {
+            this.isNavBarOpen = true;
+        },
+        closeNavBar: function() {
+            this.isNavBarOpen = false;
+        },
+        toggleNavBar: function() {
+            this.isNavBarOpen ? this.closeNavBar() : this.openNavBar();
+        },
+        onNavigation: function() {
+            this.closeNavBar();
+        }
+    }
 };
 </script>
 <style lang="scss">
@@ -26,32 +60,16 @@ export default {
 @import '@/scss/_mixins';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import '@/vendor/css/bootstrap.min.css';
+@import '../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 
 $nav-height: 90px;
 
-a,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-div,
-header,
-article,
-section,
-table,
-input,
-form {
+a,p,h1,h2,h3,h4,h5,h6,div,header,article,section,table,input,form {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
 }
 
-p,
-a,
-h1,
-h2,
+p,a,h1,h2,
 h3 {
     color: $primary-color;
 }
@@ -110,13 +128,54 @@ body {
     .nav-bar-buttons {
         margin: auto;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         font-size: 20px;
-        max-width: 630px;
+        max-width: 740px;
+        padding: 0;
+
+        &.mobile {
+            display: none;
+        }
     }
 }
 
 a {
     text-decoration: none;
+}
+
+@media(max-width: $screen-md) {
+    .nav-bar-buttons.mobile {
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        font-size: 20px;
+        max-width: 630px;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: $secondary-bg;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        opacity: 0;
+        padding: 20px 5px;
+        height: 300px;
+        top: -350px;
+        z-index: 999997;
+        overflow: hidden;
+        &.open {
+            top: 83px;
+            opacity: 1;
+            transition: top 1s ease-in-out, opacity 500ms ease-in-out;
+        }
+    }
+
+    .navbar-toggle {
+        position: absolute;
+        top: 13px;
+        right: 5px;
+    }
 }
 </style>
