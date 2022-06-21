@@ -45,11 +45,11 @@ export default {
     scroll-snap-type: none;
 }
 
-footer {
-    scroll-snap-align: none !important;
-}
 
 .about.route {
+    footer {
+        scroll-snap-align: none !important;
+    }
     .section {
         width: 100vw;
     }
@@ -83,6 +83,7 @@ footer {
                 margin-top: -95px;
                 padding: 25px;
                 box-sizing: border-box;
+                color: $secondary-text;
             }
         }
     }

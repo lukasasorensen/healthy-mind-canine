@@ -44,11 +44,16 @@
                 </div>
             </div>
         </section>
+        <Footer></Footer>
     </div>
 </template>
 <script>
+import Footer from "../components/Footer";
 export default {
     name: 'services',
+    components: {
+        Footer
+    },
     methods: {
         scrollTo: function(refName) {
             var element = this.$refs[refName];
