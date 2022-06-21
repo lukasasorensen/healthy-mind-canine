@@ -23,7 +23,26 @@
             </div>
         </section>
         <section class="section section-3">
-            <div class="dog-pic"></div>
+            <div class="how-does-training-work-container">
+                <div class="how-does-training-work-info-container">
+                    <div class="how-does-training-work-header-container">
+                        <h1 class="how-does-training-work-header">How Does Training Work?</h1>
+                    </div>
+                    <div class="how-does-training-work-text-container">
+                        <p class="how-does-training-work-text">
+                            Our training relies on systematic desensitization. Gradually your dog is exposed to small
+                            periods of stress-free home alone time while increasing the duration at the dogs pace.
+                            Slowly, your dog becomes more comfortable with longer stretches of time until they are able
+                            to be home alone as needed.
+                            <br /><br />
+                            Studies support that this is not only the most humane treatment option but the only one that
+                            offers lasting results. Although fairly straightforward, implementing a desensitization
+                            training plan can be challenging for owners on their own without the guidance of an
+                            experienced separation anxiety trainer.
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
 </template>
@@ -59,7 +78,7 @@ export default {
                 font-size: 5em;
                 padding-top: 7%;
                 color: #fff;
-                text-shadow: 0px 7px 7px rgb(0 0 0 / 56%);
+                @include text-shadow;
             }
         }
 
@@ -94,13 +113,45 @@ export default {
     }
 
     .section-3 {
-        .dog-pic {
+
+        .how-does-training-work-container {
             @include bgimage;
             background-size: cover;
             background-image: url('assets/goldencutiepie.jpg');
             width: 100%;
-            height: 100%;
-            margin-top: -100px;
+            height: 115%;
+            margin-top: -10%;
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            .how-does-training-work-info-container {
+                width: 100%;
+                height: auto;
+                max-width: 800px;
+                margin-top: 50px;
+                background-color: #765050;
+                padding: 30px;
+                border-radius: 10px;
+                padding: 30px 50px 49px;
+
+                .how-does-training-work-header-container {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 25px;
+                    .how-does-training-work-header {
+                        color: $primary-color;
+                    }
+                }
+
+                .how-does-training-work-text-container {
+                    .how-does-training-work-text {
+                        color: #fff;
+                    }
+                }
+            }
+
         }
     }
 }
