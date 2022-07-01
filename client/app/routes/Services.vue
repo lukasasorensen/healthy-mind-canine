@@ -10,7 +10,7 @@
         </section>
         <section ref="section-2" class="section section-2">
             <div class="separation-anxiety-info-container">
-                <h1 class="separation-anxiety-info-header">What is Separation Anxiety?</h1>
+                <h1 class="separation-anxiety-info-header" id="what-is-separation-anxiety">What is Separation Anxiety?</h1>
                 <p class="separation-anxiety-info-text">
                     Separation Anxiety is very similar to phobias in humans such as a fear of heights, spiders, or
                     germs. It is exactly what it sounds like, a phobia of being left alone. The dog may display panic
@@ -101,6 +101,11 @@ export default {
             var element = this.$refs[refName];
             var top = element.offsetTop;
             document.querySelector('.route').scrollTo(0, top);
+        }
+    },
+    mounted() {
+        if (location.hash.includes('what-is-separation-anxiety')) {
+            this.scrollTo('section-2');
         }
     }
 };

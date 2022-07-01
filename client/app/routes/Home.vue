@@ -1,6 +1,6 @@
 <template lang="html">
     <div class="route home">
-        <div class="home-logo-container" :style="{'opacity': homeLogoOpacity }">
+        <div class="home-logo-container" :style="{ 'opacity': homeLogoOpacity }">
             <div class="home-logo"></div>
             <h3 class="tag-line">Separation Anxiety Training</h3>
         </div>
@@ -11,17 +11,18 @@
             <div class="home-mission">
                 <h4>Our Mission</h4>
                 <p>
-                    To provide safe and humane treatment for dogs with separation anxiety. We use the most effective
-                    training methods that are available for separation anxiety. We strive to promote a healthier mindset
-                    about being home alone for both dogs and their people. Not to mention FREEDOM!
+                    Your separation anxiety dog isn't giving you a hard time, they're <strong>having</strong> a hard time.
+                    We are here to help you regain your freedom!
                 </p>
+                <div class="home-learn-more-button-container">
+                    <button @click="goToServices()" class="btn btn-lg btn-primary">Learn More</button>
+                </div>
             </div>
         </section>
         <Footer></Footer>
     </div>
 </template>
 <script>
-import debounce from 'lodash/debounce';
 import Footer from "../components/Footer";
 
 export default {
@@ -53,6 +54,9 @@ export default {
         onScroll: function (scrollDistance) {
             this.scrollDistance = scrollDistance;
             console.log(this.homeLogoOpacity);
+        },
+        goToServices: function() {
+            this.$router.push('/services#what-is-separation-anxiety')
         }
     },
     computed: {
@@ -68,9 +72,11 @@ export default {
 </script>
 <style lang="scss">
 @import '@/scss/_variables.scss';
+
 .route {
     scroll-snap-type: y mandatory;
 }
+
 .home.route {
     .home-logo-container {
         width: 100%;
@@ -144,6 +150,11 @@ export default {
                 color: white;
                 line-height: 50px;
             }
+        }
+
+        .home-learn-more-button-container {
+            margin-top: 40px;
+            pointer-events: all;
         }
     }
 }
