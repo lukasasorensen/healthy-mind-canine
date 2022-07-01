@@ -44,6 +44,48 @@
                 </div>
             </div>
         </section>
+        <section class="section section-4">
+            <div class="what-do-i-need-container">
+                <h1 class="what-do-i-need-header">What You Will Need For Training</h1>
+                <div class="what-do-i-need-list">
+                    <ul>
+                        <li class="col-xs-12">
+                            <div class="col-xs-3">
+                                <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-wifi" />
+                            </div>
+                            <div class="col-xs-9 what-do-i-need-li-text">
+                                High speed internet connection.
+                            </div>
+                        </li>
+                        <li class="col-xs-12">
+                            <div class="col-xs-3">
+                                <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-laptop" />
+                            </div>
+                            <div class="col-xs-9 what-do-i-need-li-text">
+                                A laptop or tablet for video chat.
+                            </div>
+                        </li>
+                        <li class="col-xs-12">
+                            <div class="col-xs-3">
+                                <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-video" />
+                            </div>
+                            <div class="col-xs-9 what-do-i-need-li-text">
+                                1-2 home cameras depending on the set up of your home. We recommend the Wyze (link to cam)
+                                cam.
+                            </div>
+                        </li>
+                        <li class="col-xs-12">
+                            <div class="col-xs-3">
+                                <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-mobile" />
+                            </div>
+                            <div class="col-xs-9 what-do-i-need-li-text">
+                                A smart phone to access our training app and your home cameras.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
         <Footer></Footer>
     </div>
 </template>
@@ -55,7 +97,7 @@ export default {
         Footer
     },
     methods: {
-        scrollTo: function(refName) {
+        scrollTo: function (refName) {
             var element = this.$refs[refName];
             var top = element.offsetTop;
             document.querySelector('.route').scrollTo(0, top);
@@ -70,10 +112,11 @@ export default {
 .route {
     scroll-snap-type: y mandatory;
 }
+
 .services.route {
     .section {
-        width: 100%;
-        height: 100%;
+        width: 100vw;
+        height: 100vh;
         scroll-snap-align: start;
     }
 
@@ -153,6 +196,7 @@ export default {
                     width: 100%;
                     text-align: center;
                     margin-bottom: 25px;
+
                     .how-does-training-work-header {
                         color: $primary-color;
                     }
@@ -165,11 +209,44 @@ export default {
                 }
             }
         }
+
+    }
+
+    .section-4 {
+        margin-top: 112px;
+        text-align: center;
+        padding-top: 70px;
+
+        .what-do-i-need-header {
+            margin-bottom: 40px;
+        }
+
+        .what-do-i-need-list {
+            display: inline-block;
+            max-width: 700px;
+            text-align: left;
+
+            .what-do-i-need-icon {
+                font-size: 4em;
+            }
+
+            ul {
+                list-style-type: none;
+
+                li {
+                    margin-bottom: 40px;
+                    font-size: 1.2em;
+
+                    .what-do-i-need-li-text {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
     }
 
     @media (max-width: $screen-md) {
-        .section {
-        }
+        .section {}
 
         .section-1 {
             .separation-anxiety-header-container {
@@ -178,17 +255,14 @@ export default {
                 }
             }
 
-            .separation-anxiety-learn-more-button-container {
-            }
+            .separation-anxiety-learn-more-button-container {}
         }
 
         .section-2 {
             .separation-anxiety-info-container {
-                .separation-anxiety-info-header {
-                }
+                .separation-anxiety-info-header {}
 
-                .separation-anxiety-info-text {
-                }
+                .separation-anxiety-info-text {}
             }
         }
 
@@ -196,13 +270,11 @@ export default {
             .how-does-training-work-container {
                 .how-does-training-work-info-container {
                     .how-does-training-work-header-container {
-                        .how-does-training-work-header {
-                        }
+                        .how-does-training-work-header {}
                     }
 
                     .how-does-training-work-text-container {
-                        .how-does-training-work-text {
-                        }
+                        .how-does-training-work-text {}
                     }
                 }
             }
