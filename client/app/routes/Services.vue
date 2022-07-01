@@ -50,7 +50,7 @@
                 <div class="what-do-i-need-list">
                     <ul>
                         <li class="col-xs-12">
-                            <div class="col-xs-3">
+                            <div class="col-xs-3 what-do-i-need-li-icon">
                                 <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-wifi" />
                             </div>
                             <div class="col-xs-9 what-do-i-need-li-text">
@@ -58,7 +58,7 @@
                             </div>
                         </li>
                         <li class="col-xs-12">
-                            <div class="col-xs-3">
+                            <div class="col-xs-3 what-do-i-need-li-icon">
                                 <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-laptop" />
                             </div>
                             <div class="col-xs-9 what-do-i-need-li-text">
@@ -66,7 +66,7 @@
                             </div>
                         </li>
                         <li class="col-xs-12">
-                            <div class="col-xs-3">
+                            <div class="col-xs-3 what-do-i-need-li-icon">
                                 <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-video" />
                             </div>
                             <div class="col-xs-9 what-do-i-need-li-text">
@@ -75,7 +75,7 @@
                             </div>
                         </li>
                         <li class="col-xs-12">
-                            <div class="col-xs-3">
+                            <div class="col-xs-3 what-do-i-need-li-icon">
                                 <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-mobile" />
                             </div>
                             <div class="col-xs-9 what-do-i-need-li-text">
@@ -225,6 +225,7 @@ export default {
             display: inline-block;
             max-width: 700px;
             text-align: left;
+            margin-left: 50px;
 
             .what-do-i-need-icon {
                 font-size: 4em;
@@ -237,8 +238,12 @@ export default {
                     margin-bottom: 40px;
                     font-size: 1.2em;
 
+                    .what-do-i-need-li-icon {
+                        text-align: center;
+                    }
+
                     .what-do-i-need-li-text {
-                        margin-top: 20px;
+                        margin-top: 15px;
                     }
                 }
             }
