@@ -9,10 +9,10 @@
         </section>
         <section class="section section-2">
             <div class="home-mission">
-                <h4>Our Mission</h4>
-                <p>
-                    Your separation anxiety dog isn't giving you a hard time, they're <strong>having</strong> a hard time.
-                    We are here to help you regain your freedom!
+                <!-- <h4>Our Mission</h4> -->
+                <p class="home-mission-text">
+                    <span>"</span>Your separation anxiety dog isn't giving you a hard time, they're <i>having</i> a hard time.
+                    We are here to help you regain your freedom!<span>"</span>
                 </p>
                 <div class="home-learn-more-button-container">
                     <button @click="goToServices()" class="btn btn-lg btn-primary">Learn More</button>
@@ -131,7 +131,7 @@ export default {
         .home-mission {
             position: fixed;
             width: 100%;
-            max-width: 650px;
+            max-width: 770px;
             margin: auto;
             top: 50%;
             left: 50%;
@@ -139,6 +139,15 @@ export default {
             z-index: 1;
             font-size: 20px;
             pointer-events: none;
+
+            .home-mission-text {
+                font-size: 1.5em;
+                line-height: 2.2em;
+
+                span {
+                    font-size: 1.3em;
+                }
+            }
 
             h4 {
                 color: $primary-color;
@@ -153,8 +162,9 @@ export default {
         }
 
         .home-learn-more-button-container {
-            margin-top: 40px;
+            margin-top: 80px;
             pointer-events: all;
+            text-align: center;
         }
     }
 }
