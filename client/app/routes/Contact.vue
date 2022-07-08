@@ -1,27 +1,27 @@
 <template lang="html">
     <div class="route contact">
         <div class="contact-form-container">
-            <form name="contactForm" ref="contact_form">
+            <form name="contactForm" ref="contact_form" novalidate :class="{'dirty': isFormDirty}">
                 <h2>Human Info</h2>
 
                 <div class="form-group">
                     <label for="contactFormName">First and Last Name</label>
-                    <input type="text" class="form-control" name="contactFormName" id="contactFormName" aria-label="First and Last Name"
+                    <input required type="text" class="form-control" name="contactFormName" id="contactFormName" aria-label="First and Last Name"
                         placeholder="First and Last Name">
                 </div>
                 <div class="form-group">
                     <label for="contactFormPhoneNumber">Phone Number</label>
-                    <input type="tel" class="form-control" name="contactFormPhoneNumber" id="contactFormPhoneNumber" aria-label="Phone Number"
+                    <input required type="tel" class="form-control" name="contactFormPhoneNumber" id="contactFormPhoneNumber" aria-label="Phone Number"
                         placeholder="Phone Number">
                 </div>
                 <div class="form-group">
                     <label for="contactFormEmail">Email</label>
-                    <input type="email" class="form-control" name="contactFormEmail" id="contactFormEmail" aria-label="email"
+                    <input required type="email" class="form-control" name="contactFormEmail" id="contactFormEmail" aria-label="email"
                         placeholder="Email">
                 </div>
                 <div class="form-group">
                     <label for="contactFormAddress">Home Address</label>
-                    <input type="email" class="form-control" name="contactFormAddress" id="contactFormAddress" aria-label="Home Address"
+                    <input required type="email" class="form-control" name="contactFormAddress" id="contactFormAddress" aria-label="Home Address"
                         placeholder="Address">
                 </div>
 
@@ -31,17 +31,17 @@
 
                 <div class="form-group">
                     <label for="contactFormDogName">Dog's Name</label>
-                    <input type="text" class="form-control" name="contactFormDogName" id="contactFormDogName" aria-label="Dog's Name"
+                    <input required type="text" class="form-control" name="contactFormDogName" id="contactFormDogName" aria-label="Dog's Name"
                         placeholder="Dog's Name">
                 </div>
                 <div class="form-group">
                     <label for="contactFormDogAge">Dog's Age</label>
-                    <input type="number" class="form-control" name="contactFormDogAge" id="contactFormDogAge" aria-label="Dog's Age"
+                    <input required type="number" class="form-control" name="contactFormDogAge" id="contactFormDogAge" aria-label="Dog's Age"
                         placeholder="Dog's Age">
                 </div>
                 <div class="form-group">
                     <label for="contactFormDogOrigin">Where did you acquire your dog?</label>
-                    <input type="text" class="form-control" name="contactFormDogOrigin" id="contactFormDogOrigin"
+                    <input required type="text" class="form-control" name="contactFormDogOrigin" id="contactFormDogOrigin"
                         aria-label="Where did you acquire your dog?">
                 </div>
                 <div class="form-group">
@@ -55,19 +55,19 @@
                 </div>
                 <div class="form-group">
                     <label for="contactFormDogTimeInHome">How Long has your dog been in your home?</label>
-                    <input type="text" class="form-control" name="contactFormDogTimeInHome" id="contactFormDogTimeInHome"
+                    <input required type="text" class="form-control" name="contactFormDogTimeInHome" id="contactFormDogTimeInHome"
                         aria-label="How Long has your dog been in your home?">
                 </div>
                 <div class="form-group">
                     <label for="contactFormTimeWithSA">About how long has your dog had a difficult time being
                         alone?</label>
-                    <input type="text" class="form-control" name="contactFormTimeWithSA" id="contactFormTimeWithSA"
+                    <input required type="text" class="form-control" name="contactFormTimeWithSA" id="contactFormTimeWithSA"
                         aria-label="About how long has your dog had a difficult time being alone?">
                 </div>
                 <div class="form-group">
                     <label for="contactFormTimeLeftAlone">How often and how long is your dog currently being left
                         alone?</label>
-                    <input type="text" class="form-control" name="contactFormTimeLeftAlone" id="contactFormTimeLeftAlone"
+                    <input required type="text" class="form-control" name="contactFormTimeLeftAlone" id="contactFormTimeLeftAlone"
                         aria-label="How often and how long is your dog currently being left alone?">
                 </div>
                 <div class="form-group">
@@ -76,17 +76,17 @@
                         alone?</label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="contactFormCanYouAdjustSchedule" id="contactFormCanYouAdjustScheduleYes" value="yes" checked>
+                        <input required type="radio" name="contactFormCanYouAdjustSchedule" id="contactFormCanYouAdjustScheduleYes" value="yes" checked>
                         Yes
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="contactFormCanYouAdjustSchedule" id="contactFormCanYouAdjustScheduleNo" value="no">
+                        <input required type="radio" name="contactFormCanYouAdjustSchedule" id="contactFormCanYouAdjustScheduleNo" value="no">
                         No
                     </label>
 
                     <label class="radio-inline">
-                        <input type="radio" name="contactFormCanYouAdjustSchedule" id="contactFormCanYouAdjustScheduleMaybe" value="maybe">
+                        <input required type="radio" name="contactFormCanYouAdjustSchedule" id="contactFormCanYouAdjustScheduleMaybe" value="maybe">
                         Maybe
                     </label>
                 </div>
@@ -97,55 +97,55 @@
                     <label>Do any of the following things seem to tip your dog off to your departure?</label>
                     <div class="checkbox">
                         <label>
-                            <input v-model="leavingTriggers" type="checkbox" value="Putting your shoes on">
+                            <input required v-model="leavingTriggers" type="checkbox" value="Putting your shoes on">
                             Putting your shoes on
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="leavingTriggers" type="checkbox" value="Putting your coat on">
+                            <input required v-model="leavingTriggers" type="checkbox" value="Putting your coat on">
                             Putting your coat on
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="leavingTriggers" type="checkbox" value="Grabbing your keys">
+                            <input required v-model="leavingTriggers" type="checkbox" value="Grabbing your keys">
                             Grabbing your keys
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="leavingTriggers" type="checkbox" value="Grabbing your bag">
+                            <input required v-model="leavingTriggers" type="checkbox" value="Grabbing your bag">
                             Grabbing your bag
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="leavingTriggers" type="checkbox" value="Wearing a specific type of clothing">
+                            <input required v-model="leavingTriggers" type="checkbox" value="Wearing a specific type of clothing">
                             Wearing a specific type of clothing
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="leavingTriggers" type="checkbox" value="Locking the door">
+                            <input required v-model="leavingTriggers" type="checkbox" value="Locking the door">
                             Locking the door
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="leavingTriggers" type="checkbox" value="Opening the garage door">
+                            <input required v-model="leavingTriggers" type="checkbox" value="Opening the garage door">
                             Opening the garage door
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="leavingTriggers" type="checkbox" value="Starting your car">
+                            <input required v-model="leavingTriggers" type="checkbox" value="Starting your car">
                             Starting your car
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="leavingTriggers" type="checkbox" value="None of the above">
+                            <input required v-model="leavingTriggers" type="checkbox" value="None of the above">
                             None of the above
                         </label>
                     </div>
@@ -155,85 +155,85 @@
                     <label>Check all of the behaviors your dog performs when s/he is alone.</label>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="Barking">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="Barking">
                             Barking
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="Howling">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="Howling">
                             Howling
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="Whining">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="Whining">
                             Whining
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="Destroying furniture">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="Destroying furniture">
                             Destroying furniture
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="Breaking out of confinement">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="Breaking out of confinement">
                             Breaking out of confinement
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="Digging/scratching at a door or window">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="Digging/scratching at a door or window">
                             Digging/scratching at a door or window
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="Tearing up the carpet">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="Tearing up the carpet">
                             Opening the garage door
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="Panting">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="Panting">
                             Panting
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="Pacing">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="Pacing">
                             Pacing
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="Trembling">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="Trembling">
                             Trembling
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="Refusing to eat food">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="Refusing to eat food">
                             Refusing to eat food
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="Looking out the window">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="Looking out the window">
                             Looking out the window
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="None of the above">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="None of the above">
                             None of the above
                         </label>
                     </div>
                     <div class="checkbox">
                         <label>
-                            <input v-model="behaviorsWhenAlone" type="checkbox" value="I don't know">
+                            <input required v-model="behaviorsWhenAlone" type="checkbox" value="I don't know">
                             I don't know
                         </label>
                     </div>
@@ -251,7 +251,7 @@
 
                 <div class="form-group">
                     <label for="contactFormGoalHomeAloneTime">How long would you like to be able to leave your dog alone in the future (specify a range such as 2-4 hours)</label>
-                    <input type="text" class="form-control" name="contactFormGoalHomeAloneTime" id="contactFormGoalHomeAloneTime" aria-label="How long would you like to be able to leave your dog alone in the future (specify a range such as 2-4 hours)">
+                    <input required type="text" class="form-control" name="contactFormGoalHomeAloneTime" id="contactFormGoalHomeAloneTime" aria-label="How long would you like to be able to leave your dog alone in the future (specify a range such as 2-4 hours)">
                 </div>
 
                 <div class="form-group">
@@ -261,10 +261,11 @@
 
                 <div class="form-group">
                     <label for="contactFormReferral">Please let us know how you heard of us so we know who to thank!</label>
-                    <input type="text" class="form-control" name="contactFormReferral" id="contactFormReferral" aria-label="Please let us know how you heard of us so we know who to thank!">
+                    <input required type="text" class="form-control" name="contactFormReferral" id="contactFormReferral" aria-label="Please let us know how you heard of us so we know who to thank!">
                 </div>
 
                 <button type="button" class="btn btn-primary" @click="sendEmail">Submit</button>
+                <p class="form-invalid-message" v-if="!isFormValid">Please fill out all required fields</p>
             </form>
         </div>
     </div>
@@ -274,16 +275,25 @@ export default {
     name: 'Contact',
     methods: {
         sendEmail: function() {
+            this.isFormDirty = true;
             var formData = Object.fromEntries(new FormData(this.$refs.contact_form));
             console.log(formData, null, 2);
             console.log('behaviorsWhenAlone');
             console.log(this.behaviorsWhenAlone, null, 2);
+            console.log('leavingTriggers')
+            console.log(this.leavingTriggers, null, 2);
+            
+            this.isFormValid = this.$refs.contact_form.checkValidity();
+
+            if (!this.isFormValid) return;
         }
     },
     data() {
         return {
             behaviorsWhenAlone: [],
-            leavingTriggers: []
+            leavingTriggers: [],
+            isFormValid: true,
+            isFormDirty: false
         }
     }
 }
@@ -292,7 +302,6 @@ export default {
 .contact.route {
     display: flex;
     justify-content: center;
-    ;
 
     .contact-form-container {
         h2 {
@@ -306,8 +315,22 @@ export default {
         position: absolute;
         top: 40px;
 
+             form {
+                 &.dirty {
+                     input {
+                         &:invalid {
+                             border-color: red;
+                         }
+                     }
+                 }
+             }
+
         .form-group {
             margin-bottom: 25px;
+        }
+        .form-invalid-message {
+            color: red;
+            font-size: 1em;
         }
     }
 }
