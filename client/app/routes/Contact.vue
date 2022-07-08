@@ -261,7 +261,7 @@
 
                 <div class="form-group">
                     <label for="contactFormReferral">Please let us know how you heard of us so we know who to thank!</label>
-                    <input required type="text" class="form-control" name="contactFormReferral" id="contactFormReferral" aria-label="Please let us know how you heard of us so we know who to thank!">
+                    <input type="text" class="form-control" name="contactFormReferral" id="contactFormReferral" aria-label="Please let us know how you heard of us so we know who to thank!">
                 </div>
 
                 <button type="button" class="btn btn-primary" @click="sendEmail">Submit</button>
