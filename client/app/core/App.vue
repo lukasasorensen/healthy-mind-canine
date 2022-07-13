@@ -9,9 +9,9 @@
         <div class="nav-bar">
             <div class="nav-bar-inner row">
                 <router-link to="/">
-                    <div class="nav-bar-logo col-xs-4"></div>
+                    <div class="nav-bar-logo col-sm-4 col-xs-8"></div>
                 </router-link>
-                <div class="nav-bar-buttons col-xs-8 hidden-xs">
+                <div class="nav-bar-buttons col-sm-8 hidden-xs">
                     <router-link @click="onNavigation" to="/">Home</router-link>
                     <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
                     <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>

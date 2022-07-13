@@ -71,10 +71,7 @@
                                     <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-video" />
                                 </div>
                                 <div class="col-xs-9 what-do-i-need-li-text">
-                                    1-2 home cameras depending on the set up of your home. We recommend the Wyze (link
-                                    to
-                                    cam)
-                                    cam.
+                                   A Home Monitoring Camera (Wyze)
                                 </div>
                             </li>
                             <li class="col-xs-12">
@@ -229,7 +226,7 @@ export default {
         text-align: center;
 
         .what-do-i-need-container {
-            height: calc(100% - $nav-height);
+            height: 100%;
             padding: 5px;
 
             .what-do-i-need-image-container {
@@ -237,10 +234,6 @@ export default {
                 background-image: url('assets/dog-on-computer.jpg');
                 height: 100%;
             }
-        }
-
-        .what-do-i-need-header {
-            margin-top: 40px;
         }
 
         .what-do-i-need-list {
@@ -281,6 +274,9 @@ export default {
         }
 
         .section-4 {
+            .what-do-i-need-header {
+                margin-top: 40px;
+            }
             .what-do-i-need-info {
                 padding-top: 65px;
             }
