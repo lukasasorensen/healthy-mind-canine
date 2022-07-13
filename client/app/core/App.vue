@@ -1,11 +1,11 @@
 <template lang="html">
     <div class="app">
-    <div class="nav-bar-buttons mobile col-xs-8" :class="{ open: isNavBarOpen }">
-        <router-link @click="onNavigation" to="/">Home</router-link>
-        <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
-        <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
-        <router-link @click="onNavigation" to="/contact">Contact</router-link>
-    </div>
+        <div class="nav-bar-buttons mobile col-xs-8" :class="{ open: isNavBarOpen }">
+            <router-link @click="onNavigation" to="/">Home</router-link>
+            <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
+            <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
+            <router-link @click="onNavigation" to="/contact">Contact</router-link>
+        </div>
         <div class="nav-bar">
             <div class="nav-bar-inner row">
                 <router-link to="/">
@@ -18,7 +18,8 @@
                     <router-link @click="onNavigation" to="/contact">Contact</router-link>
                 </div>
                 <div class="navbar-toggle visible-xs">
-                    <button class="hamburger hamburger--squeeze" :class="{ 'is-active': isNavBarOpen }" @click="toggleNavBar" type="button">
+                    <button class="hamburger hamburger--squeeze" :class="{ 'is-active': isNavBarOpen }"
+                        @click="toggleNavBar" type="button">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
                         </span>
@@ -40,16 +41,16 @@ export default {
         }
     },
     methods: {
-        openNavBar: function() {
+        openNavBar: function () {
             this.isNavBarOpen = true;
         },
-        closeNavBar: function() {
+        closeNavBar: function () {
             this.isNavBarOpen = false;
         },
-        toggleNavBar: function() {
+        toggleNavBar: function () {
             this.isNavBarOpen ? this.closeNavBar() : this.openNavBar();
         },
-        onNavigation: function() {
+        onNavigation: function () {
             this.closeNavBar();
         }
     }
@@ -62,12 +63,29 @@ export default {
 @import '@/vendor/css/bootstrap.min.css';
 @import '../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 
-a,p,h1,h2,h3,h4,h5,h6,div,header,article,section,table,input,form {
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+header,
+article,
+section,
+table,
+input,
+form {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
 }
 
-p,a,h1,h2,
+p,
+a,
+h1,
+h2,
 h3 {
     color: $primary-color;
 }
@@ -151,22 +169,37 @@ a {
         position: absolute;
         left: 0;
         width: 100%;
-        height: 0;
-        background: $secondary-bg;
+        background: $secondary-color;
         color: #fff;
         display: flex;
         flex-direction: column;
         align-items: center;
         opacity: 0;
         padding: 20px 5px;
-        height: 300px;
+        height: 400px;
         top: -350px;
         z-index: 999997;
         overflow: hidden;
+        transition: top 600ms ease-in-out, opacity 200ms ease-in-out;
+
+        a {
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            height: 25%;
+            display: flex;
+            justify-content: center;
+            vertical-align: middle;
+            flex-direction: column;
+
+            &:active {
+                background-color: $primary-color;
+            }
+        }
+
         &.open {
             top: 83px;
             opacity: 1;
-            transition: top 1s ease-in-out, opacity 500ms ease-in-out;
         }
     }
 
@@ -177,9 +210,12 @@ a {
 
         .hamburger-box {
             .hamburger-inner {
-                &:before, &:after {
+
+                &:before,
+                &:after {
                     background-color: $secondary-color;
                 }
+
                 background-color: $secondary-color;
             }
         }
