@@ -62,8 +62,6 @@ export default {
 @import '@/vendor/css/bootstrap.min.css';
 @import '../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 
-$nav-height: 90px;
-
 a,p,h1,h2,h3,h4,h5,h6,div,header,article,section,table,input,form {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -176,6 +174,15 @@ a {
         position: absolute;
         top: 13px;
         right: 5px;
+
+        .hamburger-box {
+            .hamburger-inner {
+                &:before, &:after {
+                    background-color: $secondary-color;
+                }
+                background-color: $secondary-color;
+            }
+        }
     }
 }
 </style>
