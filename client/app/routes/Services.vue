@@ -34,8 +34,8 @@
                             Training is done 100% virtually. This way we can see your dog's true behavior in their
                             normal environment. During training, it is absolutely essential that you do not leave your
                             dog alone unless it's part of that day's training homework. If a dog continues to experience
-                            alone time filled with anxiety and stress, it is unlikely they will recover. 
-                            <br/><br/>
+                            alone time filled with anxiety and stress, it is unlikely they will recover.
+                            <br /><br />
                             We can achieve
                             this by temporarily utilizing daycares, pet sitters, family, friends, and neighbors.
                             Treating separation anxiety requires some short term pain for long term gain.
@@ -47,44 +47,48 @@
         <section class="section section-4">
             <div class="what-do-i-need-container">
                 <h1 class="what-do-i-need-header">What You Will Need For Training</h1>
-                <div class="what-do-i-need-list">
-                    <ul>
-                        <li class="col-xs-12">
-                            <div class="col-xs-3 what-do-i-need-li-icon">
-                                <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-wifi" />
-                            </div>
-                            <div class="col-xs-9 what-do-i-need-li-text">
-                                High speed internet connection.
-                            </div>
-                        </li>
-                        <li class="col-xs-12">
-                            <div class="col-xs-3 what-do-i-need-li-icon">
-                                <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-laptop" />
-                            </div>
-                            <div class="col-xs-9 what-do-i-need-li-text">
-                                A laptop or tablet for video chat.
-                            </div>
-                        </li>
-                        <li class="col-xs-12">
-                            <div class="col-xs-3 what-do-i-need-li-icon">
-                                <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-video" />
-                            </div>
-                            <div class="col-xs-9 what-do-i-need-li-text">
-                                1-2 home cameras depending on the set up of your home. We recommend the Wyze (link to
-                                cam)
-                                cam.
-                            </div>
-                        </li>
-                        <li class="col-xs-12">
-                            <div class="col-xs-3 what-do-i-need-li-icon">
-                                <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-mobile" />
-                            </div>
-                            <div class="col-xs-9 what-do-i-need-li-text">
-                                A smart phone to access our training app and your home cameras.
-                            </div>
-                        </li>
-                    </ul>
+                <div class="what-do-i-need-info col-md-7 col-xs-12">
+                    <div class="what-do-i-need-list">
+                        <ul>
+                            <li class="col-xs-12">
+                                <div class="col-xs-3 what-do-i-need-li-icon">
+                                    <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-wifi" />
+                                </div>
+                                <div class="col-xs-9 what-do-i-need-li-text">
+                                    High speed internet connection.
+                                </div>
+                            </li>
+                            <li class="col-xs-12">
+                                <div class="col-xs-3 what-do-i-need-li-icon">
+                                    <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-laptop" />
+                                </div>
+                                <div class="col-xs-9 what-do-i-need-li-text">
+                                    A laptop or tablet for video chat.
+                                </div>
+                            </li>
+                            <li class="col-xs-12">
+                                <div class="col-xs-3 what-do-i-need-li-icon">
+                                    <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-video" />
+                                </div>
+                                <div class="col-xs-9 what-do-i-need-li-text">
+                                    1-2 home cameras depending on the set up of your home. We recommend the Wyze (link
+                                    to
+                                    cam)
+                                    cam.
+                                </div>
+                            </li>
+                            <li class="col-xs-12">
+                                <div class="col-xs-3 what-do-i-need-li-icon">
+                                    <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-mobile" />
+                                </div>
+                                <div class="col-xs-9 what-do-i-need-li-text">
+                                    A smart phone to access our training app and your home cameras.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+                <div class="what-do-i-need-image-container col-md-5 col-xs-12 hidden-xs"></div>
             </div>
         </section>
         <Footer></Footer>
@@ -154,6 +158,8 @@ export default {
     .section-2 {
         display: flex;
         justify-content: center;
+        @include bgimage;
+        background-image: url('assets/purple-blob.png');
 
         .separation-anxiety-info-container {
             padding: 30px;
@@ -176,6 +182,8 @@ export default {
     }
 
     .section-3 {
+        overflow: hidden;
+
         .how-does-training-work-container {
             @include bgimage;
             background-size: cover;
@@ -218,15 +226,21 @@ export default {
     }
 
     .section-4 {
-        margin-top: 112px;
         text-align: center;
 
         .what-do-i-need-container {
+            height: calc(100% - $nav-height);
             padding: 5px;
+
+            .what-do-i-need-image-container {
+                @include bgimage;
+                background-image: url('assets/dog-on-computer.jpg');
+                height: 100%;
+            }
         }
 
         .what-do-i-need-header {
-            margin-bottom: 40px;
+            margin-top: 40px;
         }
 
         .what-do-i-need-list {
@@ -259,20 +273,28 @@ export default {
         .separation-anxiety-info-header {
             margin-top: -75px;
         }
+
         .section-3 {
             .how-does-training-work-info-container {
                 margin-top: 50px;
             }
         }
+
         .section-4 {
-            padding-top: 65px;
+            .what-do-i-need-info {
+                padding-top: 65px;
+            }
 
             .what-do-i-need-list {
                 margin-left: 50px;
 
-                .what-do-i-need-li-text { 
+                .what-do-i-need-li-text {
                     margin-top: 5px;
                 }
+            }
+
+            .what-do-i-need-image-container {
+                margin-top: -90px;
             }
         }
     }
@@ -286,6 +308,7 @@ export default {
         .section-1 {
             .separation-anxiety-header-container {
                 height: calc(100% - 40px);
+
                 .separation-anxiety-header {
                     font-size: 3.5em;
                 }
@@ -319,8 +342,13 @@ export default {
         .section-4 {
             .what-do-i-need-container {
                 padding-top: 40px;
+
                 .what-do-i-need-icon {
                     font-size: 2em;
+                }
+
+                .what-do-i-need-header {
+                    margin-bottom: 40px;
                 }
             }
         }
