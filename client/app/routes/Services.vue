@@ -313,30 +313,10 @@ export default {
                     font-size: 3.5em;
                 }
             }
-
-            .separation-anxiety-learn-more-button-container {}
         }
 
         .section-2 {
-            .separation-anxiety-info-container {
-                .separation-anxiety-info-header {}
-
-                .separation-anxiety-info-text {}
-            }
-        }
-
-        .section-3 {
-            .how-does-training-work-container {
-                .how-does-training-work-info-container {
-                    .how-does-training-work-header-container {
-                        .how-does-training-work-header {}
-                    }
-
-                    .how-does-training-work-text-container {
-                        .how-does-training-work-text {}
-                    }
-                }
-            }
+            background-size: 380%;
         }
 
         .section-4 {

@@ -32,7 +32,8 @@ export default {
         height: 100%;
         width: 30%;
         display: inline-block;
-        margin-right: 30px;
+        margin-right: 15px;
+        margin-left: 15px;
     }
 
     .cpdt {
@@ -49,6 +50,8 @@ export default {
 
     @media (max-width: $screen-md) {
         footer {
+            display: flex;
+            justify-content: space-between;
             height: 120px;
             padding: 20px 40px;
         }
