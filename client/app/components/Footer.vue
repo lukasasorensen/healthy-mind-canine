@@ -4,6 +4,7 @@
         </div>
         <div class="cert fear-free">
         </div>
+        <div class="cert sapdt"></div>
     </footer>
 </template>
 <script>
@@ -40,6 +41,10 @@ export default {
 
     .fear-free {
         background-image: url("assets/FEAR_FREE_CERT.png");
+    }
+
+    .sapdt {
+        background-image: url("assets/sapdt.png");
     }
 
     @media (max-width: $screen-md) {

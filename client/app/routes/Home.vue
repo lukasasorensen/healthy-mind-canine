@@ -11,7 +11,7 @@
             <div class="home-mission">
                 <!-- <h4>Our Mission</h4> -->
                 <p class="home-mission-text">
-                    <span>"</span>Your separation anxiety dog isn't giving you a hard time, they're <i>having</i> a hard time.
+                    <span>"</span>Your dog isn't giving you a hard time, they're <i>having</i> a hard time.
                     We are here to help you regain your freedom!<span>"</span>
                 </p>
                 <div class="home-learn-more-button-container">
@@ -131,7 +131,7 @@ export default {
         .home-mission {
             position: fixed;
             width: 100%;
-            max-width: 770px;
+            max-width: 850px;
             margin: auto;
             top: 50%;
             left: 50%;
@@ -141,6 +141,7 @@ export default {
             pointer-events: none;
 
             .home-mission-text {
+                text-align: center;
                 font-size: 1.5em;
                 line-height: 2.2em;
 
