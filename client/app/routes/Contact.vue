@@ -285,9 +285,11 @@
                     <input type="text" class="form-control" name="contactFormReferral" id="contactFormReferral"
                         aria-label="Please let us know how you heard of us so we know who to thank!">
                 </div>
-
-                <button type="button" class="btn btn-primary" @click="sendEmail">Submit</button>
                 <p class="form-invalid-message" v-if="!isFormValid">Please fill out all required fields</p>
+                <div class="submit-form-button-container">
+                    <button type="button" class="submit-form-button btn btn-primary btn-lg"
+                        @click="sendEmail">Submit</button>
+                </div>
             </form>
         </div>
     </div>
@@ -339,7 +341,9 @@ export default {
 
         form {
             &.dirty {
-                input, textarea {
+
+                input,
+                textarea {
                     &:invalid {
                         border-color: red;
                     }
@@ -354,6 +358,12 @@ export default {
         .form-invalid-message {
             color: red;
             font-size: 1em;
+        }
+
+        .submit-form-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
         }
     }
 }
