@@ -25,7 +25,7 @@
                 </p>
             </div>
         </section>
-        <section class="section section-3">
+        <section ref="section-3" class="section section-3">
             <div class="how-does-training-work-container">
                 <div class="how-does-training-work-info-container">
                     <div class="how-does-training-work-header-container">
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </section>
-        <section class="section section-4">
+        <section ref="section-4" class="section section-4">
             <div class="what-do-i-need-container">
                 <h1 class="what-do-i-need-header hidden-xs">What You Will Need For Training</h1>
                 <h3 class="what-do-i-need-header visible-xs">What You Will Need For Training</h3>
@@ -94,6 +94,14 @@
         </section>
         <Footer></Footer>
     </div>
+    <div class="scroll-down-container" @click="scrollToNextSection">
+        <div class="col-xs-12" :class="{'bounce-top': bounceScrollDown}">
+            <p>scroll down for more</p>
+        </div>
+        <div class="col-xs-12">
+            <font-awesome-icon class="scroll-down-icon" icon="fa-solid fa-chevron-down" />
+        </div>
+    </div>
 </template>
 <script>
 import Footer from "../components/Footer";
@@ -102,26 +110,68 @@ export default {
     components: {
         Footer
     },
+    data() {
+        return {
+            bounceScrollDown: false
+        }
+    },
     methods: {
         scrollTo: function (refName) {
             var element = this.$refs[refName];
             var top = element.offsetTop;
             document.querySelector('.route').scrollTo(0, top);
+        },
+        runScrollDownAttentionAnimation: function() {
+            this.bounceScrollDown = true;
+
+            setTimeout(() => {
+                this.bounceScrollDown = false;
+            }, 2000);
+        },
+        scrollToNextSection: function() {
+            var route = document.querySelector('.route');
+            var scrollTop = route.scrollTop;
+            var routeHeight = route.clientHeight;
+            route.scrollTo(0, (scrollTop + routeHeight));
         }
     },
     mounted() {
         if (location.hash.includes('what-is-separation-anxiety')) {
             this.scrollTo('section-2');
         }
+
+        setTimeout(() => {
+            this.runScrollDownAttentionAnimation();
+        }, 2000);
     }
 };
 </script>
 <style lang="scss">
 @import '../scss/_variables.scss';
 @import '../scss/_mixins.scss';
+@import "../scss/animations";
 
 .route {
     scroll-snap-type: y mandatory;
+}
+
+.scroll-down-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    padding-bottom: 23px;
+    cursor: pointer;
+    user-select: none;
+    div {
+        display: flex;
+        justify-content: center;
+
+        svg, p {
+            color: $primary-color;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.15);
+        }
+    }
 }
 
 .services.route {
@@ -134,7 +184,7 @@ export default {
     .section-1 {
         .separation-anxiety-header-container {
             width: 100%;
-            height: calc(100% - 40px);
+            height: calc(100% - 80px);
             background-image: url('assets/DogOwnerStock-1.jpg');
             background-size: cover;
             background-position: center;
@@ -200,7 +250,7 @@ export default {
             .how-does-training-work-info-container {
                 width: 96%;
                 height: auto;
-                max-height: calc(95% - $nav-height);
+                max-height: 85%;
                 max-width: 800px;
                 background-color: #765050;
                 border-radius: 10px;
@@ -237,6 +287,11 @@ export default {
             height: 100%;
             padding: 5px;
             max-width: 900px;
+            background-color: $primary-bg;
+            position: absolute;
+            width: 100%;
+            z-index: 10000;
+            pointer-events: none;
 
             .what-do-i-need-image-container {
                 @include bgimage;
@@ -308,6 +363,7 @@ export default {
         .section {
             width: 100%;
             height: 100%;
+            padding-bottom: 50px;
         }
 
         .section-1 {

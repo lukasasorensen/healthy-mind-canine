@@ -53,7 +53,6 @@ export default {
         },
         onScroll: function (scrollDistance) {
             this.scrollDistance = scrollDistance;
-            console.log(this.homeLogoOpacity);
         },
         goToServices: function() {
             this.$router.push('/services#what-is-separation-anxiety')
