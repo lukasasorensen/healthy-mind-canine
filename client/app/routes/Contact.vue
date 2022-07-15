@@ -1,6 +1,9 @@
 <template lang="html">
     <div class="route contact">
-        <div class="contact-form-container">
+        <div class="contact-form-header-container col-xs-12">
+            <h1></h1>
+        </div>
+        <div class="contact-form-container col-xs-12">
             <form name="contactForm" ref="contact_form" novalidate :class="{ 'dirty': isFormDirty }">
                 <h2>Human Info</h2>
 
@@ -280,9 +283,8 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="contactFormReferral">Please let us know how you heard of us so we know who to
-                        thank!</label>
-                    <input type="text" class="form-control" name="contactFormReferral" id="contactFormReferral"
+                    <label for="questions">Do you have any questions for us?</label>
+                    <input type="text" class="form-control" name="questions" id="questions"
                         aria-label="Please let us know how you heard of us so we know who to thank!">
                 </div>
                 <p class="form-invalid-message" v-if="!isFormValid">Please fill out all required fields</p>

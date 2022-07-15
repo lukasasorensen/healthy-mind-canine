@@ -2,7 +2,7 @@
     <div class="route services">
         <section class="section section-1">
             <div class="separation-anxiety-header-container">
-                <h2 class="separation-anxiety-header">What is Separation Anxiety?</h2>
+                <h1 class="separation-anxiety-header">What is Separation Anxiety?</h1>
                 <div class="separation-anxiety-learn-more-button-container">
                     <button @click="scrollTo('section-2')" class="btn btn-lg btn-primary">Learn More</button>
                 </div>
@@ -10,8 +10,10 @@
         </section>
         <section ref="section-2" class="section section-2">
             <div class="separation-anxiety-info-container">
-                <h1 class="separation-anxiety-info-header" id="what-is-separation-anxiety">What is Separation Anxiety?
-                </h1>
+                <h1 class="separation-anxiety-info-header hidden-xs" id="what-is-separation-anxiety">What is Separation
+                    Anxiety?</h1>
+                <h3 class="separation-anxiety-info-header visible-xs" id="what-is-separation-anxiety">What is Separation
+                    Anxiety?</h3>
                 <p class="separation-anxiety-info-text">
                     Separation Anxiety is very similar to phobias in humans such as a fear of heights, spiders, or
                     germs. It is exactly what it sounds like, a phobia of being left alone. The dog may display panic
@@ -27,7 +29,8 @@
             <div class="how-does-training-work-container">
                 <div class="how-does-training-work-info-container">
                     <div class="how-does-training-work-header-container">
-                        <h1 class="how-does-training-work-header">How Does Training Work?</h1>
+                        <h1 class="how-does-training-work-header hidden-xs">How Does Training Work?</h1>
+                        <h3 class="how-does-training-work-header visible-xs">How Does Training Work?</h3>
                     </div>
                     <div class="how-does-training-work-text-container">
                         <p class="how-does-training-work-text">
@@ -46,8 +49,9 @@
         </section>
         <section class="section section-4">
             <div class="what-do-i-need-container">
-                <h1 class="what-do-i-need-header">What You Will Need For Training</h1>
-                <div class="what-do-i-need-info col-md-7 col-xs-12">
+                <h1 class="what-do-i-need-header hidden-xs">What You Will Need For Training</h1>
+                <h3 class="what-do-i-need-header visible-xs">What You Will Need For Training</h3>
+                <div class="what-do-i-need-info col-sm-8 col-xs-12">
                     <div class="what-do-i-need-list">
                         <ul>
                             <li class="col-xs-12">
@@ -71,7 +75,7 @@
                                     <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-video" />
                                 </div>
                                 <div class="col-xs-9 what-do-i-need-li-text">
-                                   A Home Monitoring Camera (Wyze)
+                                    A Home Monitoring Camera (Wyze)
                                 </div>
                             </li>
                             <li class="col-xs-12">
@@ -85,7 +89,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="what-do-i-need-image-container col-md-5 col-xs-12 hidden-xs"></div>
+                <div class="what-do-i-need-image-container col-sm-4 col-xs-12 hidden-xs"></div>
             </div>
         </section>
         <Footer></Footer>
@@ -123,14 +127,14 @@ export default {
 .services.route {
     .section {
         width: 100vw;
-        height: 100vh;
+        height: calc(100vh - $nav-height);
         scroll-snap-align: start;
     }
 
     .section-1 {
         .separation-anxiety-header-container {
             width: 100%;
-            height: calc(100% - $nav-height - 40px);
+            height: calc(100% - 40px);
             background-image: url('assets/DogOwnerStock-1.jpg');
             background-size: cover;
             background-position: center;
@@ -174,6 +178,7 @@ export default {
 
             .separation-anxiety-info-text {
                 color: $secondary-text;
+                scroll-padding-bottom: 40px;
             }
         }
     }
@@ -215,6 +220,7 @@ export default {
                 .how-does-training-work-text-container {
                     .how-does-training-work-text {
                         color: #fff;
+                        scroll-padding-bottom: 20px;
                     }
                 }
             }
@@ -224,10 +230,13 @@ export default {
 
     .section-4 {
         text-align: center;
+        display: flex;
+        justify-content: center;
 
         .what-do-i-need-container {
             height: 100%;
             padding: 5px;
+            max-width: 900px;
 
             .what-do-i-need-image-container {
                 @include bgimage;
@@ -277,12 +286,12 @@ export default {
             .what-do-i-need-header {
                 margin-top: 40px;
             }
+
             .what-do-i-need-info {
                 padding-top: 65px;
             }
 
             .what-do-i-need-list {
-                margin-left: 50px;
 
                 .what-do-i-need-li-text {
                     margin-top: 5px;
@@ -306,25 +315,37 @@ export default {
                 height: calc(100% - 40px);
 
                 .separation-anxiety-header {
-                    font-size: 3.5em;
+                    font-size: 2.5em;
                 }
             }
         }
 
         .section-2 {
             background-size: 380%;
+
+            .separation-anxiety-info-container {
+
+                .separation-anxiety-info-text {
+                    max-height: 100%;
+                    overflow: auto;
+                }
+            }
         }
 
         .section-4 {
             .what-do-i-need-container {
-                padding-top: 40px;
+                padding-top: 20px;
+
+                .what-do-i-need-li-text {
+                    margin-top: -10px;
+                }
 
                 .what-do-i-need-icon {
-                    font-size: 2em;
+                    font-size: 1.2em;
                 }
 
                 .what-do-i-need-header {
-                    margin-bottom: 40px;
+                    margin-bottom: 25px;
                 }
             }
         }
