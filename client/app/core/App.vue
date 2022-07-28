@@ -3,6 +3,7 @@
         <div class="nav-bar-buttons mobile col-xs-8" :class="{ open: isNavBarOpen }">
             <router-link @click="onNavigation" to="/">Home</router-link>
             <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
+            <router-link @click="onNavigation" to="/pricing-and-faq">Pricing/FAQ</router-link>
             <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
             <router-link @click="onNavigation" to="/contact">Contact</router-link>
         </div>
@@ -14,6 +15,7 @@
                 <div class="nav-bar-buttons col-sm-8 hidden-xs">
                     <router-link @click="onNavigation" to="/">Home</router-link>
                     <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
+                    <router-link @click="onNavigation" to="/pricing-and-faq">Pricing/FAQ</router-link>
                     <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
                     <router-link @click="onNavigation" to="/contact">Contact</router-link>
                 </div>
@@ -86,11 +88,12 @@ p,
 a,
 h1,
 h2,
-h3 {
+h3,
+li {
     color: $primary-color;
 }
 
-p {
+p, li {
     font-size: 17px;
     line-height: 30px;
 }
@@ -102,6 +105,18 @@ body {
     overflow: hidden;
     margin: 0;
     padding: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.h-100 {
+    height: 100%;
 }
 
 .router-view-container {
