@@ -1,7 +1,6 @@
 <template lang="html">
     <div class="app">
         <div class="nav-bar-buttons mobile col-xs-8" :class="{ open: isNavBarOpen }">
-            <router-link @click="onNavigation" to="/">Home</router-link>
             <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
             <router-link @click="onNavigation" to="/pricing-and-faq">Pricing/FAQ</router-link>
             <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
@@ -13,7 +12,6 @@
                     <div class="nav-bar-logo col-sm-4 col-xs-8"></div>
                 </router-link>
                 <div class="nav-bar-buttons col-sm-8 hidden-xs">
-                    <router-link @click="onNavigation" to="/">Home</router-link>
                     <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
                     <router-link @click="onNavigation" to="/pricing-and-faq">Pricing/FAQ</router-link>
                     <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>

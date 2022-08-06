@@ -4,6 +4,11 @@
             <h1></h1>
         </div>
         <div class="contact-form-container col-xs-12">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSdqVyYRfMboPfCJesWLbhUYjXsTwnTxLFZE6hvUoKx9OEN82g/viewform?embedded=true"
+                width="640" height="4346" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        </div>
+        <!-- <div class="contact-form-container col-xs-12">
             <form name="contactForm" ref="contact_form" novalidate :class="{ 'dirty': isFormDirty }">
                 <h2>Human Info</h2>
 
@@ -293,7 +298,7 @@
                         @click="sendEmail">Submit</button>
                 </div>
             </form>
-        </div>
+        </div> -->
     </div>
 </template>
 <script>
@@ -336,10 +341,19 @@ export default {
 
         text-align: left;
         padding: 20px 20px 100px 20px;
-        max-width: 500px;
+        // max-width: 500px;
         width: 100%;
         position: absolute;
-        top: 40px;
+
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        padding-bottom: 200px;
+
+        iframe {
+            height: calc(100vh - 120px);
+        }
+
 
         form {
             &.dirty {
