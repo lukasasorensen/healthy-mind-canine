@@ -160,9 +160,10 @@ export default {
 @import "../scss/animations";
 
 .route.pricing-and-faq {
+    scroll-snap-type: none;
+
     .section {
         width: 100vw;
-        height: calc(100vh - $nav-height);
         scroll-snap-align: start;
     }
 

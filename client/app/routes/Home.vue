@@ -89,7 +89,7 @@ export default {
         .home-logo {
             margin: auto;
             width: 90%;
-            height: 180px;
+            height: 100px;
             max-width: 900px;
             background-image: url('assets/healthy-mind-canine-logo.png');
             background-size: contain;
