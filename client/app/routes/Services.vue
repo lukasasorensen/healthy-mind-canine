@@ -185,7 +185,7 @@ export default {
         .separation-anxiety-header-container {
             width: 100%;
             height: calc(100% - 80px);
-            background-image: url('assets/DogOwnerStock-1.jpg');
+            background-image: url('assets/DogOwnerStock-1.png');
             background-size: cover;
             background-position: center;
             color: #fff;
@@ -295,7 +295,7 @@ export default {
 
             .what-do-i-need-image-container {
                 @include bgimage;
-                background-image: url('assets/dog-on-computer.jpg');
+                background-image: url('assets/dog-on-computer.png');
                 height: 100%;
             }
         }

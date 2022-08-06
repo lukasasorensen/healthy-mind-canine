@@ -73,7 +73,7 @@ export default {
             height: 100%;
             .about-pic {
                 @include bgimage;
-                background-image: url('assets/ABOUT_PIC.jpeg');
+                background-image: url('assets/ABOUT_PIC.png');
                 height: 100%;
                 margin-bottom: 50px;
                 margin-top: 20px;
