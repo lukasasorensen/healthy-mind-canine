@@ -4,14 +4,13 @@ frontend:
     preBuild:
       commands:
         - npm ci
-        - npm run build:prod
     build:
       commands:
-        - npm run build
+        - npm run build:prod
   artifacts:
     files:
         - '**/*'
-    baseDirectory: dist/
+    baseDirectory: dist
   cache:
     paths:
       - node_modules/**/*
