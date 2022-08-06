@@ -4,6 +4,9 @@
             <div class="home-logo"></div>
             <h3 class="tag-line">Separation Anxiety Training</h3>
         </div>
+        <div class="down-icon">
+            <font-awesome-icon class="scroll-down-icon" icon="fa-solid fa-chevron-down" />
+        </div>
         <section class="section section-1">
             <div class="section-1-bg"></div>
         </section>
@@ -54,7 +57,7 @@ export default {
         onScroll: function (scrollDistance) {
             this.scrollDistance = scrollDistance;
         },
-        goToServices: function() {
+        goToServices: function () {
             this.$router.push('/services#what-is-separation-anxiety')
         }
     },
@@ -77,6 +80,17 @@ export default {
 }
 
 .home.route {
+    .down-icon {
+        position: absolute;
+        bottom: 40px;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        z-index: 9999999;
+        font-size: 20px;
+        color: $primary-color;
+    }
+
     .home-logo-container {
         width: 100%;
         text-align: center;
@@ -138,6 +152,7 @@ export default {
             z-index: 1;
             font-size: 20px;
             pointer-events: none;
+            padding: 20px;
 
             .home-mission-text {
                 text-align: center;
