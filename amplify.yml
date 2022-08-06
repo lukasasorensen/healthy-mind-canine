@@ -11,7 +11,7 @@ frontend:
   artifacts:
     files:
         - '**/*'
-    baseDirectory: /
+    baseDirectory: dist/
   cache:
     paths:
       - node_modules/**/*
