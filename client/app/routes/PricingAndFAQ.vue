@@ -110,7 +110,7 @@
                 </div>
                 <div class="faq-question-answer">
                     <div class="faq-question">
-                        How long will training take?
+                        How much of my time will training take per week?
                     </div>
                     <div class="faq-answer">
                         This depends on where your dog is at with their training. We recommend training 4-5 days per
