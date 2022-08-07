@@ -18,7 +18,7 @@
                     We are here to help you regain your freedom!<span>"</span>
                 </p>
                 <div class="home-learn-more-button-container">
-                    <button @click="goToServices()" class="btn btn-lg btn-primary">Learn More</button>
+                    <button @click="goToServices()" class="btn btn-lg btn-primary" aria-label="Learn More">Learn More</button>
                 </div>
             </div>
         </section>

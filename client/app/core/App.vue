@@ -18,7 +18,7 @@
                     <router-link @click="onNavigation" to="/contact">Contact</router-link>
                 </div>
                 <div class="navbar-toggle visible-xs">
-                    <button class="hamburger hamburger--squeeze" :class="{ 'is-active': isNavBarOpen }"
+                    <button class="hamburger hamburger--squeeze" :class="{ 'is-active': isNavBarOpen }" aria-label="Open Menu"
                         @click="toggleNavBar" type="button">
                         <span class="hamburger-box">
                             <span class="hamburger-inner"></span>
