@@ -15,7 +15,7 @@
                         She then
                         transitioned into a job as a behavior specialist at a large animal shelter for both cats and
                         dogs. After years in that position, she saw a great need for separation anxiety trainers, and
-                        decided to pursue a certification to specialize in SA. 
+                        decided to pursue a certification to specialize in Separation Anxiety. 
                         <br><br>
                         She values continuing education so she
                         can bring clients the most effective methods available. She is committed to using humane science
