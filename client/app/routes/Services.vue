@@ -45,7 +45,9 @@
                             separation anxiety specialist.
                             <br /><br />
                         </p>
+                        <br />
                         <h3>How does training work?</h3>
+                        <br />
                         <p class="how-does-training-work-text">
                             Training is done 100% virtually. This way we can see your dog's true behavior in their
                             normal environment. During training, it is absolutely essential that you do not leave your
