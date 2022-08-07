@@ -1,13 +1,20 @@
 <template lang="html">
     <div class="route contact">
-        <div class="contact-form-header-container col-xs-12">
-            <h1></h1>
+        <div class="col-xs-12 loading-container" v-if="!isIframeLoaded">
+            <font-awesome-icon class="loading-icon fa-4x" icon="fa-solid fa-circle-notch" spin/>
+            <p>Loading Contact Form...</p>
         </div>
-        <div class="contact-form-container col-xs-12">
+
+        <div class="contact-form-container col-xs-12" v-show="isIframeLoaded">
             <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSdqVyYRfMboPfCJesWLbhUYjXsTwnTxLFZE6hvUoKx9OEN82g/viewform?embedded=true"
-                width="640" height="4346" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                width="640" height="4346" frameborder="0" marginheight="0" marginwidth="0" ref="frame" @load="onIframeLoad">Loading…</iframe>
         </div>
+
+        <!-- <div class="contact-form-header-container col-xs-12">
+            <h1></h1>
+        </div> -->
+
         <!-- <div class="contact-form-container col-xs-12">
             <form name="contactForm" ref="contact_form" novalidate :class="{ 'dirty': isFormDirty }">
                 <h2>Human Info</h2>
@@ -317,6 +324,9 @@ export default {
             this.isFormValid = this.$refs.contact_form.checkValidity();
 
             if (!this.isFormValid) return;
+        },
+        onIframeLoad: function () {
+            this.isIframeLoaded = true;
         }
     },
     data() {
@@ -324,15 +334,29 @@ export default {
             behaviorsWhenAlone: [],
             leavingTriggers: [],
             isFormValid: true,
-            isFormDirty: false
+            isFormDirty: false,
+            isIframeLoaded: false
         }
     }
 }
 </script>
 <style lang="scss">
+@import '@/scss/_variables';
+
 .contact.route {
     display: flex;
     justify-content: center;
+
+    .loading-container {
+        width: 100%;
+        text-align: center;
+        margin-top: 200px;
+
+        .loading-icon {
+            margin-bottom: 20px;
+            color: $primary-color;
+        }
+    }
 
     .contact-form-container {
         h2 {

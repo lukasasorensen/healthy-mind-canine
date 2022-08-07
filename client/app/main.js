@@ -11,10 +11,10 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faVideo, faWifi, faLaptop, faMobile, faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import { faVideo, faWifi, faLaptop, faMobile, faChevronDown, faCircleNotch } from '@fortawesome/free-solid-svg-icons'
 
 /* add icons to the library */
-library.add(faVideo, faWifi, faLaptop, faMobile, faChevronDown)
+library.add(faVideo, faWifi, faLaptop, faMobile, faChevronDown, faCircleNotch)
 
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)
