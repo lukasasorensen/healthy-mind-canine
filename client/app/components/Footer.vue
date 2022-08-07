@@ -1,12 +1,10 @@
 <template lang="html">
     <footer>
-        <div class="col-xs-12 cert-container">
-            <div class="cert cpdt">
-            </div>
-            <div class="cert fear-free">
-            </div>
-            <div class="cert sapdt"></div>
+        <div class="cert cpdt">
         </div>
+        <div class="cert fear-free">
+        </div>
+        <div class="cert sapdt"></div>
     </footer>
 </template>
 <script>
@@ -17,7 +15,7 @@ export default {
 <style lang="scss">
 @import "@/scss/_variables";
 
-.cert-container {
+footer {
     width: 100%;
     height: 200px;
     background: white;

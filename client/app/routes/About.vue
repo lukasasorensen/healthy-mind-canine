@@ -9,13 +9,13 @@
                     <p class="about-text col-md-8 col-xs-12">
                         Lauren is a 2016 participant of the Karen Pryor Academy for professional dog trainers. She is
                         also a Certified Pet Dog Trainer (CPDT-KA), Fear-Free Certified Trainer, and certified
-                        Separation Anxiety Pro Trainer (SAPT). Lauren started out her early dog training career doing
-                        dog training classes and private lessons while mentoring with experienced dog trainers. 
+                        Separation Anxiety Pro Trainer (SAPT).
                         <br><br>
-                        She then
+                        Lauren started out her early dog training career doing
+                        dog training classes and private lessons while mentoring with experienced dog trainers. She then
                         transitioned into a job as a behavior specialist at a large animal shelter for both cats and
                         dogs. After years in that position, she saw a great need for separation anxiety trainers, and
-                        decided to pursue a certification to specialize in Separation Anxiety. 
+                        decided to pursue a certification to specialize in Separation Anxiety.
                         <br><br>
                         She values continuing education so she
                         can bring clients the most effective methods available. She is committed to using humane science
@@ -41,6 +41,7 @@ export default {
 <style lang="scss">
 @import '../scss/_variables.scss';
 @import '../scss/_mixins.scss';
+
 .route {
     scroll-snap-type: none;
 }
@@ -50,9 +51,11 @@ export default {
     footer {
         scroll-snap-align: none !important;
     }
+
     .section {
         width: 100vw;
     }
+
     .about-container {
         margin: 50px auto;
         width: 100%;
@@ -61,8 +64,7 @@ export default {
         pointer-events: none;
         height: 100%;
 
-        .about-header {
-        }
+        .about-header {}
 
         .certifications {
             color: $secondary-color;
@@ -71,6 +73,7 @@ export default {
 
         .about-pic-and-text-container {
             height: 100%;
+
             .about-pic {
                 @include bgimage;
                 background-image: url('assets/ABOUT_PIC.png');
@@ -93,6 +96,7 @@ export default {
             max-height: 400px;
             height: 100%;
         }
+
         .section {
             height: 100%;
         }
@@ -101,13 +105,16 @@ export default {
     @media (max-width: $screen-lg) {
         .about-container {
             margin: 0 auto;
+
             .about-header {
                 text-align: center;
             }
+
             .certifications {
                 width: 100%;
                 text-align: center;
             }
+
             .about-pic-and-text-container {
                 .about-pic {
                     height: 200px;
