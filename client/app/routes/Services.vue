@@ -34,6 +34,19 @@
                     </div>
                     <div class="how-does-training-work-text-container">
                         <p class="how-does-training-work-text">
+                            Our method relies on systematic desensitization. Gradually your dog is exposed to small
+                            periods of stress-free home alone time while increasing the duration at the dogs pace.
+                            Slowly, your dog becomes more comfortable with longer stretches of time until they are able
+                            to be home alone as needed.
+                            <br /><br />
+                            Studies support that this is not only the most humane treatment option but the only one that
+                            offers lasting results. Although fairly straightforward, implementing a desensitization
+                            training plan can be challenging for owners on their own without the guidance of a
+                            separation anxiety specialist.
+                            <br /><br />
+                        </p>
+                        <h3>How does training work?</h3>
+                        <p class="how-does-training-work-text">
                             Training is done 100% virtually. This way we can see your dog's true behavior in their
                             normal environment. During training, it is absolutely essential that you do not leave your
                             dog alone unless it's part of that day's training homework. If a dog continues to experience
@@ -95,7 +108,7 @@
         <Footer></Footer>
     </div>
     <div class="scroll-down-container" @click="scrollToNextSection">
-        <div class="col-xs-12" :class="{'bounce-top': bounceScrollDown}">
+        <div class="col-xs-12" :class="{ 'bounce-top': bounceScrollDown }">
             <p>scroll down for more</p>
         </div>
         <div class="col-xs-12">
@@ -121,14 +134,14 @@ export default {
             var top = element.offsetTop;
             document.querySelector('.route').scrollTo(0, top);
         },
-        runScrollDownAttentionAnimation: function() {
+        runScrollDownAttentionAnimation: function () {
             this.bounceScrollDown = true;
 
             setTimeout(() => {
                 this.bounceScrollDown = false;
             }, 2000);
         },
-        scrollToNextSection: function() {
+        scrollToNextSection: function () {
             var route = document.querySelector('.route');
             var scrollTop = route.scrollTop;
             var routeHeight = route.clientHeight;
@@ -163,13 +176,15 @@ export default {
     padding-bottom: 23px;
     cursor: pointer;
     user-select: none;
+
     div {
         display: flex;
         justify-content: center;
 
-        svg, p {
+        svg,
+        p {
             color: $primary-color;
-            text-shadow: 2px 2px 3px rgba(0,0,0,0.15);
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
         }
     }
 }
@@ -250,7 +265,7 @@ export default {
             .how-does-training-work-info-container {
                 width: 96%;
                 height: auto;
-                max-height: 85%;
+                max-height: 72%;
                 max-width: 800px;
                 background-color: #765050;
                 border-radius: 10px;
@@ -384,6 +399,14 @@ export default {
                 .separation-anxiety-info-text {
                     max-height: 100%;
                     overflow: auto;
+                }
+            }
+        }
+
+        .section-3 {
+            .how-does-training-work-container {
+                .how-does-training-work-info-container {
+                    max-height: 82%;
                 }
             }
         }
