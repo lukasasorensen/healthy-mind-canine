@@ -46,10 +46,9 @@
                             <br /><br />
                         </p>
                         <br />
-                        <h3>How does training work?</h3>
-                        <br />
+                        <h2 class="virtual-training-header">Training is done 100% virtual</h2>
                         <p class="how-does-training-work-text">
-                            Training is done 100% virtually. This way we can see your dog's true behavior in their
+                            This way we can see your dog's true behavior in their
                             normal environment. During training, it is absolutely essential that you do not leave your
                             dog alone unless it's part of that day's training homework. If a dog continues to experience
                             alone time filled with anxiety and stress, it is unlikely they will recover.
@@ -285,6 +284,9 @@ export default {
                 }
 
                 .how-does-training-work-text-container {
+                    .virtual-training-header {
+                        margin-bottom: 5px;
+                    }
                     .how-does-training-work-text {
                         color: #fff;
                         scroll-padding-bottom: 20px;
