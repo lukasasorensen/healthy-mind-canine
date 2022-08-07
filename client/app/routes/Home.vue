@@ -4,7 +4,7 @@
             <div class="home-logo"></div>
             <h3 class="tag-line">Separation Anxiety Training</h3>
         </div>
-        <div class="down-icon">
+        <div class="down-icon" @click="scrollToNextSection" :style="{ 'opacity': homeLogoOpacity }">
             <font-awesome-icon class="scroll-down-icon" icon="fa-solid fa-chevron-down" />
         </div>
         <section class="section section-1">
@@ -57,6 +57,12 @@ export default {
         onScroll: function (scrollDistance) {
             this.scrollDistance = scrollDistance;
         },
+        scrollToNextSection: function () {
+            var route = document.querySelector('.route');
+            var scrollTop = route.scrollTop;
+            var routeHeight = route.clientHeight;
+            route.scrollTo(0, (scrollTop + routeHeight));
+        },
         goToServices: function () {
             this.$router.push('/services#what-is-separation-anxiety')
         }
@@ -81,7 +87,7 @@ export default {
 
 .home.route {
     .down-icon {
-        position: absolute;
+        position: fixed;
         bottom: 40px;
         width: 100%;
         justify-content: center;
@@ -89,6 +95,7 @@ export default {
         z-index: 9999999;
         font-size: 20px;
         color: $primary-color;
+        cursor: pointer;
     }
 
     .home-logo-container {
