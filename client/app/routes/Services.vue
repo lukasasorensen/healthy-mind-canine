@@ -12,8 +12,8 @@
             <div class="separation-anxiety-info-container">
                 <h1 class="separation-anxiety-info-header hidden-xs" id="what-is-separation-anxiety">What is Separation
                     Anxiety?</h1>
-                <h3 class="separation-anxiety-info-header visible-xs" id="what-is-separation-anxiety">What is Separation
-                    Anxiety?</h3>
+                <h2 class="separation-anxiety-info-header visible-xs" id="what-is-separation-anxiety">What is Separation
+                    Anxiety?</h2>
                 <p class="separation-anxiety-info-text">
                     Separation Anxiety is very similar to phobias in humans such as a fear of heights, spiders, or
                     germs. It is exactly what it sounds like, a phobia of being left alone. The dog may display panic
@@ -30,7 +30,7 @@
                 <div class="how-does-training-work-info-container">
                     <div class="how-does-training-work-header-container">
                         <h1 class="how-does-training-work-header hidden-xs">How Does Training Work?</h1>
-                        <h3 class="how-does-training-work-header visible-xs">How Does Training Work?</h3>
+                        <h2 class="how-does-training-work-header visible-xs">How Does Training Work?</h2>
                     </div>
                     <div class="how-does-training-work-text-container">
                         <p class="how-does-training-work-text">
@@ -50,7 +50,7 @@
         <section ref="section-4" class="section section-4">
             <div class="what-do-i-need-container">
                 <h1 class="what-do-i-need-header hidden-xs">What You Will Need For Training</h1>
-                <h3 class="what-do-i-need-header visible-xs">What You Will Need For Training</h3>
+                <h2 class="what-do-i-need-header visible-xs">What You Will Need For Training</h2>
                 <div class="what-do-i-need-info col-sm-8 col-xs-12">
                     <div class="what-do-i-need-list">
                         <ul>
