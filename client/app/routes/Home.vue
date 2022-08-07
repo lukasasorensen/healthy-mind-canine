@@ -10,7 +10,7 @@
         <section class="section section-1">
             <div class="section-1-bg"></div>
         </section>
-        <section class="section section-2">
+        <section class="section section-2 home-mission-photo">
             <div class="home-mission">
                 <!-- <h4>Our Mission</h4> -->
                 <p class="home-mission-text">
@@ -80,6 +80,7 @@ export default {
 </script>
 <style lang="scss">
 @import '@/scss/_variables.scss';
+@import '@/scss/_mixins';
 
 .route {
     scroll-snap-type: y mandatory;
@@ -145,7 +146,7 @@ export default {
     }
 
     .section-2 {
-        background: $secondary-bg;
+        // background: $secondary-bg;
         height: 150%;
 
         .home-mission {
@@ -165,6 +166,7 @@ export default {
                 text-align: center;
                 font-size: 1.5em;
                 line-height: 2.2em;
+                text-shadow: 2px 1px 1px rgb(0 0 0 / 68%);
 
                 span {
                     font-size: 1.3em;
@@ -181,6 +183,13 @@ export default {
                 color: white;
                 line-height: 50px;
             }
+
+        }
+
+        &.home-mission-photo {
+            @include bgimage;
+            background-image: url('assets/goldencutiepie.jpg');
+            background-size: cover;
         }
 
         .home-learn-more-button-container {
