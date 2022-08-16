@@ -90,9 +90,14 @@
                                     <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-video" />
                                 </div>
                                 <div class="col-xs-9 what-do-i-need-li-text">
-                                    A Home Monitoring Camera (we recommend <a
-                                        href="https://www.wyze.com/products/wyze-cam?related_selling_plan=41618559008930"
-                                        target="_blank">Wyze</a> the camera)
+                                    A Home Monitoring Camera <br />
+                                    <span class="wzye-text">
+                                        (we recommend <a
+                                            href="https://www.wyze.com/products/wyze-cam?related_selling_plan=41618559008930"
+                                            target="_blank">
+                                            Wyze
+                                        </a> the camera)
+                                    </span>
                                 </div>
                             </li>
                             <li class="col-xs-12">
@@ -329,6 +334,10 @@ export default {
 
             .what-do-i-need-icon {
                 font-size: 3em;
+            }
+
+            span.wzye-text {
+                font-size: 0.9em;
             }
 
             ul {
