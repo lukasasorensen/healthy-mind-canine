@@ -4,7 +4,8 @@
             <div class="separation-anxiety-header-container">
                 <h1 class="separation-anxiety-header">What is Separation Anxiety?</h1>
                 <div class="separation-anxiety-learn-more-button-container">
-                    <button @click="scrollTo('section-2')" class="btn btn-lg btn-primary" aria-label="Learn More">Learn More</button>
+                    <button @click="scrollTo('section-2')" class="btn btn-lg btn-primary" aria-label="Learn More">Learn
+                        More</button>
                 </div>
             </div>
         </section>
@@ -89,7 +90,9 @@
                                     <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-video" />
                                 </div>
                                 <div class="col-xs-9 what-do-i-need-li-text">
-                                    A Home Monitoring Camera (Wyze)
+                                    A Home Monitoring Camera (we recommend <a
+                                        href="https://www.wyze.com/products/wyze-cam?related_selling_plan=41618559008930"
+                                        target="_blank">Wyze</a> the camera)
                                 </div>
                             </li>
                             <li class="col-xs-12">
@@ -287,6 +290,7 @@ export default {
                     .virtual-training-header {
                         margin-bottom: 5px;
                     }
+
                     .how-does-training-work-text {
                         color: #fff;
                         scroll-padding-bottom: 20px;
@@ -310,7 +314,6 @@ export default {
             position: absolute;
             width: 100%;
             z-index: 10000;
-            pointer-events: none;
 
             .what-do-i-need-image-container {
                 @include bgimage;

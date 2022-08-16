@@ -169,7 +169,16 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
+    color: $secondary-color;
+
+    &:hover {
+        color: blue;
+    }
+
+    &:visited {
+        color: purple;
+    }
 }
 
 @media(max-width: $screen-md) {
