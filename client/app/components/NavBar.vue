@@ -1,5 +1,5 @@
 <template lang="html">
-    <div class="nav-bar-buttons mobile col-xs-8" :class="{ open: isNavBarOpen }">
+    <div class="nav-bar nav-bar-buttons mobile col-xs-8" :class="{ open: isNavBarOpen }">
         <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
         <router-link @click="onNavigation" to="/pricing">Pricing</router-link>
         <router-link @click="onNavigation" to="/faq">FAQ</router-link>
@@ -38,7 +38,8 @@
 export default {
     data() {
         return {
-            isSaDropdownOpen: false
+            isSaDropdownOpen: false,
+            isNavBarOpen: false
         }
     },
     methods: {
@@ -75,6 +76,10 @@ export default {
     box-sizing: border-box;
     background-color: #fff;
     z-index: 999999;
+
+    a {
+        text-decoration: none;
+    }
 
     .nav-bar-inner {
         width: 100%;
