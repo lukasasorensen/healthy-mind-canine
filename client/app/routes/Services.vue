@@ -92,11 +92,11 @@
                                 <div class="col-xs-9 what-do-i-need-li-text">
                                     A Home Monitoring Camera <br />
                                     <span class="wzye-text">
-                                        (we recommend <a
+                                        (we recommend the <a
                                             href="https://www.wyze.com/products/wyze-cam?related_selling_plan=41618559008930"
                                             target="_blank">
                                             Wyze
-                                        </a> the camera)
+                                        </a> camera)
                                     </span>
                                 </div>
                             </li>
