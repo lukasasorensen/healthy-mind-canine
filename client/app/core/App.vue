@@ -1,58 +1,17 @@
 <template lang="html">
     <div class="app">
-        <div class="nav-bar-buttons mobile col-xs-8" :class="{ open: isNavBarOpen }">
-            <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
-            <router-link @click="onNavigation" to="/pricing-and-faq">Pricing/FAQ</router-link>
-            <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
-            <router-link @click="onNavigation" to="/contact">Contact</router-link>
-        </div>
-        <div class="nav-bar">
-            <div class="nav-bar-inner row">
-                <router-link to="/">
-                    <div class="nav-bar-logo col-sm-4 col-xs-8"></div>
-                </router-link>
-                <div class="nav-bar-buttons col-sm-8 hidden-xs">
-                    <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
-                    <router-link @click="onNavigation" to="/pricing-and-faq">Pricing/FAQ</router-link>
-                    <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
-                    <router-link @click="onNavigation" to="/contact">Contact</router-link>
-                </div>
-                <div class="navbar-toggle visible-xs">
-                    <button class="hamburger hamburger--squeeze" :class="{ 'is-active': isNavBarOpen }" aria-label="Open Menu"
-                        @click="toggleNavBar" type="button">
-                        <span class="hamburger-box">
-                            <span class="hamburger-inner"></span>
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </div>
+        <NavBar></NavBar>
         <div class="router-view-container">
             <router-view></router-view>
         </div>
     </div>
 </template>
 <script>
+import NavBar from '../components/NavBar.vue';
 export default {
     name: 'App',
-    data() {
-        return {
-            isNavBarOpen: false
-        }
-    },
-    methods: {
-        openNavBar: function () {
-            this.isNavBarOpen = true;
-        },
-        closeNavBar: function () {
-            this.isNavBarOpen = false;
-        },
-        toggleNavBar: function () {
-            this.isNavBarOpen ? this.closeNavBar() : this.openNavBar();
-        },
-        onNavigation: function () {
-            this.closeNavBar();
-        }
+    components: {
+        NavBar
     }
 };
 </script>
@@ -91,6 +50,14 @@ li {
     color: $primary-color;
 }
 
+.secondary-text {
+    color: $secondary-color;
+}
+
+.primary-text {
+    color: $primary-color;
+}
+
 p, li {
     font-size: 17px;
     line-height: 30px;
@@ -122,6 +89,11 @@ body {
     height: 100vh;
 }
 
+.section {
+    height: calc(100vh - $nav-height);
+    width: 100vw;
+}
+
 .route {
     width: 100%;
     height: calc(100% - $nav-height);
@@ -132,115 +104,13 @@ body {
     scroll-behavior: smooth;
 }
 
-.nav-bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: $nav-height;
-    padding: 30px;
-    box-sizing: border-box;
-    background-color: #fff;
-    z-index: 999999;
-
-    .nav-bar-inner {
-        width: 100%;
-        height: 100%;
-    }
-
-    .nav-bar-logo {
-        @include bgimage;
-        background-image: url('assets/healthy-mind-canine-logo.png');
-        height: 100%;
-    }
-
-    .nav-bar-buttons {
-        margin: auto;
-        display: flex;
-        justify-content: space-between;
-        font-size: 20px;
-        max-width: 740px;
-        padding: 0;
-
-        &.mobile {
-            display: none;
-        }
-    }
-}
-
 a {
     text-decoration: underline;
     color: $secondary-color;
-
-    &:hover {
-        color: blue;
-    }
-
-    &:visited {
-        color: purple;
-    }
 }
 
-@media(max-width: $screen-md) {
-    .nav-bar-buttons.mobile {
-        margin: auto;
-        display: flex;
-        justify-content: space-around;
-        font-size: 20px;
-        max-width: 630px;
-        position: absolute;
-        left: 0;
-        width: 100%;
-        background: $secondary-color;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        opacity: 0;
-        padding: 20px 5px;
-        height: 400px;
-        top: -350px;
-        z-index: 999997;
-        overflow: hidden;
-        transition: top 600ms ease-in-out, opacity 200ms ease-in-out;
-
-        a {
-            color: #fff;
-            width: 100%;
-            text-align: center;
-            height: 25%;
-            display: flex;
-            justify-content: center;
-            vertical-align: middle;
-            flex-direction: column;
-
-            &:active {
-                background-color: $primary-color;
-            }
-        }
-
-        &.open {
-            top: 83px;
-            opacity: 1;
-        }
-    }
-
-    .navbar-toggle {
-        position: absolute;
-        top: 13px;
-        right: 5px;
-
-        .hamburger-box {
-            .hamburger-inner {
-
-                &:before,
-                &:after {
-                    background-color: $secondary-color;
-                }
-
-                background-color: $secondary-color;
-            }
-        }
-    }
+.scroll-padding {
+    width: 100%;
+    height: 150px;        
 }
 </style>

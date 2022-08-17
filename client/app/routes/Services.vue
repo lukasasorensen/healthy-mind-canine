@@ -64,8 +64,8 @@
         </section>
         <section ref="section-4" class="section section-4">
             <div class="what-do-i-need-container">
-                <h1 class="what-do-i-need-header hidden-xs">What You Will Need For Training</h1>
-                <h2 class="what-do-i-need-header visible-xs">What You Will Need For Training</h2>
+                <h1 class="what-do-i-need-header secondary-text hidden-xs">What You Will Need For Training</h1>
+                <h2 class="what-do-i-need-header secondary-text visible-xs">What You Will Need For Training</h2>
                 <div class="what-do-i-need-info col-sm-8 col-xs-12">
                     <div class="what-do-i-need-list">
                         <ul>
@@ -92,11 +92,11 @@
                                 <div class="col-xs-9 what-do-i-need-li-text">
                                     A Home Monitoring Camera <br />
                                     <span class="wzye-text">
-                                        (we recommend <a
+                                        (we recommend the <a
                                             href="https://www.wyze.com/products/wyze-cam?related_selling_plan=41618559008930"
                                             target="_blank">
                                             Wyze
-                                        </a> the camera)
+                                        </a> camera)
                                     </span>
                                 </div>
                             </li>
