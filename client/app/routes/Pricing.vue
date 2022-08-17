@@ -74,6 +74,8 @@ export default {
 
     .section {
         scroll-snap-align: start;
+        height: auto;
+        min-height: calc(100% - $nav-height);
     }
 
     .section-1 {

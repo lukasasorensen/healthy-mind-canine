@@ -113,20 +113,21 @@ export default {
 
     .section {
         scroll-snap-align: start;
+        height: auto;
     }
 
     .section-1 {
         display: flex;
         justify-content: center;
         .faq-header {
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             margin-top: 20px;
         }
         .faq-container {
             width: 100%;
             max-width: 700px;
             padding: 20px;
-            overflow: auto;
+            height: auto;
 
             .faq-question-answer {
                 margin-bottom: 25px;
