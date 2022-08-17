@@ -54,6 +54,7 @@ export default {
 
     .section {
         width: 100vw;
+        height: auto;
     }
 
     .about-container {
