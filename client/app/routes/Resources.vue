@@ -88,6 +88,7 @@ export default {
 
     .section {
         scroll-snap-align: start;
+        height: auto;
     }
 
     .section-1 {
@@ -100,10 +101,9 @@ export default {
         .resources-list-container {
             display: block;
             width: 100%;
-            height: 100%;
+            height: auto;
             max-width: 600px;
             text-align: center;
-            overflow-y: scroll;
             padding: 20px;
         }
 
