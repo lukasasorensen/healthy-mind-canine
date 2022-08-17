@@ -23,7 +23,7 @@
                     <div class="dotted-table-row">
                         <p class="dotted-table-left">4 week package</p>
                         <div class="dotted-table-line"></div>
-                        <p class="dotted-table-right">$1200</p>
+                        <p class="dotted-table-right">$1000</p>
                     </div>
                 </div>
                 <div class="four-week-package-includes-container w-100 text-center">
