@@ -17,20 +17,6 @@ export default {
     },
     components: {
         NavBar
-    },
-    methods: {
-        openNavBar: function () {
-            this.isNavBarOpen = true;
-        },
-        closeNavBar: function () {
-            this.isNavBarOpen = false;
-        },
-        toggleNavBar: function () {
-            this.isNavBarOpen ? this.closeNavBar() : this.openNavBar();
-        },
-        onNavigation: function () {
-            this.closeNavBar();
-        }
     }
 };
 </script>
@@ -69,6 +55,14 @@ li {
     color: $primary-color;
 }
 
+.secondary-text {
+    color: $secondary-color;
+}
+
+.primary-text {
+    color: $primary-color;
+}
+
 p, li {
     font-size: 17px;
     line-height: 30px;
@@ -98,6 +92,11 @@ body {
 .router-view-container {
     width: 100vw;
     height: 100vh;
+}
+
+.section {
+    height: calc(100vh - $nav-height);
+    width: 100vw;
 }
 
 .route {

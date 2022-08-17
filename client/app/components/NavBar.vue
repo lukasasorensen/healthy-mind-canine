@@ -1,7 +1,8 @@
 <template lang="html">
     <div class="nav-bar-buttons mobile col-xs-8" :class="{ open: isNavBarOpen }">
         <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
-        <router-link @click="onNavigation" to="/pricing-and-faq">Pricing/FAQ</router-link>
+        <router-link @click="onNavigation" to="/pricing">Pricing</router-link>
+        <router-link @click="onNavigation" to="/faq">FAQ</router-link>
         <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
         <router-link @click="onNavigation" to="/contact">Contact</router-link>
     </div>
@@ -11,11 +12,12 @@
                 <div class="nav-bar-logo col-sm-4 col-xs-8"></div>
             </router-link>
             <div class="nav-bar-buttons col-sm-8 hidden-xs">
-                <div class="dropdown-container">
+                <div class="dropdown-container" :class="{ open: isSaDropdownOpen }" @mouseenter="isSaDropdownOpen = true" @mouseleave="isSaDropdownOpen = false">
                     <button class="separation-anxiety dropdown-button">Separation Anxiety</button>
-                    <div class="dropdown">
+                    <div class="dropdown" ref="saDropdown" v-show="isSaDropdownOpen">
                         <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
-                        <router-link @click="onNavigation" to="/pricing-and-faq">Pricing/FAQ</router-link>
+                        <router-link @click="onNavigation" to="/pricing">Pricing</router-link>
+                        <router-link @click="onNavigation" to="/faq">FAQ</router-link>
                     </div>
                 </div>
                 <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
@@ -36,13 +38,24 @@
 export default {
     data() {
         return {
-            isSeparationAnxietyDropdownOpen: false
+            isSaDropdownOpen: false
         }
     },
     methods: {
-        openSeperationAnxietyDropdown: function () {
-            openSeperationAnxietyDropdown
-        }
+        onNavigation: function () {
+            this.closeNavBar();
+
+            this.isSaDropdownOpen = false;
+        },
+        openNavBar: function () {
+            this.isNavBarOpen = true;
+        },
+        closeNavBar: function () {
+            this.isNavBarOpen = false;
+        },
+        toggleNavBar: function () {
+            this.isNavBarOpen ? this.closeNavBar() : this.openNavBar();
+        },
     }
 }
 </script>
@@ -118,9 +131,6 @@ export default {
     .dropdown-button {}
 
     .dropdown {
-        visibility: hidden;
-        opacity: 0;
-        height: 0;
 
         width: 220px;
         font-size: 18px;
@@ -131,26 +141,18 @@ export default {
         top: 50px;
         z-index: 9;
         border-radius: 5px;
+        height: auto;
 
         a {
             float: left;
+            clear: both;
+            display: block;
             margin-bottom: 20px;
-        }
-
-        &:hover {
-            visibility: visible;
-            opacity: 1;
-            height: auto;
         }
     }
 
-    &:hover {
-        height: 200px;
-        .dropdown {
-            visibility: visible;
-            opacity: 1;
-            height: auto;
-        }
+    &.open {
+        height: 250px;
     }
 }
 
