@@ -108,4 +108,9 @@ a {
     text-decoration: underline;
     color: $secondary-color;
 }
+
+.scroll-padding {
+    width: 100%;
+    height: 150px;        
+}
 </style>

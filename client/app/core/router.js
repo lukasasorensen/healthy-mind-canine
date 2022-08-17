@@ -7,6 +7,7 @@ import Contact from '../routes/Contact.vue';
 import Services from '../routes/Services.vue';
 import Pricing from '../routes/Pricing.vue';
 import FAQ from "../routes/FAQ.vue";
+import Resources from "../routes/Resources.vue";
 
 export default createRouter({
     mode: 'hash',
@@ -17,7 +18,8 @@ export default createRouter({
         { path: '/services', component: Services },
         { path: '/separation-anxiety', component: Services },
         { path: '/pricing', component: Pricing },
-        { path: '/faq', component: FAQ }
+        { path: '/faq', component: FAQ },
+        { path: '/resources', component: Resources }
     ],
     history: createWebHashHistory()
 });

@@ -3,6 +3,7 @@
         <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
         <router-link @click="onNavigation" to="/pricing">Pricing</router-link>
         <router-link @click="onNavigation" to="/faq">FAQ</router-link>
+        <router-link @click="onNavigation" to="/resources">Resources</router-link>
         <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
         <router-link @click="onNavigation" to="/contact">Contact</router-link>
     </div>
@@ -16,10 +17,11 @@
                     <button class="separation-anxiety dropdown-button">Separation Anxiety</button>
                     <div class="dropdown" ref="saDropdown" v-show="isSaDropdownOpen">
                         <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
-                        <router-link @click="onNavigation" to="/pricing">Pricing</router-link>
                         <router-link @click="onNavigation" to="/faq">FAQ</router-link>
+                        <router-link @click="onNavigation" to="/resources">Resources</router-link>
                     </div>
                 </div>
+                <router-link @click="onNavigation" to="/pricing">Pricing</router-link>
                 <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
                 <router-link @click="onNavigation" to="/contact">Contact</router-link>
             </div>
@@ -136,7 +138,7 @@ export default {
     .dropdown-button {}
 
     .dropdown {
-
+        margin-left: -10px;
         width: 220px;
         font-size: 18px;
         background: #fff;
