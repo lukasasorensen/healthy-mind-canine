@@ -2,7 +2,7 @@
     <div class="route services">
         <section class="section section-1">
             <div class="separation-anxiety-header-container">
-                <h1 class="separation-anxiety-header">What is Separation Anxiety?</h1>
+                <h1 class="separation-anxiety-header">Separation Anxiety Training <br>That Works!</h1>
                 <div class="separation-anxiety-learn-more-button-container">
                     <button @click="scrollTo('section-2')" class="btn btn-lg btn-primary" aria-label="Learn More">Learn
                         More</button>
