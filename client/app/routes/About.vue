@@ -3,7 +3,7 @@
         <div class="section">
             <div class="about-container">
                 <h1 class="about-header">Lauren Sorensen</h1>
-                <p class="certifications">SAPT • CPDT-KA • Fear-Free Certified</p>
+                <p class="certifications">SAPT • CPDT-KA • FFCP</p>
                 <div class="about-pic-and-text-container row">
                     <div class="about-pic col-md-4 col-xs-12"></div>
                     <p class="about-text col-md-8 col-xs-12">
