@@ -17,21 +17,11 @@
                 </div>
                 <div class="faq-question-answer">
                     <div class="faq-question">
-                        Why is training done virtually? Would it be better to have a trainer come to my home?
+                        Why is training done virtually?
                     </div>
                     <div class="faq-answer">
                         Having the trainer work virtually allows us to see your dog's true behavior in their normal
                         environment. It also allows us to work with each of our clients 5 days a week.
-                    </div>
-                </div>
-                <div class="faq-question-answer">
-                    <div class="faq-question">
-                        Why is training done virtually?
-                    </div>
-                    <div class="faq-answer">
-                        The goal of this training is to teach the dog to be home alone. We cannot train a dog to be home
-                        alone time if there is a trainer in the home. It would defeat the purpose. Having the trainer
-                        work virtually also allows us to see your dog's true behavior in their normal environment.
                     </div>
                 </div>
                 <div class="faq-question-answer">
