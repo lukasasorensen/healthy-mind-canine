@@ -114,7 +114,7 @@
                 <div class="what-do-i-need-image-container col-sm-4 col-xs-12 hidden-xs"></div>
                 <div class="go-to-buttons hidden-xs">
                     <button @click="goToFaq()" class="btn btn-secondary btn-lg hidden-xs">Go To FAQ</button>
-                    <button @click="goToFaq()" class="btn btn-primary btn-lg hidden-xs">Go To Pricing</button>
+                    <button @click="goToPricing()" class="btn btn-primary btn-lg hidden-xs">Go To Pricing</button>
                 </div>
             </div>
         </section>
