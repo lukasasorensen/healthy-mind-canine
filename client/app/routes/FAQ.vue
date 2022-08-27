@@ -17,6 +17,15 @@
                 </div>
                 <div class="faq-question-answer">
                     <div class="faq-question">
+                        Why is training done virtually? Would it be better to have a trainer come to my home?
+                    </div>
+                    <div class="faq-answer">
+                        Having the trainer work virtually allows us to see your dog's true behavior in their normal
+                        environment. It also allows us to work with each of our clients 5 days a week.
+                    </div>
+                </div>
+                <div class="faq-question-answer">
+                    <div class="faq-question">
                         Why is training done virtually?
                     </div>
                     <div class="faq-answer">
@@ -119,10 +128,12 @@ export default {
     .section-1 {
         display: flex;
         justify-content: center;
+
         .faq-header {
             margin-bottom: 40px;
             margin-top: 20px;
         }
+
         .faq-container {
             width: 100%;
             max-width: 700px;
@@ -131,11 +142,13 @@ export default {
 
             .faq-question-answer {
                 margin-bottom: 25px;
+
                 .faq-question {
                     font-size: 1.3em;
                     color: $primary-color;
                     margin-bottom: 6px;
                 }
+
                 .faq-answer {
                     font-size: 1.1em;
                     color: $secondary-text;
