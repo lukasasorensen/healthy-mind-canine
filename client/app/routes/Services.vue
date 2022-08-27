@@ -2,7 +2,7 @@
     <div class="route services">
         <section class="section section-1">
             <div class="separation-anxiety-header-container">
-                <h1 class="separation-anxiety-header">What is Separation Anxiety?</h1>
+                <h1 class="separation-anxiety-header">Separation Anxiety Training <br>That Works!</h1>
                 <div class="separation-anxiety-learn-more-button-container">
                     <button @click="scrollTo('section-2')" class="btn btn-lg btn-primary" aria-label="Learn More">Learn
                         More</button>
@@ -112,6 +112,11 @@
                     </div>
                 </div>
                 <div class="what-do-i-need-image-container col-sm-4 col-xs-12 hidden-xs"></div>
+                <div class="go-to-buttons">
+                    <button @click="goToFaq()" class="btn btn-secondary btn-lg hidden-xs">Go To FAQ</button>
+                    <button @click="goToFaq()" class="btn btn-primary hidden-md">Go To FAQ</button>
+                    <button @click="goToPricing()" class="btn btn-primary btn-lg hidden-xs">Go To Pricing</button>
+                </div>
             </div>
         </section>
         <Footer></Footer>
@@ -155,6 +160,12 @@ export default {
             var scrollTop = route.scrollTop;
             var routeHeight = route.clientHeight;
             route.scrollTo(0, (scrollTop + routeHeight));
+        },
+        goToFaq: function () {
+            this.$router.push('/faq');
+        },
+        goToPricing: function () {
+            this.$router.push('/pricing');
         }
     },
     mounted() {
@@ -355,6 +366,17 @@ export default {
                 }
             }
         }
+
+        .go-to-buttons {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            button:nth-child(1) {
+                margin-right: 35px;
+            }
+        }
     }
 
     @media (min-width: $screen-md) {
@@ -431,9 +453,26 @@ export default {
             .what-do-i-need-container {
                 padding-top: 20px;
 
-                .what-do-i-need-li-text {
-                    margin-top: -10px;
+                .what-do-i-need-list {
+                    ul {
+
+                        li {
+                            margin-bottom: 35px;
+                            font-size: 1.2em;
+                            padding: 0;
+
+                            .what-do-i-need-li-icon {
+                                text-align: center;
+                                color: $secondary-color;
+                            }
+                        }
+                    }
+
+                    .what-do-i-need-li-text {
+                        margin-top: -10px;
+                    }
                 }
+
 
                 .what-do-i-need-icon {
                     font-size: 1.2em;
@@ -441,6 +480,10 @@ export default {
 
                 .what-do-i-need-header {
                     margin-bottom: 25px;
+                }
+
+                .go-to-buttons {
+                    bottom: 20px;
                 }
             }
         }

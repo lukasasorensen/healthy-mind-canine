@@ -6,7 +6,7 @@
                     <h1 class="pricing-header secondary-text">Pricing</h1>
                 </div>
                 <div class="package-disclaimer w-100 text-center">
-                    <p>Separation Anxiety Training is sold in 4 week packages.</p>
+                    <p>Initial Consult is required before purchasing packages.</p>
                 </div>
                 <div class="pricing-table">
                     <div class="dotted-table-row">
@@ -25,9 +25,23 @@
                         <div class="dotted-table-line"></div>
                         <p class="dotted-table-right">$1000</p>
                     </div>
+
+                    <div class="dotted-table-row">
+                        <p class="dotted-table-left">8 week package</p>
+                        <div class="dotted-table-line"></div>
+                        <p class="dotted-table-right">$1,700</p>
+                    </div>
+
+                    <div class="dotted-table-row">
+                        <p class="dotted-table-left">One hour session</p>
+                        <div class="dotted-table-line"></div>
+                        <p class="dotted-table-right">$120</p>
+                    </div>
+                    <small class="pricing-detail">* for previous clients or Heroes members</small>
+                    
                 </div>
                 <div class="four-week-package-includes-container w-100 text-center">
-                    <h2>4 week package includes:</h2>
+                    <h2>Packages Include:</h2>
                 </div>
                 <ul class="four-week-package-items">
                     <li>
@@ -78,6 +92,11 @@ export default {
         min-height: calc(100% - $nav-height);
     }
 
+    .pricing-detail {
+        color: $secondary-color;
+        margin-left: 20px;
+    }
+
     .section-1 {
         display: flex;
         justify-content: center;
@@ -113,6 +132,7 @@ export default {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
+                margin-top: 25px;
 
                 .dotted-table-line {
                     border-bottom: 2px dotted $secondary-color;

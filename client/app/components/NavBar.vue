@@ -13,7 +13,7 @@
                 <div class="nav-bar-logo col-sm-4 col-xs-8"></div>
             </router-link>
             <div class="nav-bar-buttons col-sm-8 hidden-xs">
-                <div class="dropdown-container" :class="{ open: isSaDropdownOpen }" @mouseenter="isSaDropdownOpen = true" @mouseleave="isSaDropdownOpen = false">
+                <div class="dropdown-container" :class="{ open: isSaDropdownOpen }" @click="goToServices()" @mouseenter="isSaDropdownOpen = true" @mouseleave="isSaDropdownOpen = false">
                     <button class="separation-anxiety dropdown-button">Separation Anxiety</button>
                     <div class="dropdown" ref="saDropdown" v-show="isSaDropdownOpen">
                         <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
@@ -59,6 +59,9 @@ export default {
         toggleNavBar: function () {
             this.isNavBarOpen ? this.closeNavBar() : this.openNavBar();
         },
+        goToServices: function() {
+            this.$router.push('/services');
+        }
     }
 }
 </script>

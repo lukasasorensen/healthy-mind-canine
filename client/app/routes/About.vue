@@ -3,25 +3,26 @@
         <div class="section">
             <div class="about-container">
                 <h1 class="about-header">Lauren Sorensen</h1>
-                <p class="certifications">SAPT • CPDT-KA • Fear-Free Certified</p>
+                <p class="certifications">SAPT • CPDT-KA • FFCP</p>
                 <div class="about-pic-and-text-container row">
                     <div class="about-pic col-md-4 col-xs-12"></div>
                     <p class="about-text col-md-8 col-xs-12">
                         Lauren is a 2016 participant of the Karen Pryor Academy for professional dog trainers. She is
-                        also a Certified Pet Dog Trainer (CPDT-KA), Fear-Free Certified Trainer, and certified
-                        Separation Anxiety Pro Trainer (SAPT).
+                        also a Certified Pet Dog Trainer (CPDT-KA), Fear-Free Certified Trainer (FFCP), and Certified
+                        Separation Anxiety Pro Trainer (Cert-SAPT). She is currently working on her behavior consultant
+                        certification through the Certification Counsel For Pet Dog Trainers.
                         <br><br>
-                        Lauren started out her early dog training career doing
-                        dog training classes and private lessons while mentoring with experienced dog trainers. She then
-                        transitioned into a job as a behavior specialist at a large animal shelter for both cats and
-                        dogs. After years in that position, she saw a great need for separation anxiety trainers, and
-                        decided to pursue a certification to specialize in Separation Anxiety.
+                        Lauren started out her early dog training career mentoring with experienced local trainers
+                        before taking on her own training classes and private lessons. She most recently worked as a
+                        behavior specialist at a high volume animal shelter for a number of years. In that position, she
+                        saw a great need for separation anxiety trainers, and decided to pursue certification to
+                        specialize in separation anxiety. Lauren also has experience working in vet clinics, dog
+                        daycares, and grooming salons.
                         <br><br>
-                        She values continuing education so she
-                        can bring clients the most effective methods available. She is committed to using humane science
-                        based training practices. This means that she will never do anything that hurts or scares your
-                        dog! Her favorite thing about dog training is seeing the relationship between dog and owner
-                        flourish through fear-free training methods.
+                        She values continuing education so she can bring clients the most effective methods available.
+                        She is committed to using humane training methods backed by the latest scientific research. This
+                        means that she will never do anything that hurts or scares your dog! Her favorite thing about
+                        dog training is seeing the “AH-HA!” moment when a dog catches on to a new training exercise.
                     </p>
                 </div>
             </div>
