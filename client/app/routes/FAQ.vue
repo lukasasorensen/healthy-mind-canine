@@ -20,9 +20,8 @@
                         Why is training done virtually?
                     </div>
                     <div class="faq-answer">
-                        The goal of this training is to teach the dog to be home alone. We cannot train a dog to be home
-                        alone time if there is a trainer in the home. It would defeat the purpose. Having the trainer
-                        work virtually also allows us to see your dog's true behavior in their normal environment.
+                        Having the trainer work virtually allows us to see your dog's true behavior in their normal
+                        environment. It also allows us to work with each of our clients 5 days a week.
                     </div>
                 </div>
                 <div class="faq-question-answer">
@@ -67,6 +66,16 @@
                         time we may be able to reduce the frequency of training, but your time away from home for
                         training sessions will become longer. You will finally be able to run some errands during
                         training!
+                    </div>
+                </div>
+                <div class="faq-question-answer">
+                    <div class="faq-question">
+                        Do you do payment plans?
+                    </div>
+                    <div class="faq-answer">
+                        We currently do not offer payment plans. Head on over to our <router-link to="/resources">resources</router-link> page for other
+                        options if working 1:1 with a trainer is not something you can do right now. We do offer one off
+                        sessions for owners who are enrolled in the "Heros" program and need supplemental help.
                     </div>
                 </div>
                 <div class="faq-question-answer">
@@ -119,10 +128,12 @@ export default {
     .section-1 {
         display: flex;
         justify-content: center;
+
         .faq-header {
             margin-bottom: 40px;
             margin-top: 20px;
         }
+
         .faq-container {
             width: 100%;
             max-width: 700px;
@@ -131,11 +142,13 @@ export default {
 
             .faq-question-answer {
                 margin-bottom: 25px;
+
                 .faq-question {
                     font-size: 1.3em;
                     color: $primary-color;
                     margin-bottom: 6px;
                 }
+
                 .faq-answer {
                     font-size: 1.1em;
                     color: $secondary-text;
