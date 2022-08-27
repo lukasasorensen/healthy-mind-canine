@@ -113,4 +113,14 @@ a {
     width: 100%;
     height: 150px;        
 }
+
+.btn-secondary {
+    background-color: $secondary-color;
+    color: white;
+
+    &:hover {
+        color: white;
+        background-color: darken($secondary-color, 10%);
+    }
+}
 </style>
