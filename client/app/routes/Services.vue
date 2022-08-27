@@ -112,8 +112,9 @@
                     </div>
                 </div>
                 <div class="what-do-i-need-image-container col-sm-4 col-xs-12 hidden-xs"></div>
-                <div class="go-to-buttons hidden-xs">
+                <div class="go-to-buttons">
                     <button @click="goToFaq()" class="btn btn-secondary btn-lg hidden-xs">Go To FAQ</button>
+                    <button @click="goToFaq()" class="btn btn-primary hidden-md">Go To FAQ</button>
                     <button @click="goToPricing()" class="btn btn-primary btn-lg hidden-xs">Go To Pricing</button>
                 </div>
             </div>
@@ -372,8 +373,8 @@ export default {
             left: 50%;
             transform: translateX(-50%);
 
-            button:nth-child(2) {
-                margin-left: 30px;
+            button:nth-child(1) {
+                margin-right: 35px;
             }
         }
     }
@@ -452,9 +453,26 @@ export default {
             .what-do-i-need-container {
                 padding-top: 20px;
 
-                .what-do-i-need-li-text {
-                    margin-top: -10px;
+                .what-do-i-need-list {
+                    ul {
+
+                        li {
+                            margin-bottom: 35px;
+                            font-size: 1.2em;
+                            padding: 0;
+
+                            .what-do-i-need-li-icon {
+                                text-align: center;
+                                color: $secondary-color;
+                            }
+                        }
+                    }
+
+                    .what-do-i-need-li-text {
+                        margin-top: -10px;
+                    }
                 }
+
 
                 .what-do-i-need-icon {
                     font-size: 1.2em;
@@ -462,6 +480,10 @@ export default {
 
                 .what-do-i-need-header {
                     margin-bottom: 25px;
+                }
+
+                .go-to-buttons {
+                    bottom: 20px;
                 }
             }
         }
