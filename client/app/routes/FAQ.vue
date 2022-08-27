@@ -70,6 +70,16 @@
                 </div>
                 <div class="faq-question-answer">
                     <div class="faq-question">
+                        Do you do payment plans?
+                    </div>
+                    <div class="faq-answer">
+                        We currently do not offer payment plans. Head on over to our <router-link to="/resources">resources</router-link> page for other
+                        options if working 1:1 with a trainer is not something you can do right now. We do offer one off
+                        sessions for owners who are enrolled in the "Heros" program and need supplemental help.
+                    </div>
+                </div>
+                <div class="faq-question-answer">
+                    <div class="faq-question">
                         Will I need to give my dog less affection or stop letting them sleep in my bed?
                     </div>
                     <div class="faq-answer">
