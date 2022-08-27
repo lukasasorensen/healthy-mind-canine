@@ -112,6 +112,10 @@
                     </div>
                 </div>
                 <div class="what-do-i-need-image-container col-sm-4 col-xs-12 hidden-xs"></div>
+                <div class="go-to-buttons hidden-xs">
+                    <button @click="goToFaq()" class="btn btn-secondary btn-lg hidden-xs">Go To FAQ</button>
+                    <button @click="goToFaq()" class="btn btn-primary btn-lg hidden-xs">Go To Pricing</button>
+                </div>
             </div>
         </section>
         <Footer></Footer>
@@ -155,6 +159,12 @@ export default {
             var scrollTop = route.scrollTop;
             var routeHeight = route.clientHeight;
             route.scrollTo(0, (scrollTop + routeHeight));
+        },
+        goToFaq: function () {
+            this.$router.push('/faq');
+        },
+        goToPricing: function () {
+            this.$router.push('/pricing');
         }
     },
     mounted() {
@@ -353,6 +363,17 @@ export default {
                         color: $secondary-color;
                     }
                 }
+            }
+        }
+
+        .go-to-buttons {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            button:nth-child(2) {
+                margin-left: 30px;
             }
         }
     }
