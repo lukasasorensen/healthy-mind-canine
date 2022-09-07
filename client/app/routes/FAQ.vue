@@ -40,8 +40,8 @@
                         Can you guarantee results?
                     </div>
                     <div class="faq-answer">
-                        Ethically, we cannot guarantee results, as we are working with live sentient beings. Our method
-                        is studied to have a 73% success rate if the training protocol is followed.
+                        Ethically, we cannot guarantee results, as we are working with live sentient beings. The method
+                        we use is studied to be the most effective method available for separation anxiety so far.
                     </div>
                 </div>
                 <div class="faq-question-answer">
@@ -73,7 +73,8 @@
                         Do you do payment plans?
                     </div>
                     <div class="faq-answer">
-                        We currently do not offer payment plans. Head on over to our <router-link to="/resources">resources</router-link> page for other
+                        We currently do not offer payment plans. Head on over to our <router-link to="/resources">
+                            resources</router-link> page for other
                         options if working 1:1 with a trainer is not something you can do right now. We do offer one off
                         sessions for owners who are enrolled in the "Heros" program and need supplemental help.
                     </div>
