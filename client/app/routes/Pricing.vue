@@ -12,7 +12,7 @@
                     <div class="dotted-table-row">
                         <p class="dotted-table-left">Initial Consultation (60-90min)</p>
                         <div class="dotted-table-line"></div>
-                        <p class="dotted-table-right">$150</p>
+                        <p class="dotted-table-right">$175</p>
                     </div>
                     <!-- maybe add this later -->
                     <!-- <div class="dotted-table-row">
@@ -23,13 +23,13 @@
                     <div class="dotted-table-row">
                         <p class="dotted-table-left">4 week package</p>
                         <div class="dotted-table-line"></div>
-                        <p class="dotted-table-right">$1000</p>
+                        <p class="dotted-table-right">$800</p>
                     </div>
 
                     <div class="dotted-table-row">
                         <p class="dotted-table-left">8 week package</p>
                         <div class="dotted-table-line"></div>
-                        <p class="dotted-table-right">$1700</p>
+                        <p class="dotted-table-right">$1350</p>
                     </div>
 
                     <div class="dotted-table-row">
