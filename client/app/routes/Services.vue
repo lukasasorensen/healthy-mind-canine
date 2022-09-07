@@ -11,9 +11,9 @@
         </section>
         <section ref="section-2" class="section section-2">
             <div class="separation-anxiety-info-container">
-                <h1 class="separation-anxiety-info-header hidden-xs" id="what-is-separation-anxiety">What is Separation
+                <h1 class="separation-anxiety-info-header hidden-xs" id="what-is-separation-anxiety">What Is Separation
                     Anxiety?</h1>
-                <h2 class="separation-anxiety-info-header visible-xs" id="what-is-separation-anxiety">What is Separation
+                <h2 class="separation-anxiety-info-header visible-xs" id="what-is-separation-anxiety">What Is Separation
                     Anxiety?</h2>
                 <p class="separation-anxiety-info-text">
                     Separation Anxiety is very similar to phobias in humans such as a fear of heights, spiders, or
@@ -30,8 +30,8 @@
             <div class="how-does-training-work-container">
                 <div class="how-does-training-work-info-container">
                     <div class="how-does-training-work-header-container">
-                        <h1 class="how-does-training-work-header hidden-xs">How Does Training Work?</h1>
-                        <h2 class="how-does-training-work-header visible-xs">How Does Training Work?</h2>
+                        <h1 class="how-does-training-work-header hidden-xs">What Is Our Training Method?</h1>
+                        <h2 class="how-does-training-work-header visible-xs">What Is Our Training Method?</h2>
                     </div>
                     <div class="how-does-training-work-text-container">
                         <p class="how-does-training-work-text">
