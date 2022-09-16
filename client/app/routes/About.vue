@@ -64,7 +64,7 @@ export default {
         max-width: 900px;
         padding: 20px;
         pointer-events: none;
-        height: 100%;
+        height: auto;
 
         .about-header {}
 
@@ -79,7 +79,7 @@ export default {
             .about-pic {
                 @include bgimage;
                 background-image: url('assets/ABOUT_PIC.png');
-                height: 100%;
+                height: 370px;
                 margin-bottom: 50px;
                 margin-top: 20px;
             }
@@ -95,12 +95,12 @@ export default {
 
     @media (min-width: $screen-lg) {
         .about-container {
-            max-height: 400px;
-            height: 100%;
+            // max-height: 400px;
+            height: auto;
         }
 
         .section {
-            height: 100%;
+            height: auto;
         }
     }
 
