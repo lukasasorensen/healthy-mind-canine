@@ -95,7 +95,6 @@ export default {
 
     @media (min-width: $screen-lg) {
         .about-container {
-            // max-height: 400px;
             height: auto;
         }
 
