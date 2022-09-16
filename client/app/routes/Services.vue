@@ -186,7 +186,7 @@ export default {
 @import "../scss/animations";
 
 .route {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
 }
 
 .scroll-down-container {
@@ -380,6 +380,26 @@ export default {
         }
     }
 
+    @media(max-height: 770px) {
+        .section-4 {
+            .go-to-buttons {
+                position: relative;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                top: 20px;
+            }
+        }
+    }
+
+    @media(max-height: 650px) {
+        .section-1 {
+            .separation-anxiety-learn-more-button-container {
+                display: none;
+            }
+        }
+    }
+
     @media (min-width: $screen-md) {
         .separation-anxiety-info-header {
             margin-top: -75px;
@@ -392,6 +412,8 @@ export default {
         }
 
         .section-4 {
+            min-height: 730px;
+
             .what-do-i-need-header {
                 margin-top: 40px;
             }
