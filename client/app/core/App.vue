@@ -1,4 +1,7 @@
 <template lang="html">
+    <metainfo>
+        <template v-slot:title="{ content }">{{ content }}</template>
+    </metainfo>
     <div class="app">
         <NavBar></NavBar>
         <div class="router-view-container">
@@ -8,10 +11,17 @@
 </template>
 <script>
 import NavBar from '../components/NavBar.vue';
+import { useMeta } from 'vue-meta'
+
 export default {
     name: 'App',
     components: {
         NavBar
+    },
+    setup() {
+        useMeta({
+            title: 'Healthy Mind Canine'
+        })
     }
 };
 </script>
@@ -58,7 +68,8 @@ li {
     color: $primary-color;
 }
 
-p, li {
+p,
+li {
     font-size: 17px;
     line-height: 30px;
 }
@@ -111,7 +122,7 @@ a {
 
 .scroll-padding {
     width: 100%;
-    height: 150px;        
+    height: 150px;
 }
 
 .btn-secondary {

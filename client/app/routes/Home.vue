@@ -27,6 +27,7 @@
 </template>
 <script>
 import Footer from "../components/Footer";
+import { useMeta } from "vue-meta";
 
 export default {
     name: 'Home',
@@ -75,6 +76,11 @@ export default {
     },
     mounted() {
         this.registerScrollEventListener();
+    },
+    setup() {
+        useMeta({
+            title: 'Dog Separation Anxiety Training | Healthy Mind Canine'
+        })
     }
 };
 </script>

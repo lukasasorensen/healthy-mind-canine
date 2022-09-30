@@ -71,10 +71,16 @@
 </template>
 <script>
 import Footer from '../components/Footer.vue'
+import { useMeta } from 'vue-meta';
 export default {
     name: 'Resources',
     components: {
         Footer
+    },
+    setup() {
+        useMeta({
+            title: 'Separation Anxiety Resources | Books, blogs, & more | Healthy Mind Canine'
+        })
     }
 }
 </script>
