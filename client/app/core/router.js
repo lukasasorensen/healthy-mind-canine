@@ -1,5 +1,5 @@
 'use strict';
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
 import Home from '../routes/Home.vue';
 import About from '../routes/About.vue';
@@ -21,5 +21,5 @@ export default createRouter({
         { path: '/faq', component: FAQ },
         { path: '/resources', component: Resources }
     ],
-    history: createWebHashHistory()
+    history: createWebHistory()
 });
