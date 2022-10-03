@@ -182,7 +182,8 @@ export default {
     },
     setup() {
         useMeta({
-            title: 'About Separation Anxiety | Virtual Dog Training | Healthy Mind Canine'
+            title: 'About Separation Anxiety | Healthy Mind Canine | Virtual Dog Training',
+            description: 'Virtual separation anxiety dog training that actually works. No more noise complaints or household destruction. We take the guesswork out of training your dog. Learn more about our methods & how we can help you regain your freedom!'
         })
     }
 };

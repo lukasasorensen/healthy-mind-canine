@@ -114,7 +114,8 @@ export default {
     },
     setup() {
         useMeta({
-            title: 'Separation Anxiety Dog Training | FAQs | Healthy Mind Canine'
+            title: 'FAQs | Healthy Mind Canine | Separation Anxiety',
+            description: 'Learn more about our effective separation anxiety dog training programs on our FAQ page.'
         })
     }
 }

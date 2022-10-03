@@ -79,7 +79,8 @@ export default {
     },
     setup() {
         useMeta({
-            title: 'Separation Anxiety Resources | Books, blogs, & more | Healthy Mind Canine'
+            title: 'Resources | Healthy Mind Canine | Separation Anxiety',
+            description: 'We provide separation anxiety dog training resources so you can learn how to help your dog recover from their separation anxiety.'
         })
     }
 }

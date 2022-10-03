@@ -80,7 +80,8 @@ export default {
     },
     setup() {
         useMeta({
-            title: 'Separation Anxiety Programs | Pricing | Healthy Mind Canine'
+            title: 'Pricing | Healthy Mind Canine | Separation Anxiety Programs',
+            description: 'Learn more about our expert separation anxiety dog training packages and pricing. Get custom coaching, training, & support for you and your dog today!'
         })
     }
 }

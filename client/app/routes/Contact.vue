@@ -342,7 +342,8 @@ export default {
     },
     setup() {
         useMeta({
-            title: 'Dog Separation Anxiety Training | Contact Us | Healthy Mind Canine'
+            title: 'Contact Us | Healthy Mind Canine | Dog Separation Anxiety Training',
+            description: 'Contact us about our customized separation anxiety dog training. It all starts with a virtual initial consultation so we can assess your dog and walk you through our training program. Don\'t wait! Get started today and regain your freedom.'
         })
     }
 }
