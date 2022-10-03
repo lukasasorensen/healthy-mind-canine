@@ -32,10 +32,16 @@
 </template>
 <script>
 import Footer from '../components/Footer';
+import { useMeta } from 'vue-meta';
 export default {
     name: 'About',
     components: {
         Footer
+    },
+    setup() {
+        useMeta({
+            title: 'Dog Separation Anxiety Expert | About Us | Healthy Mind Canine'
+        })
     }
 };
 </script>

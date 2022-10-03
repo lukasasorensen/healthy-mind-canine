@@ -309,6 +309,8 @@
     </div>
 </template>
 <script>
+import { useMeta } from 'vue-meta';
+
 export default {
     name: 'Contact',
     methods: {
@@ -337,6 +339,11 @@ export default {
             isFormDirty: false,
             isIframeLoaded: false
         }
+    },
+    setup() {
+        useMeta({
+            title: 'Dog Separation Anxiety Training | Contact Us | Healthy Mind Canine'
+        })
     }
 }
 </script>

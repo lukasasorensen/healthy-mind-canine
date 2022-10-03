@@ -133,6 +133,8 @@
 </template>
 <script>
 import Footer from "../components/Footer";
+import { useMeta } from 'vue-meta'
+
 export default {
     name: 'services',
     components: {
@@ -177,6 +179,11 @@ export default {
         setTimeout(() => {
             this.runScrollDownAttentionAnimation();
         }, 2000);
+    },
+    setup() {
+        useMeta({
+            title: 'About Separation Anxiety | Virtual Dog Training | Healthy Mind Canine'
+        })
     }
 };
 </script>
