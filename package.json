@@ -51,6 +51,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
+    "copy-webpack-plugin": "^11.0.0",
     "html-webpack-plugin": "^5.5.0"
   }
 }
