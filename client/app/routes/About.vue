@@ -40,7 +40,8 @@ export default {
     },
     setup() {
         useMeta({
-            title: 'Dog Separation Anxiety Expert | About Us | Healthy Mind Canine'
+            title: 'About Us | Healthy Mind Canine | Dog Separation Anxiety Expert',
+            description: 'Meet our multi certified separation anxiety dog training expert, Lauren Sorensen. She prioritizes bringing her clients the most effective and humane methods available.'
         })
     }
 };
