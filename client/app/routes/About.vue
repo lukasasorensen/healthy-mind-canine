@@ -32,10 +32,17 @@
 </template>
 <script>
 import Footer from '../components/Footer';
+import { useMeta } from 'vue-meta';
 export default {
     name: 'About',
     components: {
         Footer
+    },
+    setup() {
+        useMeta({
+            title: 'About Us | Healthy Mind Canine | Dog Separation Anxiety Expert',
+            description: 'Meet our multi certified separation anxiety dog training expert, Lauren Sorensen. She prioritizes bringing her clients the most effective and humane methods available.'
+        })
     }
 };
 </script>

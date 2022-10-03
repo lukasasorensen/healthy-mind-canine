@@ -309,6 +309,8 @@
     </div>
 </template>
 <script>
+import { useMeta } from 'vue-meta';
+
 export default {
     name: 'Contact',
     methods: {
@@ -337,6 +339,12 @@ export default {
             isFormDirty: false,
             isIframeLoaded: false
         }
+    },
+    setup() {
+        useMeta({
+            title: 'Contact Us | Healthy Mind Canine | Dog Separation Anxiety Training',
+            description: 'Contact us about our customized separation anxiety dog training. It all starts with a virtual initial consultation so we can assess your dog and walk you through our training program. Don\'t wait! Get started today and regain your freedom.'
+        })
     }
 }
 </script>

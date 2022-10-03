@@ -18,7 +18,8 @@
                     We are here to help you regain your freedom!<span>"</span>
                 </p>
                 <div class="home-learn-more-button-container">
-                    <button @click="goToServices()" class="btn btn-lg btn-primary" aria-label="Learn More">Learn More</button>
+                    <button @click="goToServices()" class="btn btn-lg btn-primary" aria-label="Learn More">Learn
+                        More</button>
                 </div>
             </div>
         </section>
@@ -27,6 +28,7 @@
 </template>
 <script>
 import Footer from "../components/Footer";
+import { useMeta } from "vue-meta";
 
 export default {
     name: 'Home',
@@ -75,6 +77,12 @@ export default {
     },
     mounted() {
         this.registerScrollEventListener();
+    },
+    setup() {
+        useMeta({
+            title: 'Healthy Mind Canine | Separation Anxiety Dog Training',
+            description: 'Our certified dog separation anxiety experts provide custom coaching & training for pets and their guardians no matter where they live. We use the most effective methods available to give you the best chance of success!'
+        })
     }
 };
 </script>

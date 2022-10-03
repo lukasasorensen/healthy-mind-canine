@@ -106,11 +106,18 @@
 </template>
 <script>
 import Footer from '../components/Footer.vue'
+import { useMeta } from 'vue-meta';
 export default {
     name: 'PricingAndFAQ',
     components: {
         Footer
     },
+    setup() {
+        useMeta({
+            title: 'FAQs | Healthy Mind Canine | Separation Anxiety',
+            description: 'Learn more about our effective separation anxiety dog training programs on our FAQ page.'
+        })
+    }
 }
 </script>
 <style lang="scss">

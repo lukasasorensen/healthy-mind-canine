@@ -1,6 +1,6 @@
 {
   "name": "healthy-mind-canine",
-  "version": "1.0.15",
+  "version": "1.0.17",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -43,6 +43,7 @@
     "vue": "^3.2.33",
     "vue-i18n": "^9.1.10",
     "vue-loader": "^17.0.0",
+    "vue-meta": "^3.0.0-alpha.10",
     "vue-router": "^4.0.15",
     "vuex": "^4.0.2",
     "webpack": "^5.72.1",
@@ -50,6 +51,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
+    "copy-webpack-plugin": "^11.0.0",
     "html-webpack-plugin": "^5.5.0"
   }
 }
