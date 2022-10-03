@@ -61,8 +61,8 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: path.resolve(__dirname, '..', 'client/assets/healthy-mind-canine-logo-small.png'),
-                    to: path.resolve(__dirname, '..', 'dist/healthy-mind-canine-logo-small.png')
+                    from: path.resolve(__dirname, '..', 'client/assets/hmc-social-metatag-image.png'),
+                    to: path.resolve(__dirname, '..', 'dist/hmc-social-metatag-image.png')
                 }
             ]
         })
