@@ -81,7 +81,7 @@ export default {
     setup() {
         useMeta({
             title: 'Healthy Mind Canine | Separation Anxiety Dog Training',
-            description: 'Our certified dog separation anxiety experts provide custom coaching & training for pets and their guardians no matter where they live in the world. We use the most effective methods available to give you the best chance of success!'
+            description: 'Our certified dog separation anxiety experts provide custom coaching & training for pets and their guardians no matter where they live. We use the most effective methods available to give you the best chance of success!'
         })
     }
 };
