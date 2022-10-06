@@ -114,10 +114,8 @@
                 </div>
                 <div class="what-do-i-need-image-container col-sm-4 col-xs-12 hidden-xs"></div>
                 <div class="go-to-buttons">
-                    <p class="call-to-action">Are you ready to go from chaos to calm?</p>
-                    <button @click="goToFaq()" class="btn btn-secondary btn-lg hidden-xs">Yes I'm Ready!</button>
-                    <button @click="goToFaq()" class="btn btn-primary visible-xs">Yes I'm Ready!</button>
-                    <!-- <button @click="goToPricing()" class="btn btn-primary btn-lg hidden-xs">Go To Pricing</button> -->
+                    <p class="call-to-action">Are you ready to go from <i>chaos</i> to calm?</p>
+                    <button @click="gotToContact()" class="btn btn-secondary btn-lg">Yes, I'm Ready!</button>
                 </div>
             </div>
         </section>
@@ -170,6 +168,9 @@ export default {
         },
         goToPricing: function () {
             this.$router.push('/pricing');
+        },
+        gotToContact: function() {
+            this.$router.push('/contact')
         }
     },
     mounted() {
@@ -404,6 +405,7 @@ export default {
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
+                bottom: 20px !important;
             }
         }
     }
@@ -522,7 +524,7 @@ export default {
                 }
 
                 .go-to-buttons {
-                    bottom: 20px;
+                    bottom: 10%;
                 }
             }
         }
