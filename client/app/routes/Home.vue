@@ -3,6 +3,7 @@
         <div class="home-logo-container" :style="{ 'opacity': homeLogoOpacity }">
             <div class="home-logo"></div>
             <h3 class="tag-line">Separation Anxiety Training</h3>
+            <h4 class="service-area-tag-line">"Serving people and pets no matter where they live"</h4>
         </div>
         <div class="down-icon" @click="scrollToNextSection" :style="{ 'opacity': homeLogoOpacity }">
             <font-awesome-icon class="scroll-down-icon" icon="fa-solid fa-chevron-down" />
@@ -130,6 +131,13 @@ export default {
         .tag-line {
             color: $secondary-color;
             font-size: 24px;
+        }
+
+        .service-area-tag-line {
+            color: $secondary-color;
+            font-style: oblique;
+            font-size: 20px;
+            margin-top: 7%;
         }
     }
 
