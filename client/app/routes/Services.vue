@@ -403,7 +403,7 @@ export default {
                 width: 100%;
                 display: flex;
                 justify-content: center;
-                top: 20px;
+                flex-direction: column;
             }
         }
     }
