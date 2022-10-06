@@ -114,9 +114,8 @@
                 </div>
                 <div class="what-do-i-need-image-container col-sm-4 col-xs-12 hidden-xs"></div>
                 <div class="go-to-buttons">
-                    <button @click="goToFaq()" class="btn btn-secondary btn-lg hidden-xs">Go To FAQ</button>
-                    <button @click="goToFaq()" class="btn btn-primary visible-xs">Go To FAQ</button>
-                    <button @click="goToPricing()" class="btn btn-primary btn-lg hidden-xs">Go To Pricing</button>
+                    <p class="call-to-action">Are you ready to go from <i>chaos</i> to calm?</p>
+                    <button @click="gotToContact()" class="btn btn-secondary btn-lg">Yes, I'm Ready!</button>
                 </div>
             </div>
         </section>
@@ -169,6 +168,9 @@ export default {
         },
         goToPricing: function () {
             this.$router.push('/pricing');
+        },
+        gotToContact: function() {
+            this.$router.push('/contact')
         }
     },
     mounted() {
@@ -382,8 +384,15 @@ export default {
             left: 50%;
             transform: translateX(-50%);
 
-            button:nth-child(1) {
-                margin-right: 35px;
+            button {
+                margin: auto;
+            }
+
+            .call-to-action {
+                margin-bottom: 15px;
+                color: $primary-color;
+                font-weight: bolder;
+                font-family: arial;
             }
         }
     }
@@ -395,7 +404,8 @@ export default {
                 width: 100%;
                 display: flex;
                 justify-content: center;
-                top: 20px;
+                flex-direction: column;
+                bottom: 20px !important;
             }
         }
     }
@@ -427,7 +437,7 @@ export default {
             }
 
             .what-do-i-need-info {
-                padding-top: 65px;
+                padding-top: 40px;
             }
 
             .what-do-i-need-list {
@@ -514,7 +524,7 @@ export default {
                 }
 
                 .go-to-buttons {
-                    bottom: 20px;
+                    bottom: 10%;
                 }
             }
         }
