@@ -114,9 +114,10 @@
                 </div>
                 <div class="what-do-i-need-image-container col-sm-4 col-xs-12 hidden-xs"></div>
                 <div class="go-to-buttons">
-                    <button @click="goToFaq()" class="btn btn-secondary btn-lg hidden-xs">Go To FAQ</button>
-                    <button @click="goToFaq()" class="btn btn-primary visible-xs">Go To FAQ</button>
-                    <button @click="goToPricing()" class="btn btn-primary btn-lg hidden-xs">Go To Pricing</button>
+                    <p class="call-to-action">Are you ready to go from chaos to calm?</p>
+                    <button @click="goToFaq()" class="btn btn-secondary btn-lg hidden-xs">Yes I'm Ready!</button>
+                    <button @click="goToFaq()" class="btn btn-primary visible-xs">Yes I'm Ready!</button>
+                    <!-- <button @click="goToPricing()" class="btn btn-primary btn-lg hidden-xs">Go To Pricing</button> -->
                 </div>
             </div>
         </section>
@@ -382,8 +383,15 @@ export default {
             left: 50%;
             transform: translateX(-50%);
 
-            button:nth-child(1) {
-                margin-right: 35px;
+            button {
+                margin: auto;
+            }
+
+            .call-to-action {
+                margin-bottom: 15px;
+                color: $primary-color;
+                font-weight: bolder;
+                font-family: arial;
             }
         }
     }
@@ -427,7 +435,7 @@ export default {
             }
 
             .what-do-i-need-info {
-                padding-top: 65px;
+                padding-top: 40px;
             }
 
             .what-do-i-need-list {
