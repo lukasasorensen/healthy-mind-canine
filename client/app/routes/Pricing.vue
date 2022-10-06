@@ -97,7 +97,7 @@ export default {
     .section {
         scroll-snap-align: start;
         height: auto;
-        min-height: calc(100% - $nav-height);
+        min-height: 100%;
     }
 
     .pricing-detail {

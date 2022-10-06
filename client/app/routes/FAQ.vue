@@ -131,6 +131,7 @@ export default {
     .section {
         scroll-snap-align: start;
         height: auto;
+        min-height: 100%;
     }
 
     .section-1 {
