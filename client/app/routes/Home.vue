@@ -214,5 +214,22 @@ export default {
             text-align: center;
         }
     }
+
+    @media (max-width: $screen-md) {
+        .home-logo-container {
+
+            .home-logo {
+                height: 69px;
+            }
+
+            .tag-line {
+                font-size: 18px;
+            }
+
+            .service-area-tag-line {
+                margin-top: 13%;
+            }
+        }
+    }
 }
 </style>
