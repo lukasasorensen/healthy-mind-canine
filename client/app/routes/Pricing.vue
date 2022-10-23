@@ -10,7 +10,7 @@
                 </div>
                 <div class="pricing-table">
                     <div class="dotted-table-row">
-                        <p class="dotted-table-left">Initial Consultation (60-90min)</p>
+                        <p class="dotted-table-left">Initial Consultation (90min)</p>
                         <div class="dotted-table-line"></div>
                         <p class="dotted-table-right">$175</p>
                     </div>
@@ -45,7 +45,7 @@
                 </div>
                 <ul class="four-week-package-items">
                     <li>
-                        1 face to face Zoom meeting per week, 30-60 Minutes. During these sessions we will walk you
+                        1 face to face Zoom meeting per week, 30 Minutes. During these sessions we will walk you
                         through
                         a training exercise, assess your dog, and answer any questions that come up.
                     </li>
@@ -55,7 +55,7 @@
                         on how your dog did during training the previous day.
                     </li>
                     <li>
-                        Access to our exclusive separation anxiety app to track your progress and communicate with your
+                        Access to the exclusive <i>SA Pro Trainer App</i> to track your progress and communicate with your
                         trainer.
                     </li>
                     <li>
@@ -97,7 +97,7 @@ export default {
     .section {
         scroll-snap-align: start;
         height: auto;
-        min-height: calc(100% - $nav-height);
+        min-height: 100%;
     }
 
     .pricing-detail {
