@@ -21,7 +21,8 @@
                     </div>
                     <div class="faq-answer">
                         Having the trainer work virtually allows us to see your dog's true behavior in their normal
-                        environment. It also allows us to work with each of our clients 5 days a week.
+                        environment. It also allows us to work with each of our clients 5 days a week to provide an
+                        unmatched level of support!
                     </div>
                 </div>
                 <div class="faq-question-answer">
@@ -40,8 +41,8 @@
                         Can you guarantee results?
                     </div>
                     <div class="faq-answer">
-                        Ethically, we cannot guarantee results, as we are working with live sentient beings. The method
-                        we use is studied to be the most effective method available for separation anxiety so far.
+                        The method we use is studied to be the most effective method available for separation anxiety so
+                        far. However, we cannot guarantee results since we are working with live beings.
                     </div>
                 </div>
                 <div class="faq-question-answer">
