@@ -329,6 +329,7 @@ export default {
     }
 
     .section-4 {
+        min-height: 740px;
         text-align: center;
         display: flex;
         justify-content: center;
@@ -405,7 +406,8 @@ export default {
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-                bottom: 20px !important;
+                bottom: 0px !important;
+                padding: 10px;
             }
         }
     }
