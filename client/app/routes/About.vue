@@ -63,6 +63,7 @@ export default {
     .section {
         width: 100vw;
         height: auto;
+        min-height: calc(100% - $nav-height);
     }
 
     .about-container {
