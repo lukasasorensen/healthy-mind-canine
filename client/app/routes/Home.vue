@@ -1,26 +1,67 @@
 <template lang="html">
     <div class="route home">
-        <div class="home-logo-container" :style="{ 'opacity': homeLogoOpacity }">
-            <div class="home-logo"></div>
-            <h3 class="tag-line">Separation Anxiety Training</h3>
-            <h4 class="service-area-tag-line">"Serving people and pets no matter where they live"</h4>
-        </div>
         <div class="down-icon" @click="scrollToNextSection" :style="{ 'opacity': homeLogoOpacity }">
             <font-awesome-icon class="scroll-down-icon" icon="fa-solid fa-chevron-down" />
         </div>
         <section class="section section-1">
             <div class="section-1-bg"></div>
+            <div class="scrolling-copy-container">
+                <div class="copy-container home-copy-1-container">
+                    <h2 class="home-copy-1-header copy-header">There is Hope!</h2>
+                    <p class="home-copy-1">
+                        Do you feel like you have tried absolutely everything to fix your dog's separation anxiety and
+                        you're still coming home to a destroyed space, angry neighbors, and a panicked dog?
+                        &nbsp;&nbsp;We get it, you're at your wits end, you're sad to see your pup suffering, and you
+                        don't know how
+                        else to help your dog.
+                    </p>
+                </div>
+
+                <div class="copy-container home-copy-2-container">
+                    <h2 class="home-copy-2-header copy-header">Certified Pro Trainers</h2>
+                    <p class="home-copy-2">
+                        Our Certified Separation Anxiety Pro Trainers are here for you and can help even in the most
+                        severe cases, no matter where you live.
+                    </p>
+                    <p class="emphasis">We live and breathe separation anxiety. In fact, it's all we do!</p>
+                </div>
+            </div>
         </section>
-        <section class="section section-2 home-mission-photo">
-            <div class="home-mission">
-                <!-- <h4>Our Mission</h4> -->
-                <p class="home-mission-text">
-                    <span>"</span>Your dog isn't giving you a hard time, they're <i>having</i> a hard time.
-                    We are here to help you regain your freedom!<span>"</span>
-                </p>
-                <div class="home-learn-more-button-container">
-                    <button @click="goToServices()" class="btn btn-lg btn-primary" aria-label="Learn More">Learn
-                        More</button>
+        <section class="section section-2 why-us-section">
+            <div class="col-xs-12 why-us-list-container">
+                <div class="why-us-item">
+                    <div class="why-us-item-icon-container">
+                        <font-awesome-icon class="fa-4x" icon="fa-solid fa-dog" />
+                    </div>
+                    <h2 class="why-us-item-header">Custom Training Plans</h2>
+                    <p class="why-us-item-text">
+                        We craft custom, easy to follow, training plans each day based on how your dog did the previous
+                        day. We take the guesswork out of training, giving you, and your furry family member the best
+                        chance of resolution.
+                    </p>
+                </div>
+
+                <div class="why-us-item">
+                    <div class="why-us-item-icon-container">
+                        <font-awesome-icon class="fa-4x" icon="fa-solid fa-laptop" />
+                    </div>
+                    <h2 class="why-us-item-header">Remote Training</h2>
+                    <p class="why-us-item-text">
+                        Remote training allows trainers to see your dog in its natural environment and work with
+                        each client up to 5 days a week.
+                    </p>
+                </div>
+
+                <div class="why-us-item">
+                    <div class="why-us-item-icon-container">
+                        <font-awesome-icon class="fa-4x" icon="fa-solid fa-graduation-cap" />
+                    </div>
+                    <h2 class="why-us-item-header">1 on 1 Training</h2>
+                    <p class="why-us-item-text">
+                        Our trainers only take on a small number of cases so we can provide intensive individualized
+                        support to each one of our clients. You are not just a client to us. You are part of the Healthy
+                        Mind Canine family!
+                    </p>
                 </div>
             </div>
         </section>
@@ -149,69 +190,116 @@ export default {
 
     .section-1 {
         z-index: 1;
-    }
 
-    .section-1-bg {
-        width: 100%;
-        height: 100%;
-        background: $primary-bg;
-        position: absolute;
-        z-index: 1000;
-        top: 0;
-        left: 0;
-    }
-
-    .section-2 {
-        // background: $secondary-bg;
-        height: 150%;
-
-        .home-mission {
+        .section-1-bg {
             position: fixed;
+            top: $nav-height;
+            left: 0;
             width: 100%;
-            max-width: 850px;
-            margin: auto;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            font-size: 20px;
+            height: calc(100% - $nav-height);
+            z-index: -1;
+            @include bgimage;
+            background-image: url('assets/woman-shaking-hands-with-dog.jpg');
+            background-size: cover;
             pointer-events: none;
-            padding: 20px;
+        }
 
-            .home-mission-text {
-                text-align: center;
-                font-size: 1.5em;
-                line-height: 2.2em;
-                text-shadow: 2px 1px 1px rgb(0 0 0 / 68%);
+        .scrolling-copy-container {
+            width: 100%;
+            height: 100%;
+            padding-top: 50px;
 
-                span {
-                    font-size: 1.3em;
+            .copy-container {
+                width: 80%;
+                height: auto;
+                border-radius: 20px;
+                padding: 30px 50px 30px 50px;
+                position: absolute;
+                backdrop-filter: blur(6px);
+                background: rgba(246, 251, 255, 0.8);
+
+                p {
+                    color: $secondary-color;
+                    line-height: 35px;
+                    font-size: 17px;
                 }
             }
 
-            h4 {
-                color: $primary-color;
-                font-size: 35px;
-                margin-bottom: 15px;
+            .copy-header {
+                font-size: 40px;
+                margin-bottom: 20px;
             }
 
-            p {
-                color: white;
-                line-height: 50px;
+            .home-copy-1-container {
+                left: -20px;
+                top: 50px;
+
+                p {
+                    color: black;
+                }
             }
 
-        }
+            .home-copy-2-container {
+                right: -20px;
+                bottom: 80px;
+                background-color: rgba(14, 34, 49, 0.8);
 
-        &.home-mission-photo {
-            @include bgimage;
-            background-image: url('assets/goldencutiepie.jpg');
-            background-size: cover;
-        }
+                .home-copy-2-header {
+                    font-size: 24px;
+                }
 
-        .home-learn-more-button-container {
-            margin-top: 80px;
-            pointer-events: all;
-            text-align: center;
+                .emphasis {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-weight: bolder;
+                    font-size: 20px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .section-2 {
+
+        .why-us-list-container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 50px 30px;
+
+            .why-us-item {
+                opacity: 0.95;
+                padding: 20px;
+                border-radius: 15px;
+                width: 30%;
+                height: 100%;
+                max-height: 60%;
+                background-color: $primary-bg;
+                color: $secondary-text;
+                font-size: 14px;
+                align-self: center;
+
+                .why-us-item-header {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                .why-us-item-text {
+                    color: $secondary-text;
+                }
+
+                .why-us-item-icon-container {
+                    margin-bottom: 20px;
+                }
+
+                .why-us-item-icon-container,
+                .why-us-item-text,
+                .why-us-item-header {
+                    text-align: center;
+                }
+            }
         }
     }
 

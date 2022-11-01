@@ -103,7 +103,7 @@ export default {
         justify-content: space-between;
         font-size: 18px;
         max-width: 740px;
-        padding: 0;
+        padding: 10px 0;
         color: $primary-color;
 
         button {
