@@ -77,7 +77,7 @@ export default {
     left: 0;
     width: 100%;
     height: $nav-height;
-    padding: 30px;
+    padding: 20px;
     box-sizing: border-box;
     background-color: #fff;
     z-index: 999999;
@@ -101,13 +101,13 @@ export default {
         margin: auto;
         display: flex;
         justify-content: space-between;
-        font-size: 20px;
+        font-size: 18px;
         max-width: 740px;
         padding: 0;
         color: $primary-color;
 
         button {
-            font-size: 20px;
+            font-size: 18px;
             color: $primary-color;
             background: transparent;
             border: none;
