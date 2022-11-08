@@ -1,43 +1,52 @@
 <template lang="html">
     <div class="route home">
-        <div class="down-icon" @click="scrollToNextSection" :style="{ 'opacity': homeLogoOpacity }">
-            <font-awesome-icon class="scroll-down-icon" icon="fa-solid fa-chevron-down" />
+        <div class="down-icon-container" @click="scrollToNextSection">
+            <div class="down-icon">
+                <font-awesome-icon class="scroll-down-icon" icon="fa-solid fa-chevron-down" />
+            </div>
         </div>
         <section class="section section-1">
             <div class="section-1-bg"></div>
-            <div class="scrolling-copy-container">
+
+            <h1 class="home-main-header">Struggling with Dog Separation Anxiety?</h1>
+
+            <div class="section-1-copy-container">
                 <div class="copy-container home-copy-1-container">
-                    <h2 class="home-copy-1-header copy-header">There is Hope!</h2>
                     <p class="home-copy-1">
                         Do you feel like you have tried absolutely everything to fix your dog's separation anxiety and
                         you're still coming home to a destroyed space, angry neighbors, and a panicked dog?
-                        &nbsp;&nbsp;We get it, you're at your wits end, you're sad to see your pup suffering, and you
-                        don't know how
+                        &nbsp;We get it, you're sad to see your pup suffering, you're at your wits end, and you don't
+                        know how
                         else to help your dog.
                     </p>
                 </div>
 
+
+            </div>
+        </section>
+        <section class="section section-2">
+            <div class="content-container">
                 <div class="copy-container home-copy-2-container">
-                    <h2 class="home-copy-2-header copy-header">Certified Pro Trainers</h2>
+                    <h2 class="home-copy-2-header copy-header">There is Hope!</h2>
                     <p class="home-copy-2">
                         Our Certified Separation Anxiety Pro Trainers are here for you and can help even in the most
-                        severe cases, no matter where you live.
+                        severe cases.
                     </p>
-                    <p class="emphasis">We live and breathe separation anxiety. In fact, it's all we do!</p>
+                    <p class="emphasis">We live & breathe separation anxiety. In fact, it's all we do!</p>
                 </div>
             </div>
         </section>
-        <section class="section section-2 why-us-section">
+        <section class="section section-3 why-us-section">
             <div class="col-xs-12 why-us-list-container">
                 <div class="why-us-item">
                     <div class="why-us-item-icon-container">
                         <font-awesome-icon class="fa-4x" icon="fa-solid fa-dog" />
                     </div>
-                    <h2 class="why-us-item-header">Custom Training Plans</h2>
+                    <h2 class="why-us-item-header">Customized training</h2>
                     <p class="why-us-item-text">
-                        We craft custom, easy to follow, training plans each day based on how your dog did the previous
-                        day. We take the guesswork out of training, giving you, and your furry family member the best
-                        chance of resolution.
+                        Every dog is an individual. Therefore, we craft custom, easy to follow, training plans each day
+                        based on how your dog did the previous day. We take the guesswork out of training, giving you,
+                        and your furry family member the best chance of resolution.
                     </p>
                 </div>
 
@@ -45,10 +54,11 @@
                     <div class="why-us-item-icon-container">
                         <font-awesome-icon class="fa-4x" icon="fa-solid fa-laptop" />
                     </div>
-                    <h2 class="why-us-item-header">Remote Training</h2>
+                    <h2 class="why-us-item-header">100% Virtual</h2>
                     <p class="why-us-item-text">
-                        Remote training allows trainers to see your dog in its natural environment and work with
-                        each client up to 5 days a week.
+                        Where you live should not be a barrier to expert help. Working virtually allows us to work with
+                        pet owners no matter where they live, support each client up to 5 days a week and
+                        allows us to see your dog's behavior in their typical environment.
                     </p>
                 </div>
 
@@ -58,9 +68,9 @@
                     </div>
                     <h2 class="why-us-item-header">1 on 1 Training</h2>
                     <p class="why-us-item-text">
-                        Our trainers only take on a small number of cases so we can provide intensive individualized
-                        support to each one of our clients. You are not just a client to us. You are part of the Healthy
-                        Mind Canine family!
+                        Our trainers only take on a small number of cases so we can provide individualized support to
+                        each one of our clients. You are not just a client to us. You and your dog are part of the
+                        Healthy Mind Canine family! We love them too!
                     </p>
                 </div>
             </div>
@@ -112,10 +122,6 @@ export default {
         }
     },
     computed: {
-        homeLogoOpacity() {
-            if (!this.scrollDistance) return 1;
-            return 0.8 - this.scrollDistance / window.innerHeight;
-        }
     },
     mounted() {
         this.registerScrollEventListener();
@@ -137,9 +143,16 @@ export default {
 }
 
 .home.route {
-    .down-icon {
+
+    h1,
+    h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+    }
+
+    .down-icon-container {
         position: fixed;
-        bottom: 40px;
+        bottom: 13px;
         width: 100%;
         justify-content: center;
         display: flex;
@@ -147,6 +160,19 @@ export default {
         font-size: 20px;
         color: $primary-color;
         cursor: pointer;
+
+        .down-icon {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+
+            &:hover {
+                background: rgba(102, 102, 102, 0.1);
+            }
+        }
     }
 
     .home-logo-container {
@@ -182,6 +208,33 @@ export default {
         }
     }
 
+    .copy-container {
+        width: 100%;
+        max-width: 970px;
+        height: auto;
+        border-radius: 20px;
+        padding: 30px 50px 30px 50px;
+        backdrop-filter: blur(6px);
+        background: rgba(246, 251, 255, 0.8);
+
+        p {
+            color: $secondary-text;
+            line-height: 35px;
+            font-size: 17px;
+        }
+    }
+
+    .copy-header {
+        margin-bottom: 20px;
+    }
+
+    .section-1-copy-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
     .section {
         width: 100%;
         height: 100%;
@@ -191,12 +244,23 @@ export default {
     .section-1 {
         z-index: 1;
 
+        .home-main-header {
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            top: 100px;
+            font-size: 90px;
+            text-shadow: 3px 3px 3px black;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
         .section-1-bg {
             position: fixed;
             top: $nav-height;
             left: 0;
             width: 100%;
-            height: calc(100% - $nav-height);
+            height: calc(100% - $nav-height - 60px);
             z-index: -1;
             @include bgimage;
             background-image: url('assets/woman-shaking-hands-with-dog.jpg');
@@ -204,61 +268,47 @@ export default {
             pointer-events: none;
         }
 
-        .scrolling-copy-container {
-            width: 100%;
-            height: 100%;
-            padding-top: 50px;
+        .home-copy-1-container {
+            position: absolute;
+            bottom: 120px;
+            background-color: rgba(14, 34, 49, 0.9);
 
-            .copy-container {
-                width: 80%;
-                height: auto;
-                border-radius: 20px;
-                padding: 30px 50px 30px 50px;
-                position: absolute;
-                backdrop-filter: blur(6px);
-                background: rgba(246, 251, 255, 0.8);
-
-                p {
-                    color: $secondary-color;
-                    line-height: 35px;
-                    font-size: 17px;
-                }
+            p {
+                color: #fff;
             }
 
-            .copy-header {
-                font-size: 40px;
-                margin-bottom: 20px;
+            .home-copy-1-header {
+                font-size: 36px;
             }
 
-            .home-copy-1-container {
-                left: -20px;
-                top: 50px;
-
-                p {
-                    color: black;
-                }
-            }
-
-            .home-copy-2-container {
-                right: -20px;
-                bottom: 80px;
-                background-color: rgba(14, 34, 49, 0.8);
-
-                .home-copy-2-header {
-                    font-size: 24px;
-                }
-
-                .emphasis {
-                    font-family: Arial, Helvetica, sans-serif;
-                    font-weight: bolder;
-                    font-size: 20px;
-                    margin-top: 10px;
-                }
+            .emphasis {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bolder;
+                font-size: 20px;
+                margin-top: 10px;
             }
         }
     }
 
     .section-2 {
+        .content-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .home-copy-2-container {
+            bottom: 200px;
+            right: -20px;
+            position: absolute;
+
+            .home-copy-2-header {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .section-3 {
 
         .why-us-list-container {
             height: 100%;
@@ -273,8 +323,7 @@ export default {
                 padding: 20px;
                 border-radius: 15px;
                 width: 30%;
-                height: 100%;
-                max-height: 60%;
+                height: 410px;
                 background-color: $primary-bg;
                 color: $secondary-text;
                 font-size: 14px;
