@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="route home">
         <div class="down-icon-container" @click="scrollToNextSection">
-            <div class="down-icon">
+            <div class="down-icon hidden-xs">
                 <font-awesome-icon class="scroll-down-icon" icon="fa-solid fa-chevron-down" />
             </div>
         </div>
@@ -81,8 +81,8 @@
             </div>
             <div class="imagine-peace-text-container">
                 <p class="imagine-peace-text">
-                    Now, imagine coming home to a dog who has been comfortably lounging all day instead of barking,
-                    howling, or destroying your home. A dog who experiences separation anxiety can overcome it and learn
+                    Imagine coming home to a dog who has been comfortably lounging all day instead of barking,
+                    howling, or destroying your home. A dog who experiences separation anxiety <i>can</i> overcome it and learn
                     to relax at home comfortably with the help of a specialist!
                 </p>
             </div>

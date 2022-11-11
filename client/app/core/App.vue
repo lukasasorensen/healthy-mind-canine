@@ -103,6 +103,7 @@ body {
 .section {
     height: calc(100vh - $nav-height);
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .route {
