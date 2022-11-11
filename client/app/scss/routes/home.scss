@@ -213,6 +213,48 @@
         }
     }
 
+    .section-4 {
+        position: relative;
+        background: $primary-bg;
+        padding-top: 30px;
+        .imagine-peace-text-container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            padding: 0 20%;
+            margin-top: 10px;
+
+            .imagine-peace-text {
+                font-size: 22px;
+                line-height: 42px;
+                text-align: center;
+            }
+        }
+
+        .sleepy-dog-image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .sleepy-dog-image {
+                @include bgimage;
+                background-image: url("assets/sleepy-puppy.jpg");
+                background-size: cover;
+                width: 260px;
+                height: 260px;
+                margin: 0px;
+                clip-path: circle(44% at 50% 50%);
+            }
+        }
+
+        .continue-button-container {
+            width: 100%;
+            margin-top: 35px;
+            text-align: center;
+        }
+    }
+
     @media (max-width: $screen-md) {
         .home-logo-container {
             .home-logo {

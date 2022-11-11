@@ -76,12 +76,18 @@
             </div>
         </section>
         <section class="section section-4">
+            <div class="sleepy-dog-image-container">
+                <div class="sleepy-dog-image"></div>
+            </div>
             <div class="imagine-peace-text-container">
-                <p class="image-peace-text">
+                <p class="imagine-peace-text">
                     Now, imagine coming home to a dog who has been comfortably lounging all day instead of barking,
                     howling, or destroying your home. A dog who experiences separation anxiety can overcome it and learn
                     to relax at home comfortably with the help of a specialist!
                 </p>
+            </div>
+            <div class="continue-button-container">
+                <button class="continue-button btn btn-lg btn-primary" @click="goToServices">View Training Programs</button>
             </div>
         </section>
         <Footer></Footer>
@@ -127,7 +133,7 @@ export default {
             route.scrollTo(0, (scrollTop + routeHeight));
         },
         goToServices: function () {
-            this.$router.push('/services#what-is-separation-anxiety')
+            this.$router.push('/services')
         }
     },
     computed: {
