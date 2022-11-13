@@ -63,7 +63,7 @@
                 </div>
             </div>
         </section>
-        <section ref="section-4" class="section section-4 pricing">
+        <section ref="section-4" class="section section-4 pricing" id="pricing">
             <div class="pricing-info-container">
 
                 <div class="pricing-header-container">
@@ -77,7 +77,7 @@
                         <div class="pricing-panel">
                             <div class="col-xs-12 pricing-panel-header">
                                 <h2>Initial Consultation and Assessment</h2>
-                                <p class="pricing-panel-price">$175</p>
+                                <p class="pricing-panel-price">$200</p>
                             </div>
                             <div class="pricing-panel-details">
                                 <ul>
@@ -97,7 +97,8 @@
                         <div class="pricing-panel">
                             <div class="col-xs-12 pricing-panel-header">
                                 <h2>4 Week Program</h2>
-                                <p class="pricing-panel-price">$800</p>
+                                <p class="pricing-panel-price"><strike>$800</strike> $600</p>
+                                <p>Limited Time Offer!</p>
                             </div>
                             <div class="pricing-panel-details">
                                 <ul>
@@ -115,7 +116,8 @@
                         <div class="pricing-panel">
                             <div class="col-xs-12 pricing-panel-header">
                                 <h2>8 Week Program</h2>
-                                <p class="pricing-panel-price">$1,350 (save $250!)</p>
+                                <p class="pricing-panel-price"><strike>$1,350</strike> $1,075</p>
+                                <p>Limited Time Offer!</p>
                             </div>
                             <div class="pricing-panel-details">
                                 <ul>

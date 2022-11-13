@@ -221,17 +221,11 @@
         .pricing-panel-container {
             padding: 10px;
 
-            &.program-panel {
-                .pricing-panel .pricing-panel-header {
-                    margin-bottom: 35px;
-                }
-            }
-
             .pricing-panel {
                 padding: 30px 30px 20px 30px;
                 background: #e1cdec;
                 border-radius: 10px;
-                height: 500px;
+                min-height: 470px;
                 max-width: 390px;
 
                 &:hover {
@@ -254,7 +248,7 @@
 
                 .pricing-panel-header {
                     text-align: center;
-                    margin-bottom: 10px;
+                    margin-bottom: 15px;
 
                     h2 {
                         font-family: Arial, Helvetica, sans-serif;
