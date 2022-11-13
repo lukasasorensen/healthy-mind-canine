@@ -134,7 +134,7 @@
         }
     }
 
-    .section-4 {
+    .section-5 {
         min-height: 740px;
         text-align: center;
         display: flex;
@@ -204,8 +204,158 @@
         }
     }
 
+    .section-4.pricing {
+        display: flex;
+        justify-content: center;
+        height: auto;
+
+        .pricing-detail {
+            color: $secondary-color;
+        }
+
+        .pricing-panels-container {
+            display: inline-block;
+        }
+
+        .pricing-panel-container {
+            padding: 10px;
+
+            &.program-panel {
+                .pricing-panel .pricing-panel-header {
+                    margin-bottom: 35px;
+                }
+            }
+
+            .pricing-panel {
+                padding: 30px 30px 20px 30px;
+                background: #e1cdec;
+                border-radius: 10px;
+                height: 500px;
+                max-width: 390px;
+
+                &:hover {
+                    background: #98609e;
+                    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+
+                    .pricing-panel-details {
+                        ul li {
+                            color: #fff;
+                        }
+                    }
+
+                    .pricing-panel-header {
+                        h2,
+                        .pricing-panel-price {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .pricing-panel-header {
+                    text-align: center;
+                    margin-bottom: 10px;
+
+                    h2 {
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+
+                    .pricing-panel-price {
+                    }
+                }
+
+                .pricing-panel-details {
+                    ul {
+                        text-decoration: none;
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            margin-top: 10px;
+                            font-size: 15px;
+                            list-style-image: url('assets/pawprint.svg');
+
+                            &::marker {
+                                width: 20px;
+                                height: 20px;
+                                color: $secondary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .more-services {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+
+            .pricing-table {
+                width: 100%;
+                max-width: 700px;
+                margin: 20px auto;
+            }
+
+            .dotted-table-row {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .dotted-table-line {
+                    border-bottom: 2px dotted $secondary-color;
+                    flex: 1;
+                    margin-bottom: 8px;
+                    margin: 8px 4px;
+                }
+
+                .dotted-table-right {
+                    color: $secondary-color;
+                    font-weight: bolder;
+                }
+            }
+
+            .pricing-submessage {
+                margin-left: 20px;
+                color: $primary-color;
+            }
+        }
+
+        .pricing-info-container {
+            width: 100%;
+            padding: 20px 20px 100px 20px;
+            overflow: auto;
+            max-width: 1050px;
+
+            .pricing-header-container {
+                width: 100%;
+                text-align: center;
+                margin: 5px;
+            }
+
+            .package-disclaimer {
+                margin-bottom: 20px;
+
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        @media (max-width: $screen-md) {
+            .pricing-info-container {
+                .pricing-panel-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
     @media (max-height: 770px) {
-        .section-4 {
+        .section-5 {
             .go-to-buttons {
                 position: relative;
                 width: 100%;
@@ -237,7 +387,7 @@
             }
         }
 
-        .section-4 {
+        .section-5 {
             min-height: 730px;
 
             .what-do-i-need-header {
@@ -302,9 +452,9 @@
             }
         }
 
-        .section-4 {
+        .section-5 {
             .what-do-i-need-container {
-                padding-top: 20px;
+                padding-top: 50px;
 
                 .what-do-i-need-list {
                     ul {

@@ -63,7 +63,86 @@
                 </div>
             </div>
         </section>
-        <section ref="section-4" class="section section-4">
+        <section ref="section-4" class="section section-4 pricing">
+            <div class="pricing-info-container">
+
+                <div class="pricing-header-container">
+                    <h1 class="pricing-header secondary-text">Separation Anxiety Training Services</h1>
+                </div>
+                <div class="package-disclaimer w-100 text-center">
+                    <p><i>*Initial Consult is required before purchasing programs.</i></p>
+                </div>
+                <div class="pricing-panels-container">
+                    <div class="col-xs-12 col-sm-4 pricing-panel-container">
+                        <div class="pricing-panel">
+                            <div class="col-xs-12 pricing-panel-header">
+                                <h2>Initial Consultation and Assessment</h2>
+                                <p class="pricing-panel-price">$175</p>
+                            </div>
+                            <div class="pricing-panel-details">
+                                <ul>
+                                    <li>90 minute private session</li>
+                                    <li>Review of your dog's history and goals</li>
+                                    <li>Assessment of your dog</li>
+                                    <li>Overview of what training looks like</li>
+                                    <li>Discuss tech set up</li>
+                                    <li>A recording of your session</li>
+                                    <li>Resources & handouts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 pricing-panel-container program-panel">
+                        <div class="pricing-panel">
+                            <div class="col-xs-12 pricing-panel-header">
+                                <h2>4 Week Program</h2>
+                                <p class="pricing-panel-price">$800</p>
+                            </div>
+                            <div class="pricing-panel-details">
+                                <ul>
+                                    <li>4 weekly zoom check-ins</li>
+                                    <li>5 individualized training plans for the pet parent to conduct each week</li>
+                                    <li>Access to the SA Pro Trainer App</li>
+                                    <li>Daily messaging support M - F</li>
+                                    <li>Unlimited video review from your trainer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 pricing-panel-container program-panel">
+                        <div class="pricing-panel">
+                            <div class="col-xs-12 pricing-panel-header">
+                                <h2>8 Week Program</h2>
+                                <p class="pricing-panel-price">$1,350 (save $250!)</p>
+                            </div>
+                            <div class="pricing-panel-details">
+                                <ul>
+                                    <li>8 weekly zoom check-ins</li>
+                                    <li>5 individualized training plans for the pet parent to conduct each week</li>
+                                    <li>Access to the SA Pro Trainer App</li>
+                                    <li>Daily messaging support M - F</li>
+                                    <li>Unlimited video review from your trainer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="more-services">
+                    <div class="pricing-table">
+                        <div class="dotted-table-row">
+                            <p class="dotted-table-left">1 Hour as-needed Session</p>
+                            <div class="dotted-table-line"></div>
+                            <p class="dotted-table-right">$175</p>
+                        </div>
+                        <small class="pricing-submessage">*to supplement DIY programs</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section ref="section-5" class="section section-5">
             <div class="what-do-i-need-container">
                 <h1 class="what-do-i-need-header secondary-text hidden-xs">What You Will Need For Training</h1>
                 <h2 class="what-do-i-need-header secondary-text visible-xs">What You Will Need For Training</h2>
