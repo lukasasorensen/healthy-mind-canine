@@ -70,7 +70,7 @@ li {
 
 p,
 li {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 30px;
 }
 
@@ -103,6 +103,7 @@ body {
 .section {
     height: calc(100vh - $nav-height);
     width: 100vw;
+    overflow-x: hidden;
 }
 
 .route {
