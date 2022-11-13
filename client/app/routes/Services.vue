@@ -200,7 +200,7 @@
         </section>
         <Footer></Footer>
     </div>
-    <div class="scroll-down-container" @click="scrollToNextSection">
+    <div class="scroll-down-container hidden-xs" @click="scrollToNextSection">
         <div class="col-xs-12" :class="{ 'bounce-top': bounceScrollDown }">
             <p>scroll down for more</p>
         </div>
