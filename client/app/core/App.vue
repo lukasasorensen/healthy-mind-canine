@@ -70,7 +70,7 @@ li {
 
 p,
 li {
-    font-size: 17px;
+    font-size: 16px;
     line-height: 30px;
 }
 

@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="route home">
         <div class="down-icon-container" @click="scrollToNextSection">
-            <div class="down-icon hidden-xs">
+            <div class="down-icon">
                 <font-awesome-icon class="scroll-down-icon" icon="fa-solid fa-chevron-down" />
             </div>
         </div>
