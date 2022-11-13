@@ -2,67 +2,81 @@
     <div class="route pricing">
         <section class="section section-1 pricing">
             <div class="pricing-info-container">
+
                 <div class="pricing-header-container">
                     <h1 class="pricing-header secondary-text">Pricing</h1>
                 </div>
                 <div class="package-disclaimer w-100 text-center">
-                    <p>Initial Consult is required before purchasing packages.</p>
+                    <p><i>*Initial Consult is required before purchasing programs.</i></p>
                 </div>
-                <div class="pricing-table">
-                    <div class="dotted-table-row">
-                        <p class="dotted-table-left">Initial Consultation (90min)</p>
-                        <div class="dotted-table-line"></div>
-                        <p class="dotted-table-right">$175</p>
-                    </div>
-                    <!-- maybe add this later -->
-                    <!-- <div class="dotted-table-row">
-                        <p class="dotted-table-left">Tune up for previous clients (60min)</p>
-                        <div class="dotted-table-line"></div>
-                        <p class="dotted-table-right">$120</p>
-                    </div> -->
-                    <div class="dotted-table-row">
-                        <p class="dotted-table-left">4 week package</p>
-                        <div class="dotted-table-line"></div>
-                        <p class="dotted-table-right">$800</p>
+                <div class="pricing-panels-container">
+                    <div class="col-xs-12 col-sm-4 pricing-panel-container">
+                        <div class="pricing-panel">
+                            <div class="col-xs-12 pricing-panel-header">
+                                <h2>Initial Consultation and Assessment</h2>
+                                <p class="pricing-panel-price">$175</p>
+                            </div>
+                            <div class="pricing-panel-details">
+                                <ul>
+                                    <li>90 minute private session</li>
+                                    <li>Review of your dogs history and goals</li>
+                                    <li>Assessment of your dog</li>
+                                    <li>Overview of what training will look like</li>
+                                    <li>Discuss tech set up</li>
+                                    <li>A recording of your session</li>
+                                    <li>Resources & handouts</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="dotted-table-row">
-                        <p class="dotted-table-left">8 week package</p>
-                        <div class="dotted-table-line"></div>
-                        <p class="dotted-table-right">$1350</p>
+                    <div class="col-xs-12 col-sm-4 pricing-panel-container">
+                        <div class="pricing-panel">
+                            <div class="col-xs-12 pricing-panel-header">
+                                <h2>4 Week Program</h2>
+                                <p class="pricing-panel-price">$800</p>
+                            </div>
+                            <div class="pricing-panel-details">
+                                <ul>
+                                    <li>4 weekly zoom check-ins</li>
+                                    <li>5 individualized training plans for the pet parent to conduct each week</li>
+                                    <li>Access to the SA Pro Trainer App</li>
+                                    <li>Daily messaging support M - F</li>
+                                    <li>Unlimited video review from your trainer</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="dotted-table-row">
-                        <p class="dotted-table-left">One hour session</p>
-                        <div class="dotted-table-line"></div>
-                        <p class="dotted-table-right">$120</p>
+                    <div class="col-xs-12 col-sm-4 pricing-panel-container">
+                        <div class="pricing-panel">
+                            <div class="col-xs-12 pricing-panel-header">
+                                <h2>8 Week Program</h2>
+                                <p class="pricing-panel-price">$1,350 (save $250!)</p>
+                            </div>
+                            <div class="pricing-panel-details">
+                                <ul>
+                                    <li>8 weekly zoom check-ins</li>
+                                    <li>5 individualized training plans for the pet parent to conduct each week</li>
+                                    <li>Access to the SA Pro Trainer App</li>
+                                    <li>Daily messaging support M - F</li>
+                                    <li>Unlimited video review from your trainer</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <small class="pricing-detail">* for previous clients or Heroes members</small>
-                    
                 </div>
-                <div class="four-week-package-includes-container w-100 text-center">
-                    <h2>Packages Include:</h2>
+
+                <div class="more-services">
+                    <div class="pricing-table">
+                        <div class="dotted-table-row">
+                            <p class="dotted-table-left">1 Hour as-needed Session</p>
+                            <div class="dotted-table-line"></div>
+                            <p class="dotted-table-right">$175</p>
+                        </div>
+                        <small class="pricing-submessage">*to supplement DIY programs</small>
+                    </div>
                 </div>
-                <ul class="four-week-package-items">
-                    <li>
-                        1 face to face Zoom meeting per week, 30 Minutes. During these sessions we will walk you
-                        through
-                        a training exercise, assess your dog, and answer any questions that come up.
-                    </li>
-                    <li>
-                        5 individualized training plans for the pet parent to conduct each week. These daily plans are
-                        based
-                        on how your dog did during training the previous day.
-                    </li>
-                    <li>
-                        Access to the exclusive <i>SA Pro Trainer App</i> to track your progress and communicate with your
-                        trainer.
-                    </li>
-                    <li>
-                        Daily messaging support and video review from your Separation Anxiety Pro Trainer.
-                        Monday-Friday.
-                    </li>
-                </ul>
                 <div class="scroll-padding"></div>
             </div>
         </section>
@@ -102,7 +116,109 @@ export default {
 
     .pricing-detail {
         color: $secondary-color;
-        margin-left: 20px;
+    }
+
+    .pricing-panels-container {
+        display: inline-block;
+    }
+
+    .pricing-panel-container {
+        padding: 10px;
+
+        .pricing-panel {
+            padding: 30px 25px 20px 30px;
+            background: #e1cdec;
+            border-radius: 10px;
+            height: 500px;
+            max-width: 390px;
+
+            &:hover {
+                background: #98609e;
+                box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+
+                .pricing-panel-details {
+                    ul li {
+                        color: #fff;
+                    }
+                }
+
+                .pricing-panel-header {
+
+                    h2,
+                    .pricing-panel-price {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .pricing-panel-header {
+                text-align: center;
+                margin-bottom: 10px;
+
+                h2 {
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                .pricing-panel-price {}
+            }
+
+            .pricing-panel-details {
+                ul {
+                    text-decoration: none;
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+
+                    li {
+                        margin-top: 10px;
+                        font-size: 15px;
+                        list-style-image: url("assets/pawprint.svg");
+
+                        &::marker {
+                            width: 20px;
+                            height: 20px;
+                            color: $secondary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .more-services {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+
+        .pricing-table {
+            width: 100%;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        .dotted-table-row {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .dotted-table-line {
+                border-bottom: 2px dotted $secondary-color;
+                flex: 1;
+                margin-bottom: 8px;
+                margin: 8px 4px;
+            }
+
+            .dotted-table-right {
+                color: $secondary-color;
+                font-weight: bolder;
+            }
+        }
+
+        .pricing-submessage {
+            margin-left: 20px;
+            color: $primary-color;
+        }
     }
 
     .section-1 {
@@ -111,9 +227,9 @@ export default {
 
         .pricing-info-container {
             width: 100%;
-            max-width: 825px;
             padding: 20px;
             overflow: auto;
+            max-width: 1050px;
 
             .pricing-header-container {
                 width: 100%;
@@ -130,42 +246,17 @@ export default {
                 }
             }
 
-            .pricing-table {
-                width: 100%;
-                max-width: 700px;
-                margin: 20px auto;
-            }
 
-            .dotted-table-row {
-                width: 100%;
+        }
+    }
+
+    @media(max-width: $screen-md) {
+        .pricing-info-container {
+
+            .pricing-panel-container {
                 display: flex;
-                justify-content: space-between;
-                margin-top: 25px;
-
-                .dotted-table-line {
-                    border-bottom: 2px dotted $secondary-color;
-                    flex: 1;
-                    margin-bottom: 8px;
-                    margin: 8px 4px;
-                }
-
-                .dotted-table-right {
-                    color: $secondary-color;
-                    font-weight: bolder;
-                }
-            }
-
-            .four-week-package-includes-container {
-                margin-top: 40px;
-                margin-bottom: 20px;
-            }
-
-            ul.four-week-package-items {
-                li {
-                    margin-bottom: 15px;
-                    color: $secondary-text;
-                    font-size: 16px;
-                }
+                justify-content: center;
+                margin-bottom: 30px;
             }
         }
     }

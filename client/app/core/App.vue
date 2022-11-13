@@ -34,9 +34,6 @@ export default {
 
 a,
 p,
-h1,
-h2,
-h3,
 h4,
 h5,
 h6,
@@ -48,6 +45,14 @@ table,
 input,
 form {
     font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
     margin: 0;
 }
 

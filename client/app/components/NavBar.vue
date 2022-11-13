@@ -1,7 +1,6 @@
 <template lang="html">
     <div class="nav-bar nav-bar-buttons mobile col-xs-8" :class="{ open: isNavBarOpen }">
         <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
-        <router-link @click="onNavigation" to="/pricing">Pricing</router-link>
         <router-link @click="onNavigation" to="/faq">FAQ</router-link>
         <router-link @click="onNavigation" to="/resources">Resources</router-link>
         <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
@@ -12,16 +11,23 @@
             <router-link to="/">
                 <div class="nav-bar-logo col-sm-4 col-xs-8"></div>
             </router-link>
-            <div class="nav-bar-buttons col-sm-8 hidden-xs">
+            <div class="nav-bar-buttons col-sm-8 hidden-xs hidden-md hidden-lg hidden-xl">
                 <div class="dropdown-container" :class="{ open: isSaDropdownOpen }" @mouseenter="isSaDropdownOpen = true" @mouseleave="isSaDropdownOpen = false">
                     <button class="separation-anxiety dropdown-button" @click="goToServices()">Separation Anxiety</button>
                     <div class="dropdown" ref="saDropdown" v-show="isSaDropdownOpen">
                         <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
-                        <router-link @click="onNavigation" to="/faq">FAQ</router-link>
                         <router-link @click="onNavigation" to="/resources">Resources</router-link>
+                        <router-link @click="onNavigation" to="/faq">FAQ</router-link>
                     </div>
                 </div>
-                <router-link @click="onNavigation" to="/pricing">Pricing</router-link>
+                <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
+                <router-link @click="onNavigation" to="/contact">Contact</router-link>
+            </div>
+
+            <div class="nav-bar-buttons col-xs-8 hidden-sm hidden-xs">
+                <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
+                <router-link @click="onNavigation" to="/resources">Resources</router-link>
+                <router-link @click="onNavigation" to="/faq">FAQ</router-link>
                 <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
                 <router-link @click="onNavigation" to="/contact">Contact</router-link>
             </div>
@@ -103,7 +109,7 @@ export default {
         justify-content: space-between;
         font-size: 18px;
         max-width: 740px;
-        padding: 10px 0;
+        padding: 10px 0 0 15px;
         color: $primary-color;
 
         button {
