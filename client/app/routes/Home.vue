@@ -15,7 +15,8 @@
                     <p class="home-copy-1">
                         Do you feel like you have tried absolutely everything to fix your dog's separation anxiety and
                         you're still coming home to a destroyed space, angry neighbors, and a panicked dog?
-                        &nbsp;We get it, you're sad to see your pup suffering, you're at your wits end, and you don't
+                        <br><br>
+                        We get it, you're sad to see your pup suffering, you're at your wits end, and you don't
                         know how
                         else to help your dog.
                     </p>
