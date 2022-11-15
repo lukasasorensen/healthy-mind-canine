@@ -1,0 +1,368 @@
+@import '@/scss/_variables.scss';
+@import '@/scss/_mixins';
+
+.route {
+    scroll-snap-type: y mandatory;
+}
+
+.home.route {
+    h1,
+    h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bolder;
+    }
+
+    .down-icon-container {
+        position: fixed;
+        bottom: 13px;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        z-index: 9999999;
+        font-size: 20px;
+        color: $primary-color;
+        cursor: pointer;
+
+        .down-icon {
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+
+            &:hover {
+                background: rgba(102, 102, 102, 0.1);
+            }
+        }
+    }
+
+    .home-logo-container {
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        position: fixed;
+        pointer-events: none;
+        z-index: 1001;
+
+        .home-logo {
+            margin: auto;
+            width: 90%;
+            height: 100px;
+            max-width: 900px;
+            background-image: url('assets/healthy-mind-canine-logo.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .tag-line {
+            color: $secondary-color;
+            font-size: 24px;
+        }
+
+        .service-area-tag-line {
+            color: $secondary-color;
+            font-style: oblique;
+            font-size: 20px;
+            margin-top: 7%;
+        }
+    }
+
+    .copy-container {
+        width: 100%;
+        max-width: 970px;
+        height: auto;
+        border-radius: 20px;
+        padding: 30px 50px 30px 50px;
+        backdrop-filter: blur(6px);
+        background: rgba(246, 251, 255, 0.8);
+
+        p {
+            color: $secondary-text;
+            line-height: 35px;
+            font-size: 17px;
+        }
+    }
+
+    .copy-header {
+        margin-bottom: 20px;
+    }
+
+    .section-1-copy-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .section {
+        width: 100%;
+        height: 100%;
+        scroll-snap-align: start;
+    }
+
+    .section-1 {
+        z-index: 1;
+
+        .home-main-header {
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            top: 100px;
+            font-size: 80px;
+            line-height: 100px;
+            padding: 0 50px;
+            text-shadow: 3px 3px 3px black;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .section-1-bg {
+            position: fixed;
+            top: $nav-height;
+            left: 0;
+            width: 100%;
+            height: calc(100% - $nav-height - 60px);
+            z-index: -1;
+            @include bgimage;
+            background-image: url('assets/woman-shaking-hands-with-dog.jpg');
+            background-size: cover;
+            pointer-events: none;
+        }
+
+        .home-copy-1-container {
+            position: absolute;
+            bottom: 120px;
+            background-color: rgba(14, 34, 49, 0.9);
+
+            p {
+                color: #fff;
+            }
+
+            .home-copy-1-header {
+                font-size: 36px;
+            }
+
+            .emphasis {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bolder;
+                font-size: 20px;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    .section-2 {
+        .content-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .home-copy-2-container {
+            bottom: 200px;
+            right: -20px;
+            position: absolute;
+
+            .home-copy-2-header {
+                font-size: 40px;
+            }
+        }
+    }
+
+    .section-3 {
+        .why-us-list-container {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding: 50px 30px;
+
+            .why-us-item {
+                opacity: 0.95;
+                padding: 20px;
+                border-radius: 15px;
+                width: 30%;
+                height: 410px;
+                background-color: $primary-bg;
+                color: $secondary-text;
+                font-size: 14px;
+                align-self: center;
+
+                .why-us-item-header {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 20px;
+                }
+
+                .why-us-item-text {
+                    color: $secondary-text;
+                }
+
+                .why-us-item-icon-container {
+                    margin-bottom: 20px;
+                }
+
+                .why-us-item-icon-container,
+                .why-us-item-text,
+                .why-us-item-header {
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .section-4 {
+        position: relative;
+        background: $primary-bg;
+        padding-top: 30px;
+        .imagine-peace-text-container {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            padding: 0 20%;
+            margin-top: 10px;
+
+            .imagine-peace-text {
+                font-size: 22px;
+                line-height: 42px;
+                text-align: center;
+            }
+        }
+
+        .sleepy-dog-image-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            .sleepy-dog-image {
+                @include bgimage;
+                background-image: url('assets/sleepy-puppy.jpg');
+                background-size: cover;
+                width: 260px;
+                height: 260px;
+                margin: 0px;
+                clip-path: circle(44% at 50% 50%);
+            }
+        }
+
+        .continue-button-container {
+            width: 100%;
+            margin-top: 35px;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: $screen-md) {
+
+        scroll-snap-type: none !important;
+
+        .section {
+            height: auto;
+            min-height: 100%;
+        }
+
+        .home-logo-container {
+            .home-logo {
+                height: 69px;
+            }
+
+            .tag-line {
+                font-size: 18px;
+            }
+
+            .service-area-tag-line {
+                margin-top: 13%;
+            }
+        }
+
+        .section-1 {
+            .section-1-bg {
+                height: calc(100% - 90px)
+            }
+            .home-main-header {
+                top: 50px;
+                font-size: 50px;
+                line-height: normal;
+                width: 100%;
+                padding: 0 30px;
+            }
+
+            .section-1-copy-container {
+                padding: 0 20px;
+
+                .home-copy-1-container {
+                    border-radius: 10px;
+                    margin-top: 110vh;
+                    position: relative;
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .section-2 {
+            .content-container {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: flex;
+                justify-content: center;
+
+                .home-copy-2-container {
+                    position: absolute;
+                    top: 30px;
+                    width: 90%;
+                    margin: 0 auto;
+                    bottom: initial;
+                    right: initial;
+                    background: #fff;
+
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        .section-3 {
+            .why-us-list-container {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+                .why-us-item {
+                    width: 95%;
+                    height: 60%;
+                    margin: 25% auto;
+                }
+            }
+        }
+
+        .section-4 {
+            padding-bottom: 40px;
+            
+            .sleepy-dog-image-container {
+                .sleepy-dog-image {
+                    width: 200px;
+                    height: 200px;
+                }
+            }
+
+            .imagine-peace-text-container {
+                padding: 0 8%;
+                .imagine-peace-text {
+                    font-size: 20px;
+                    line-height: normal;
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

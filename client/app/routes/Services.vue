@@ -63,7 +63,88 @@
                 </div>
             </div>
         </section>
-        <section ref="section-4" class="section section-4">
+        <section ref="section-4" class="section section-4 pricing" id="pricing">
+            <div class="pricing-info-container">
+
+                <div class="pricing-header-container">
+                    <h1 class="pricing-header secondary-text">Separation Anxiety Training Services</h1>
+                </div>
+                <div class="package-disclaimer w-100 text-center">
+                    <p><i>*Initial Consult is required before purchasing programs.</i></p>
+                </div>
+                <div class="pricing-panels-container">
+                    <div class="col-xs-12 col-sm-4 pricing-panel-container">
+                        <div class="pricing-panel">
+                            <div class="col-xs-12 pricing-panel-header">
+                                <h2>Initial Consultation and Assessment</h2>
+                                <p class="pricing-panel-price">$200</p>
+                            </div>
+                            <div class="pricing-panel-details">
+                                <ul>
+                                    <li>90 minute private session</li>
+                                    <li>Review of your dog's history and goals</li>
+                                    <li>Assessment of your dog</li>
+                                    <li>Overview of what training looks like</li>
+                                    <li>Discuss tech set up</li>
+                                    <li>A recording of your session</li>
+                                    <li>Resources & handouts</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 pricing-panel-container program-panel">
+                        <div class="pricing-panel">
+                            <div class="col-xs-12 pricing-panel-header">
+                                <h2>4 Week Program</h2>
+                                <p class="pricing-panel-price"><strike>$800</strike> $600</p>
+                                <p>Limited Time Offer!</p>
+                            </div>
+                            <div class="pricing-panel-details">
+                                <ul>
+                                    <li>4 weekly zoom check-ins</li>
+                                    <li>5 individualized training plans for the pet parent to conduct each week</li>
+                                    <li>Access to the SA Pro Trainer App</li>
+                                    <li>Daily messaging support M - F</li>
+                                    <li>Unlimited video review from your trainer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-4 pricing-panel-container program-panel">
+                        <div class="pricing-panel">
+                            <div class="col-xs-12 pricing-panel-header">
+                                <h2>8 Week Program</h2>
+                                <p class="pricing-panel-price"><strike>$1,350</strike> $1,075</p>
+                                <p>Limited Time Offer!</p>
+                            </div>
+                            <div class="pricing-panel-details">
+                                <ul>
+                                    <li>8 weekly zoom check-ins</li>
+                                    <li>5 individualized training plans for the pet parent to conduct each week</li>
+                                    <li>Access to the SA Pro Trainer App</li>
+                                    <li>Daily messaging support M - F</li>
+                                    <li>Unlimited video review from your trainer</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="more-services">
+                    <div class="pricing-table">
+                        <div class="dotted-table-row">
+                            <p class="dotted-table-left">1 Hour as-needed Session</p>
+                            <div class="dotted-table-line"></div>
+                            <p class="dotted-table-right">$175</p>
+                        </div>
+                        <small class="pricing-submessage">*to supplement DIY programs</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section ref="section-5" class="section section-5">
             <div class="what-do-i-need-container">
                 <h1 class="what-do-i-need-header secondary-text hidden-xs">What You Will Need For Training</h1>
                 <h2 class="what-do-i-need-header secondary-text visible-xs">What You Will Need For Training</h2>
@@ -121,7 +202,7 @@
         </section>
         <Footer></Footer>
     </div>
-    <div class="scroll-down-container" @click="scrollToNextSection">
+    <div class="scroll-down-container hidden-xs" @click="scrollToNextSection">
         <div class="col-xs-12" :class="{ 'bounce-top': bounceScrollDown }">
             <p>scroll down for more</p>
         </div>
@@ -191,345 +272,5 @@ export default {
 };
 </script>
 <style lang="scss">
-@import '../scss/_variables.scss';
-@import '../scss/_mixins.scss';
-@import "../scss/animations";
-
-.route {
-    scroll-snap-type: y proximity;
-}
-
-.scroll-down-container {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    z-index: 9999;
-    padding-bottom: 23px;
-    cursor: pointer;
-    user-select: none;
-
-    div {
-        display: flex;
-        justify-content: center;
-
-        svg,
-        p {
-            color: $primary-color;
-            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
-        }
-    }
-}
-
-.services.route {
-    .section {
-        width: 100vw;
-        height: calc(100vh - $nav-height);
-        scroll-snap-align: start;
-    }
-
-    .section-1 {
-        .separation-anxiety-header-container {
-            width: 100%;
-            height: calc(100% - 80px);
-            background-image: url('assets/DogOwnerStock-1.png');
-            background-size: cover;
-            background-position: center;
-            color: #fff;
-            text-align: center;
-            box-shadow: inset 0 0 0 2000px rgb(34 34 34 / 30%);
-
-            .separation-anxiety-header {
-                font-size: 5em;
-                padding-top: 7%;
-                color: #fff;
-                @include text-shadow;
-            }
-        }
-
-        .separation-anxiety-learn-more-button-container {
-            width: 100%;
-            margin-top: 130px;
-        }
-    }
-
-    .section-2 {
-        display: flex;
-        justify-content: center;
-        @include bgimage;
-        background-image: url('assets/purple-blob.png');
-
-        .separation-anxiety-info-container {
-            padding: 30px;
-            width: 100%;
-            height: 100%;
-            max-width: 750px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            .separation-anxiety-info-header {
-                margin-bottom: 30px;
-                text-align: center;
-            }
-
-            .separation-anxiety-info-text {
-                color: $secondary-text;
-                scroll-padding-bottom: 40px;
-            }
-        }
-    }
-
-    .section-3 {
-        overflow: hidden;
-
-        .how-does-training-work-container {
-            @include bgimage;
-            background-size: cover;
-            background-image: url('assets/goldencutiepie.jpg');
-            width: 100%;
-            height: 115%;
-            padding-top: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-
-            .how-does-training-work-info-container {
-                width: 96%;
-                height: auto;
-                max-height: 72%;
-                max-width: 800px;
-                background-color: #765050;
-                border-radius: 10px;
-                padding: 30px 40px;
-                overflow-y: auto;
-
-                .how-does-training-work-header-container {
-                    width: 100%;
-                    text-align: center;
-                    margin-bottom: 25px;
-
-                    .how-does-training-work-header {
-                        color: $primary-color;
-                    }
-                }
-
-                .how-does-training-work-text-container {
-                    .virtual-training-header {
-                        margin-bottom: 5px;
-                    }
-
-                    .how-does-training-work-text {
-                        color: #fff;
-                        scroll-padding-bottom: 20px;
-                    }
-                }
-            }
-        }
-
-    }
-
-    .section-4 {
-        min-height: 740px;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-
-        .what-do-i-need-container {
-            height: 100%;
-            padding: 5px;
-            max-width: 900px;
-            background-color: $primary-bg;
-            position: absolute;
-            width: 100%;
-            z-index: 10000;
-
-            .what-do-i-need-image-container {
-                @include bgimage;
-                background-image: url('assets/dog-on-computer.png');
-                height: 100%;
-            }
-        }
-
-        .what-do-i-need-list {
-            display: inline-block;
-            max-width: 700px;
-            text-align: left;
-
-            .what-do-i-need-icon {
-                font-size: 3em;
-            }
-
-            span.wzye-text {
-                font-size: 0.9em;
-            }
-
-            ul {
-                padding: 0;
-                list-style-type: none;
-
-                li {
-                    margin-bottom: 50px;
-                    font-size: 1.2em;
-
-                    .what-do-i-need-li-icon {
-                        text-align: center;
-                        color: $secondary-color;
-                    }
-                }
-            }
-        }
-
-        .go-to-buttons {
-            position: absolute;
-            bottom: 10%;
-            left: 50%;
-            transform: translateX(-50%);
-
-            button {
-                margin: auto;
-            }
-
-            .call-to-action {
-                margin-bottom: 15px;
-                color: $primary-color;
-                font-weight: bolder;
-                font-family: arial;
-            }
-        }
-    }
-
-    @media(max-height: 770px) {
-        .section-4 {
-            .go-to-buttons {
-                position: relative;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                bottom: 0px !important;
-                padding: 10px;
-            }
-        }
-    }
-
-    @media(max-height: 650px) {
-        .section-1 {
-            .separation-anxiety-learn-more-button-container {
-                display: none;
-            }
-        }
-    }
-
-    @media (min-width: $screen-md) {
-        .separation-anxiety-info-header {
-            margin-top: -75px;
-        }
-
-        .section-3 {
-            .how-does-training-work-info-container {
-                margin-top: 50px;
-            }
-        }
-
-        .section-4 {
-            min-height: 730px;
-
-            .what-do-i-need-header {
-                margin-top: 40px;
-            }
-
-            .what-do-i-need-info {
-                padding-top: 40px;
-            }
-
-            .what-do-i-need-list {
-
-                .what-do-i-need-li-text {
-                    margin-top: 5px;
-                }
-            }
-
-            .what-do-i-need-image-container {
-                margin-top: -90px;
-            }
-        }
-    }
-
-    @media (max-width: $screen-md) {
-        .section {
-            width: 100%;
-            height: 100%;
-            padding-bottom: 50px;
-        }
-
-        .section-1 {
-            .separation-anxiety-header-container {
-                height: calc(100% - 40px);
-
-                .separation-anxiety-header {
-                    font-size: 2.5em;
-                }
-            }
-        }
-
-        .section-2 {
-            background-size: 380%;
-
-            .separation-anxiety-info-container {
-
-                .separation-anxiety-info-text {
-                    max-height: 100%;
-                    overflow: auto;
-                }
-            }
-        }
-
-        .section-3 {
-            .how-does-training-work-container {
-                .how-does-training-work-info-container {
-                    max-height: 82%;
-                }
-            }
-        }
-
-        .section-4 {
-            .what-do-i-need-container {
-                padding-top: 20px;
-
-                .what-do-i-need-list {
-                    ul {
-
-                        li {
-                            margin-bottom: 35px;
-                            font-size: 1.2em;
-                            padding: 0;
-
-                            .what-do-i-need-li-icon {
-                                text-align: center;
-                                color: $secondary-color;
-                            }
-                        }
-                    }
-
-                    .what-do-i-need-li-text {
-                        margin-top: -10px;
-                    }
-                }
-
-
-                .what-do-i-need-icon {
-                    font-size: 1.2em;
-                }
-
-                .what-do-i-need-header {
-                    margin-bottom: 25px;
-                }
-
-                .go-to-buttons {
-                    bottom: 10%;
-                }
-            }
-        }
-    }
-}
+@import "@/scss/routes/services.scss";
 </style>

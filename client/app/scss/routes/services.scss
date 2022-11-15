@@ -1,0 +1,493 @@
+@import '@/scss/_variables.scss';
+@import '@/scss/_mixins.scss';
+@import '@/scss/animations';
+
+.route {
+    scroll-snap-type: y proximity;
+}
+
+.scroll-down-container {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    padding-bottom: 23px;
+    cursor: pointer;
+    user-select: none;
+
+    div {
+        display: flex;
+        justify-content: center;
+
+        svg,
+        p {
+            color: $primary-color;
+            text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+        }
+    }
+}
+
+.services.route {
+    .section {
+        width: 100vw;
+        height: calc(100vh - $nav-height);
+        scroll-snap-align: start;
+    }
+
+    .section-1 {
+        .separation-anxiety-header-container {
+            width: 100%;
+            height: calc(100% - 80px);
+            background-image: url('assets/DogOwnerStock-1.png');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            box-shadow: inset 0 0 0 2000px rgb(34 34 34 / 30%);
+
+            .separation-anxiety-header {
+                font-size: 5em;
+                padding-top: 7%;
+                color: #fff;
+                @include text-shadow;
+            }
+        }
+
+        .separation-anxiety-learn-more-button-container {
+            width: 100%;
+            margin-top: 130px;
+        }
+    }
+
+    .section-2 {
+        display: flex;
+        justify-content: center;
+        @include bgimage;
+        background-image: url('assets/purple-blob.png');
+
+        .separation-anxiety-info-container {
+            padding: 30px;
+            width: 100%;
+            height: 100%;
+            max-width: 750px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .separation-anxiety-info-header {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+
+            .separation-anxiety-info-text {
+                color: $secondary-text;
+                scroll-padding-bottom: 40px;
+            }
+        }
+    }
+
+    .section-3 {
+        overflow: hidden;
+
+        .how-does-training-work-container {
+            @include bgimage;
+            background-size: cover;
+            background-image: url('assets/goldencutiepie.jpg');
+            width: 100%;
+            height: 115%;
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            .how-does-training-work-info-container {
+                width: 96%;
+                height: auto;
+                max-height: 72%;
+                max-width: 800px;
+                background-color: #765050;
+                background-color: #352727cc;
+                border-radius: 10px;
+                padding: 30px 40px;
+                overflow-y: auto;
+
+                .how-does-training-work-header-container {
+                    width: 100%;
+                    text-align: center;
+                    margin-bottom: 25px;
+
+                    .how-does-training-work-header {
+                        color: $primary-color;
+                    }
+                }
+
+                .how-does-training-work-text-container {
+                    .virtual-training-header {
+                        margin-bottom: 5px;
+                    }
+
+                    .how-does-training-work-text {
+                        color: #fff;
+                        scroll-padding-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+    .section-5 {
+        min-height: 740px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+
+        .what-do-i-need-container {
+            height: 100%;
+            padding: 5px;
+            max-width: 900px;
+            background-color: $primary-bg;
+            position: absolute;
+            width: 100%;
+            z-index: 10000;
+
+            .what-do-i-need-image-container {
+                @include bgimage;
+                background-image: url('assets/dog-on-computer.png');
+                height: 100%;
+            }
+        }
+
+        .what-do-i-need-list {
+            display: inline-block;
+            max-width: 700px;
+            text-align: left;
+
+            .what-do-i-need-icon {
+                font-size: 3em;
+            }
+
+            span.wzye-text {
+                font-size: 0.9em;
+            }
+
+            ul {
+                padding: 0;
+                list-style-type: none;
+
+                li {
+                    margin-bottom: 50px;
+                    font-size: 1.2em;
+
+                    .what-do-i-need-li-icon {
+                        text-align: center;
+                        color: $secondary-color;
+                    }
+                }
+            }
+        }
+
+        .go-to-buttons {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            button {
+                margin: auto;
+            }
+
+            .call-to-action {
+                margin-bottom: 15px;
+                color: $primary-color;
+                font-weight: bolder;
+                font-family: arial;
+            }
+        }
+    }
+
+    .section-4.pricing {
+        display: flex;
+        justify-content: center;
+        height: auto;
+
+        .pricing-detail {
+            color: $secondary-color;
+        }
+
+        .pricing-panels-container {
+            display: inline-block;
+        }
+
+        .pricing-panel-container {
+            padding: 10px;
+
+            .pricing-panel {
+                padding: 30px 30px 20px 30px;
+                background: #e1cdec;
+                border-radius: 10px;
+                min-height: 470px;
+                max-width: 390px;
+
+                &:hover {
+                    background: #98609e;
+                    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+
+                    .pricing-panel-details {
+                        ul li {
+                            color: #fff;
+                        }
+                    }
+
+                    .pricing-panel-header {
+                        h2,
+                        .pricing-panel-price {
+                            color: #fff;
+                        }
+                    }
+                }
+
+                .pricing-panel-header {
+                    text-align: center;
+                    margin-bottom: 15px;
+
+                    h2 {
+                        font-family: Arial, Helvetica, sans-serif;
+                    }
+
+                    .pricing-panel-price {
+                    }
+                }
+
+                .pricing-panel-details {
+                    ul {
+                        text-decoration: none;
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            margin-top: 10px;
+                            font-size: 15px;
+                            list-style-image: url('assets/pawprint.svg');
+
+                            &::marker {
+                                width: 20px;
+                                height: 20px;
+                                color: $secondary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .more-services {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+
+            .pricing-table {
+                width: 100%;
+                max-width: 700px;
+                margin: 20px auto;
+            }
+
+            .dotted-table-row {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .dotted-table-line {
+                    border-bottom: 2px dotted $secondary-color;
+                    flex: 1;
+                    margin-bottom: 8px;
+                    margin: 8px 4px;
+                }
+
+                .dotted-table-right {
+                    color: $secondary-color;
+                    font-weight: bolder;
+                }
+            }
+
+            .pricing-submessage {
+                margin-left: 20px;
+                color: $primary-color;
+            }
+        }
+
+        .pricing-info-container {
+            width: 100%;
+            padding: 20px 20px 100px 20px;
+            overflow: auto;
+            max-width: 1050px;
+
+            .pricing-header-container {
+                width: 100%;
+                text-align: center;
+                margin: 5px;
+            }
+
+            .package-disclaimer {
+                margin-bottom: 20px;
+
+                p {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        @media (max-width: $screen-md) {
+            .pricing-info-container {
+                .pricing-panel-container {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 30px;
+                }
+
+                .pricing-panel {
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    @media (max-height: 770px) {
+        .section-5 {
+            .go-to-buttons {
+                position: relative;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                bottom: 0px !important;
+                padding: 10px;
+            }
+        }
+    }
+
+    @media (max-height: 650px) {
+        .section-1 {
+            .separation-anxiety-learn-more-button-container {
+                display: none;
+            }
+        }
+    }
+
+    @media (min-width: $screen-md) {
+        .separation-anxiety-info-header {
+            margin-top: -75px;
+        }
+
+        .section-3 {
+            .how-does-training-work-info-container {
+                margin-top: 50px;
+            }
+        }
+
+        .section-5 {
+            min-height: 730px;
+
+            .what-do-i-need-header {
+                margin-top: 40px;
+            }
+
+            .what-do-i-need-info {
+                padding-top: 40px;
+            }
+
+            .what-do-i-need-list {
+                .what-do-i-need-li-text {
+                    margin-top: 5px;
+                }
+            }
+
+            .what-do-i-need-image-container {
+                margin-top: -90px;
+            }
+        }
+    }
+
+    @media (max-width: $screen-md) {
+        scroll-snap-type: none;
+
+        .section {
+            width: 100%;
+            height: 100%;
+            padding-bottom: 50px;
+        }
+
+        .section-1 {
+            .separation-anxiety-header-container {
+                height: calc(100% - 40px);
+
+                .separation-anxiety-header {
+                    font-size: 2.5em;
+                }
+            }
+        }
+
+        .section-2 {
+            height: auto;
+            background-size: 380%;
+            background-position: -140px -216px;
+            margin-top: -90px;
+            padding-top: 40px;
+
+            .separation-anxiety-info-container {
+                .separation-anxiety-info-text {
+                    max-height: 100%;
+                    overflow: auto;
+                }
+            }
+        }
+
+        .section-3 {
+            height: auto;
+            .how-does-training-work-container {
+                padding-bottom: 30px;
+                .how-does-training-work-info-container {
+                    max-height: none;
+                }
+            }
+        }
+
+        .section-5 {
+            .what-do-i-need-container {
+                padding-top: 50px;
+
+                .what-do-i-need-list {
+                    ul {
+                        li {
+                            margin-bottom: 35px;
+                            font-size: 1.2em;
+                            padding: 0;
+
+                            .what-do-i-need-li-icon {
+                                text-align: center;
+                                color: $secondary-color;
+                            }
+                        }
+                    }
+
+                    .what-do-i-need-li-text {
+                        margin-top: -10px;
+                    }
+                }
+
+                .what-do-i-need-icon {
+                    font-size: 1.2em;
+                }
+
+                .what-do-i-need-header {
+                    margin-bottom: 25px;
+                }
+
+                .go-to-buttons {
+                    bottom: 10%;
+                }
+            }
+        }
+    }
+}

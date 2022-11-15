@@ -1,27 +1,93 @@
 <template lang="html">
     <div class="route home">
-        <div class="home-logo-container" :style="{ 'opacity': homeLogoOpacity }">
-            <div class="home-logo"></div>
-            <h3 class="tag-line">Separation Anxiety Training</h3>
-            <h4 class="service-area-tag-line">"Serving people and pets no matter where they live"</h4>
-        </div>
-        <div class="down-icon" @click="scrollToNextSection" :style="{ 'opacity': homeLogoOpacity }">
-            <font-awesome-icon class="scroll-down-icon" icon="fa-solid fa-chevron-down" />
+        <div class="down-icon-container" @click="scrollToNextSection">
+            <div class="down-icon">
+                <font-awesome-icon class="scroll-down-icon" icon="fa-solid fa-chevron-down" />
+            </div>
         </div>
         <section class="section section-1">
             <div class="section-1-bg"></div>
-        </section>
-        <section class="section section-2 home-mission-photo">
-            <div class="home-mission">
-                <!-- <h4>Our Mission</h4> -->
-                <p class="home-mission-text">
-                    <span>"</span>Your dog isn't giving you a hard time, they're <i>having</i> a hard time.
-                    We are here to help you regain your freedom!<span>"</span>
-                </p>
-                <div class="home-learn-more-button-container">
-                    <button @click="goToServices()" class="btn btn-lg btn-primary" aria-label="Learn More">Learn
-                        More</button>
+
+            <h1 class="home-main-header">Struggling with Dog Separation Anxiety?</h1>
+
+            <div class="section-1-copy-container">
+                <div class="copy-container home-copy-1-container">
+                    <p class="home-copy-1">
+                        Do you feel like you have tried absolutely everything to fix your dog's separation anxiety and
+                        you're still coming home to a destroyed space, angry neighbors, and a panicked dog?
+                        &nbsp;We get it, you're sad to see your pup suffering, you're at your wits end, and you don't
+                        know how
+                        else to help your dog.
+                    </p>
                 </div>
+
+
+            </div>
+        </section>
+        <section class="section section-2">
+            <div class="content-container">
+                <div class="copy-container home-copy-2-container">
+                    <h2 class="home-copy-2-header copy-header">There is Hope!</h2>
+                    <p class="home-copy-2">
+                        Our Certified Separation Anxiety Pro Trainers are here for you and can help even in the most
+                        severe cases.
+                    </p>
+                    <p class="emphasis">We live & breathe separation anxiety. In fact, it's all we do!</p>
+                </div>
+            </div>
+        </section>
+        <section class="section section-3 why-us-section">
+            <div class="col-xs-12 why-us-list-container">
+                <div class="why-us-item">
+                    <div class="why-us-item-icon-container">
+                        <font-awesome-icon class="fa-4x" icon="fa-solid fa-dog" />
+                    </div>
+                    <h2 class="why-us-item-header">Customized training</h2>
+                    <p class="why-us-item-text">
+                        Every dog is an individual. Therefore, we craft custom, easy to follow, training plans each day
+                        based on how your dog did the previous day. We take the guesswork out of training, giving you,
+                        and your furry family member the best chance of resolution.
+                    </p>
+                </div>
+
+                <div class="why-us-item">
+                    <div class="why-us-item-icon-container">
+                        <font-awesome-icon class="fa-4x" icon="fa-solid fa-laptop" />
+                    </div>
+                    <h2 class="why-us-item-header">100% Virtual</h2>
+                    <p class="why-us-item-text">
+                        Where you live should not be a barrier to expert help. Working virtually allows us to work with
+                        pet owners no matter where they live, support each client up to 5 days a week and
+                        allows us to see your dog's behavior in their typical environment.
+                    </p>
+                </div>
+
+                <div class="why-us-item">
+                    <div class="why-us-item-icon-container">
+                        <font-awesome-icon class="fa-4x" icon="fa-solid fa-graduation-cap" />
+                    </div>
+                    <h2 class="why-us-item-header">1 on 1 Training</h2>
+                    <p class="why-us-item-text">
+                        Our trainers only take on a small number of cases so we can provide individualized support to
+                        each one of our clients. You are not just a client to us. You and your dog are part of the
+                        Healthy Mind Canine family! We love them too!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section section-4">
+            <div class="sleepy-dog-image-container">
+                <div class="sleepy-dog-image"></div>
+            </div>
+            <div class="imagine-peace-text-container">
+                <p class="imagine-peace-text">
+                    Imagine coming home to a dog who has been comfortably lounging all day instead of barking,
+                    howling, or destroying your home. A dog who experiences separation anxiety <i>can</i> overcome it and learn
+                    to relax at home comfortably with the help of a specialist!
+                </p>
+            </div>
+            <div class="continue-button-container">
+                <button class="continue-button btn btn-lg btn-primary" @click="goToServices">View Training Programs</button>
             </div>
         </section>
         <Footer></Footer>
@@ -67,14 +133,10 @@ export default {
             route.scrollTo(0, (scrollTop + routeHeight));
         },
         goToServices: function () {
-            this.$router.push('/services#what-is-separation-anxiety')
+            this.$router.push('/services')
         }
     },
     computed: {
-        homeLogoOpacity() {
-            if (!this.scrollDistance) return 1;
-            return 0.8 - this.scrollDistance / window.innerHeight;
-        }
     },
     mounted() {
         this.registerScrollEventListener();
@@ -88,148 +150,5 @@ export default {
 };
 </script>
 <style lang="scss">
-@import '@/scss/_variables.scss';
-@import '@/scss/_mixins';
-
-.route {
-    scroll-snap-type: y mandatory;
-}
-
-.home.route {
-    .down-icon {
-        position: fixed;
-        bottom: 40px;
-        width: 100%;
-        justify-content: center;
-        display: flex;
-        z-index: 9999999;
-        font-size: 20px;
-        color: $primary-color;
-        cursor: pointer;
-    }
-
-    .home-logo-container {
-        width: 100%;
-        text-align: center;
-        top: 50%;
-        transform: translateY(-50%);
-        position: fixed;
-        pointer-events: none;
-        z-index: 1001;
-
-        .home-logo {
-            margin: auto;
-            width: 90%;
-            height: 100px;
-            max-width: 900px;
-            background-image: url('assets/healthy-mind-canine-logo.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        .tag-line {
-            color: $secondary-color;
-            font-size: 24px;
-        }
-
-        .service-area-tag-line {
-            color: $secondary-color;
-            font-style: oblique;
-            font-size: 20px;
-            margin-top: 7%;
-        }
-    }
-
-    .section {
-        width: 100%;
-        height: 100%;
-        scroll-snap-align: start;
-    }
-
-    .section-1 {
-        z-index: 1;
-    }
-
-    .section-1-bg {
-        width: 100%;
-        height: 100%;
-        background: $primary-bg;
-        position: absolute;
-        z-index: 1000;
-        top: 0;
-        left: 0;
-    }
-
-    .section-2 {
-        // background: $secondary-bg;
-        height: 150%;
-
-        .home-mission {
-            position: fixed;
-            width: 100%;
-            max-width: 850px;
-            margin: auto;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            font-size: 20px;
-            pointer-events: none;
-            padding: 20px;
-
-            .home-mission-text {
-                text-align: center;
-                font-size: 1.5em;
-                line-height: 2.2em;
-                text-shadow: 2px 1px 1px rgb(0 0 0 / 68%);
-
-                span {
-                    font-size: 1.3em;
-                }
-            }
-
-            h4 {
-                color: $primary-color;
-                font-size: 35px;
-                margin-bottom: 15px;
-            }
-
-            p {
-                color: white;
-                line-height: 50px;
-            }
-
-        }
-
-        &.home-mission-photo {
-            @include bgimage;
-            background-image: url('assets/goldencutiepie.jpg');
-            background-size: cover;
-        }
-
-        .home-learn-more-button-container {
-            margin-top: 80px;
-            pointer-events: all;
-            text-align: center;
-        }
-    }
-
-    @media (max-width: $screen-md) {
-        .home-logo-container {
-
-            .home-logo {
-                height: 69px;
-            }
-
-            .tag-line {
-                font-size: 18px;
-            }
-
-            .service-area-tag-line {
-                margin-top: 13%;
-            }
-        }
-    }
-}
+@import "@/scss/routes/home.scss";
 </style>
