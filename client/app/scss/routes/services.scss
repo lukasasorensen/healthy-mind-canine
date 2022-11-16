@@ -234,7 +234,6 @@
 
                     .pricing-panel-details {
                         ul {
-                            display: inline-block;
                             li {
                                 color: #fff;
                             }
@@ -263,6 +262,7 @@
 
                 .pricing-panel-details {
                     ul {
+                        display: inline-block;
                         text-decoration: none;
                         list-style-type: none;
                         margin: 0;
