@@ -233,8 +233,10 @@
                     box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 
                     .pricing-panel-details {
-                        ul li {
-                            color: #fff;
+                        ul {
+                            li {
+                                color: #fff;
+                            }
                         }
                     }
 
@@ -260,6 +262,7 @@
 
                 .pricing-panel-details {
                     ul {
+                        display: inline-block;
                         text-decoration: none;
                         list-style-type: none;
                         margin: 0;
