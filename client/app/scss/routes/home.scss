@@ -119,6 +119,24 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        @media (max-height: 730px) {
+            .home-main-header {
+                top: 20px;
+                font-size: 60px;
+                line-height: 70px;
+            }
+
+            div.copy-container.home-copy-1-container {
+                bottom: 20px;
+            }
+        }
+
+        @media (max-height: 500px) {
+            .home-main-header {
+                top: 5px;
+                font-size: 40px;
+            }
+        }
         .section-1-bg {
             position: fixed;
             top: $nav-height;
@@ -258,7 +276,6 @@
     }
 
     @media (max-width: $screen-md) {
-
         scroll-snap-type: none !important;
 
         .section {
@@ -282,7 +299,7 @@
 
         .section-1 {
             .section-1-bg {
-                height: calc(100% - 90px)
+                height: calc(100% - 90px);
             }
             .home-main-header {
                 top: 50px;
@@ -347,7 +364,7 @@
 
         .section-4 {
             padding-bottom: 40px;
-            
+
             .sleepy-dog-image-container {
                 .sleepy-dog-image {
                     width: 200px;
