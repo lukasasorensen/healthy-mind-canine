@@ -140,4 +140,8 @@ a {
         background-color: darken($secondary-color, 10%);
     }
 }
+
+.cursor-pointer {
+    cursor: pointer;
+}
 </style>
