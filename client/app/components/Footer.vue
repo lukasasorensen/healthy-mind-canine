@@ -19,8 +19,14 @@
             </div>
         </div>
         <div class="contact-info">
-            <a href="mailto:lauren@healthymindcanine.com">lauren@healthymindcanine.com</a> | <a
-                href="tel:+16125679390">(612) 567-9390</a>
+            <div class="hidden-xs">
+                <a href="mailto:lauren@healthymindcanine.com">lauren@healthymindcanine.com</a> | <a
+                    href="tel:+16125679390">(612) 567-9390</a>
+            </div>
+            <div class="visible-xs">
+                <a href="mailto:lauren@healthymindcanine.com">lauren@healthymindcanine.com</a><br><br><a
+                    href="tel:+16125679390">(612) 567-9390</a>
+            </div>
         </div>
         <div class="certs">
             <div class="certs-inner-container">
@@ -64,6 +70,7 @@ footer {
             width: 100%;
             max-width: 850px;
             height: 100%;
+
             .cert {
                 background-size: contain;
                 background-position: center;
@@ -123,9 +130,6 @@ footer {
 
 @media (max-width: $screen-md) {
     footer {
-        display: flex;
-        justify-content: space-between;
-        height: 120px;
         padding: 20px 40px;
     }
 }
