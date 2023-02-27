@@ -196,7 +196,9 @@
                 <div class="what-do-i-need-image-container col-sm-4 col-xs-12 hidden-xs"></div>
                 <div class="go-to-buttons">
                     <p class="call-to-action">Are you ready to go from <i>chaos</i> to calm?</p>
-                    <button @click="gotToContact()" class="btn btn-secondary btn-lg">Yes, I'm Ready!</button>
+                    <button @click="goToContact()" class="btn btn-secondary btn-lg go-to-contact">Yes, I'm Ready!</button>
+                    <p class="or">or</p>
+                    <a href="https://calendly.com/healthymindcanine/discovery-call" target="_blank" role="button" class="btn btn-primary btn-lg">Book a Free Discovery Call</a>
                 </div>
             </div>
         </section>
@@ -250,7 +252,7 @@ export default {
         goToPricing: function () {
             this.$router.push('/pricing');
         },
-        gotToContact: function() {
+        goToContact: function() {
             this.$router.push('/contact')
         }
     },
