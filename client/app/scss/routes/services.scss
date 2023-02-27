@@ -136,7 +136,7 @@
     }
 
     .section-5 {
-        min-height: 740px;
+        min-height: 800px;
         text-align: center;
         display: flex;
         justify-content: center;
@@ -189,13 +189,26 @@
         .go-to-buttons {
             position: absolute;
             bottom: 10%;
-            left: 50%;
-            transform: translateX(-50%);
+            width: 100%;
 
-            button {
+            button, a {
                 margin: auto;
             }
 
+            a {
+                text-decoration: none;
+            }
+
+            button, a {
+                margin-top: 10px;
+            }
+
+            .or {
+                margin: 10px;
+                display: inline-block;
+                transform: translateY(6px);
+            }
+            
             .call-to-action {
                 margin-bottom: 15px;
                 color: $primary-color;
@@ -390,7 +403,7 @@
         }
 
         .section-5 {
-            min-height: 730px;
+            min-height: 850px;
 
             .what-do-i-need-header {
                 margin-top: 40px;
@@ -488,8 +501,16 @@
                 }
 
                 .go-to-buttons {
-                    bottom: 10%;
+                    bottom: 15%;
                 }
+            }
+        }
+    }
+
+    @media (max-width: 400px) {
+        .section-5 {
+            .go-to-buttons {
+                bottom: 5% !important;
             }
         }
     }
