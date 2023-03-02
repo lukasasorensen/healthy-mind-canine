@@ -369,7 +369,7 @@
         }
     }
 
-    @media (max-height: 770px) {
+    @media (max-height: 800px) {
         .section-5 {
             .go-to-buttons {
                 position: relative;
@@ -377,8 +377,16 @@
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-                bottom: 0px !important;
+                bottom: 45px !important;
                 padding: 10px;
+            }
+        }
+    }
+
+    @media (max-height: 800px) and (max-width: $screen-md) {
+        .section-5 {
+            .go-to-buttons {
+                bottom: 10px !important;
             }
         }
     }
