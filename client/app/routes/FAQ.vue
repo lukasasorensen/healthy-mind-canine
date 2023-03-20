@@ -51,10 +51,10 @@
                     </div>
                     <div class="faq-answer">
                         The timeline is different for every dog. We always tell people to think in months, not weeks.
-                        Separation anxiety training is not a quick process and requires time, patience, and commitment
-                        to
-                        seeing a carefully crafted training plan to completion. Our job is to make this process smooth
-                        and attainable.
+                        Separation anxiety training is not a quick process and requires time, patience, and commitment to
+                        seeing a carefully crafted training plan to completion. Our job is to make this process smooth and
+                        attainable. Think of our training programs as a subscription that you renew until your dog's
+                        separation anxiety is resolved.
                     </div>
                 </div>
                 <div class="faq-question-answer">
@@ -74,10 +74,10 @@
                         Do you do payment plans?
                     </div>
                     <div class="faq-answer">
-                        We currently do not offer payment plans. Head on over to our <router-link to="/resources">
-                            resources</router-link> page for other
-                        options if working 1:1 with a trainer is not something you can do right now. We do offer one off
-                        sessions for owners who are enrolled in the "Heros" program and need supplemental help.
+                        We currently do not offer payment plans. We do offer one off
+                        sessions and custom packages for owners who are enrolled in a DIY program and need supplemental
+                        help. Check out our <router-link to="/resources"> resources</router-link> page for other
+                        options if working 1:1 with a trainer is not something you can do right now.
                     </div>
                 </div>
                 <div class="faq-question-answer">
@@ -167,5 +167,4 @@ export default {
         }
     }
 
-}
-</style>
+}</style>
