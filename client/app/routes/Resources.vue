@@ -10,11 +10,13 @@
                         Be Right Back! How to overcome separation anxiety and regain your
                         freedom.
                     </a>
-                    <a target="_blank" href="https://www.amazon.com/Right-Puppy-Separation-Anxiety-Step/dp/1999296621/ref=sr_1_1_sspa?crid=2JVN3WF1TE1T2&keywords=Julie+naismith&qid=1660143544&sprefix=julie+naismith%2Caps%2C96&sr=8-1-spons&psc=1"
+                    <a target="_blank"
+                        href="https://www.amazon.com/Right-Puppy-Separation-Anxiety-Step/dp/1999296621/ref=sr_1_1_sspa?crid=2JVN3WF1TE1T2&keywords=Julie+naismith&qid=1660143544&sprefix=julie+naismith%2Caps%2C96&sr=8-1-spons&psc=1"
                         class="resource-link">
                         Be right Back! Puppy Separation Anxiety Edition.
                     </a>
-                    <a target="_blank" href="https://www.amazon.com/Separation-Anxiety-Dogs-Generation-Treatment-ebook/dp/B08LRPXSRP/ref=sr_1_1?crid=3LWXYV0TH3EN9&keywords=separation+anxiety+in+dogs+book&qid=1660143700&sprefix=separation+anxiety+in+dogs+book%2Caps%2C82&sr=8-1"
+                    <a target="_blank"
+                        href="https://www.amazon.com/Separation-Anxiety-Dogs-Generation-Treatment-ebook/dp/B08LRPXSRP/ref=sr_1_1?crid=3LWXYV0TH3EN9&keywords=separation+anxiety+in+dogs+book&qid=1660143700&sprefix=separation+anxiety+in+dogs+book%2Caps%2C82&sr=8-1"
                         class="resource-link">
                         Separation Anxiety In Dogs: Next Generation Treatment Protocols And Practices.
                     </a>
@@ -58,7 +60,8 @@
                     <a target="_blank" href="https://courses.malenademartini.com/?aff=26" class="resource-link">
                         Mission Possible.
                     </a>
-                    <a target="_blank" href="https://separationanxietydog.thinkific.com/courses/do-it-yourself-separation-anxiety-program?ref=aff0c6"
+                    <a target="_blank"
+                        href="https://separationanxietydog.thinkific.com/courses/do-it-yourself-separation-anxiety-program?ref=3183a4"
                         class="resource-link">
                         Separation Anxiety Dog DIY.
                     </a>
@@ -139,12 +142,11 @@ export default {
 
                 &:hover {
                     background: #98609e;
-                    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+                    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
                     color: white;
                 }
             }
         }
     }
 
-}
-</style>
+}</style>
