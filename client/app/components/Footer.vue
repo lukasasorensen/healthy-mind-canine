@@ -35,6 +35,7 @@
                 <div class="cert fear-free">
                 </div>
                 <div class="cert sapdt"></div>
+                <div class="cert pt"></div>
             </div>
         </div>
     </footer>
@@ -114,18 +115,23 @@ footer {
     }
 }
 
-
-.cpdt {
-    background-image: url("assets/CPDT.png");
-}
-
-.fear-free {
-    background-image: url("assets/FEAR_FREE_CERT.png");
-}
-
-.sapdt {
-    background-image: url("assets/sapdt.png");
-    background-size: 34% !important;
+.cert {
+    &.cpdt {
+        background-image: url("assets/CPDT.png");
+    }
+    
+    &.fear-free {
+        background-image: url("assets/FEAR_FREE_CERT.png");
+    }
+    
+    &.sapdt {
+        background-image: url("assets/sapdt.png");
+        
+    }
+    
+    &.pt {
+        background-image: url("assets/PTbadge.png");
+    }
 }
 
 @media (max-width: $screen-md) {
