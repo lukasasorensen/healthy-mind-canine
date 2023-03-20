@@ -191,7 +191,8 @@
             bottom: 10%;
             width: 100%;
 
-            button, a {
+            button,
+            a {
                 margin: auto;
             }
 
@@ -199,7 +200,8 @@
                 text-decoration: none;
             }
 
-            button, a {
+            button,
+            a {
                 margin-top: 10px;
             }
 
@@ -208,7 +210,7 @@
                 display: inline-block;
                 transform: translateY(6px);
             }
-            
+
             .call-to-action {
                 margin-bottom: 15px;
                 color: $primary-color;
@@ -374,11 +376,9 @@
             .go-to-buttons {
                 position: relative;
                 width: 100%;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;
-                bottom: 45px !important;
+                bottom: 20px !important;
                 padding: 10px;
+                clear: both;
             }
         }
     }
@@ -511,6 +511,16 @@
                 .go-to-buttons {
                     bottom: 15%;
                 }
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .section-5 {
+            .go-to-buttons {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
             }
         }
     }
