@@ -43,6 +43,7 @@
                                     <li>Access to the SA Pro Trainer App</li>
                                     <li>Daily messaging support M - F</li>
                                     <li>Unlimited video review from your trainer</li>
+                                    <li>As needed data driven reports & communication with your vet.</li>
                                 </ul>
                             </div>
                         </div>
@@ -61,6 +62,7 @@
                                     <li>Access to the SA Pro Trainer App</li>
                                     <li>Daily messaging support M - F</li>
                                     <li>Unlimited video review from your trainer</li>
+                                    <li>As needed data driven reports & communication with your vet.</li>
                                 </ul>
                             </div>
                         </div>
