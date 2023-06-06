@@ -55,7 +55,7 @@
                 <div class="resources-category">
                     <h2 class="resource-header">DIY programs</h2>
                     <a target="_blank" href="https://julienaismith.com/work-with-julie/#parents" class="resource-link">
-                        Separation Anxiety Heros. Use discount code 347611 for 50% off your first 3 months.
+                        Separation Anxiety Heros.
                     </a>
                     <a target="_blank" href="https://courses.malenademartini.com/?aff=26" class="resource-link">
                         Mission Possible.
