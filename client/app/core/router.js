@@ -6,8 +6,9 @@ import About from '../routes/About.vue';
 import Contact from '../routes/Contact.vue';
 import Services from '../routes/Services.vue';
 import Pricing from '../routes/Pricing.vue';
-import FAQ from "../routes/FAQ.vue";
-import Resources from "../routes/Resources.vue";
+import FAQ from '../routes/FAQ.vue';
+import Resources from '../routes/Resources.vue';
+import DIY from '../routes/DIY.vue';
 
 export default createRouter({
     mode: 'hash',
@@ -19,7 +20,8 @@ export default createRouter({
         { path: '/separation-anxiety', component: Services },
         { path: '/pricing', component: Pricing },
         { path: '/faq', component: FAQ },
-        { path: '/resources', component: Resources }
+        { path: '/resources', component: Resources },
+        { path: '/diy', component: DIY}
     ],
     history: createWebHistory()
 });
