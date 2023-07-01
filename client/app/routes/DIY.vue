@@ -8,12 +8,13 @@
                     <a target="_blank" href="https://julienaismith.com/work-with-julie/#parents" class="resource-link">
                         Separation Anxiety Heros.
                     </a>
+                    <a target="_blank" href="https://347611--julienaismith.thrivecart.com/separation-anxiety-heroes-app-only-usd/" class="resource-link">
+                        Separation Anxiety Heros. (App Only Membership)
+                    </a>
                     <a target="_blank" href="https://courses.malenademartini.com/?aff=26" class="resource-link">
                         Mission Possible.
                     </a>
-                    <a target="_blank"
-                        href="https://separationanxietydog.thinkific.com/courses/do-it-yourself-separation-anxiety-program?ref=3183a4"
-                        class="resource-link">
+                    <a target="_blank" href="https://347611--julienaismith.thrivecart.com/separation-anxiety-heroes-usd-new/" class="resource-link">
                         Separation Anxiety Dog DIY.
                     </a>
                 </div>
@@ -56,7 +57,7 @@ export default {
     .section-1 {
         display: flex;
         justify-content: center;
-        
+
         .resources-header {
             margin-top: 20px;
             font-size: 2.5em;
