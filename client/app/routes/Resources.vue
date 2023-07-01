@@ -51,21 +51,6 @@
                         Rescued By Training.
                     </a>
                 </div>
-
-                <div class="resources-category">
-                    <h2 class="resource-header">DIY programs</h2>
-                    <a target="_blank" href="https://julienaismith.com/work-with-julie/#parents" class="resource-link">
-                        Separation Anxiety Heros.
-                    </a>
-                    <a target="_blank" href="https://courses.malenademartini.com/?aff=26" class="resource-link">
-                        Mission Possible.
-                    </a>
-                    <a target="_blank"
-                        href="https://separationanxietydog.thinkific.com/courses/do-it-yourself-separation-anxiety-program?ref=3183a4"
-                        class="resource-link">
-                        Separation Anxiety Dog DIY.
-                    </a>
-                </div>
                 <div class="scroll-padding"></div>
             </div>
         </section>
