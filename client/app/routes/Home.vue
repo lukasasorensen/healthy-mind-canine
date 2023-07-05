@@ -1,5 +1,9 @@
 <template lang="html">
     <div class="route home">
+        <div class="discovery-call-attention-container"
+            :class="{ 'push-down': isDiscoveryCallShown, 'heartbeat': isDiscoveryCallBeating }" ref="discoveryCallPopup">
+            <BigDiscoveryCallButton></BigDiscoveryCallButton>
+        </div>
         <div class="down-icon-container" @click="scrollToNextSection">
             <div class="down-icon">
                 <font-awesome-icon class="scroll-down-icon" icon="fa-solid fa-chevron-down" />
@@ -21,8 +25,6 @@
                         else to help your dog.
                     </p>
                 </div>
-
-
             </div>
         </section>
         <section class="section section-2">
@@ -76,14 +78,15 @@
                 </div>
             </div>
         </section>
-        <section class="section section-4">
+        <section class="section section-4" ref="lastSection">
             <div class="sleepy-dog-image-container">
                 <div class="sleepy-dog-image"></div>
             </div>
             <div class="imagine-peace-text-container">
                 <p class="imagine-peace-text">
                     Imagine coming home to a dog who has been comfortably lounging all day instead of barking,
-                    howling, or destroying your home. A dog who experiences separation anxiety <i>can</i> overcome it and learn
+                    howling, or destroying your home. A dog who experiences separation anxiety <i>can</i> overcome it and
+                    learn
                     to relax at home comfortably with the help of a specialist!
                 </p>
             </div>
@@ -96,17 +99,21 @@
 </template>
 <script>
 import Footer from "../components/Footer";
+import BigDiscoveryCallButton from '../components/DiscoveryCallButton.vue';
 import { useMeta } from "vue-meta";
 
 export default {
     name: 'Home',
     data() {
         return {
-            scrollDistance: Number
+            scrollDistance: 0,
+            isDiscoveryCallShown: false,
+            isDiscoveryCallBeating: false
         }
     },
     components: {
-        Footer
+        Footer,
+        BigDiscoveryCallButton
     },
     methods: {
         registerScrollEventListener: function () {
@@ -126,6 +133,24 @@ export default {
         },
         onScroll: function (scrollDistance) {
             this.scrollDistance = scrollDistance;
+
+            let lastSectionOffsetTop = this.$refs.lastSection.offsetTop;
+
+            let distanceToLastSection = lastSectionOffsetTop - this.scrollDistance;
+
+            if (distanceToLastSection < 100) {
+                setTimeout(() => {
+                    this.showDiscoveryCallPopup();
+                }, 2000)
+            }
+
+            if (this.showDiscoveryCallOnStopScrollTimeout) {
+                clearTimeout(this.showDiscoveryCallOnStopScrollTimeout);
+            }
+
+            this.showDiscoveryCallOnStopScrollTimeout = setTimeout(() => {
+                this.showDiscoveryCallPopup();
+            }, 20000);
         },
         scrollToNextSection: function () {
             var route = document.querySelector('.route');
@@ -135,6 +160,20 @@ export default {
         },
         goToServices: function () {
             this.$router.push('/services')
+        },
+        showDiscoveryCallPopup() {
+            this.isDiscoveryCallShown = true;
+            setTimeout(() => {
+                this.isDiscoveryCallBeating = true;
+            }, 1000);
+
+            setTimeout(() => {
+                this.isDiscoveryCallBeating = false
+            }, 3000)
+        },
+        hideDiscoveryCallPopup() {
+            this.isDiscoveryCallShown = false;
+            this.isDiscoveryCallBeating = false
         }
     },
     computed: {
@@ -147,6 +186,13 @@ export default {
             title: 'Healthy Mind Canine | Separation Anxiety Dog Training',
             description: 'Our certified dog separation anxiety experts provide custom coaching & training for pets and their guardians no matter where they live. We use the most effective methods available to give you the best chance of success!'
         })
+    },
+    created() {
+        setTimeout(() => {
+            if (this.scrollDistance < 500) {
+                this.showDiscoveryCallPopup();
+            }
+        }, 10000)
     }
 };
 </script>

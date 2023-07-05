@@ -12,6 +12,20 @@
         font-weight: bolder;
     }
 
+    .discovery-call-attention-container {
+        z-index: 999997;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        transition: top 1s ease-in-out;
+        top: -200px;
+
+        &.push-down {
+            top: 100px;
+        }
+    }
+
     .down-icon-container {
         position: fixed;
         bottom: 13px;
