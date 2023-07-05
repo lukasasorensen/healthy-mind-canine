@@ -101,6 +101,9 @@
 import Footer from "../components/Footer";
 import BigDiscoveryCallButton from '../components/DiscoveryCallButton.vue';
 import { useMeta } from "vue-meta";
+const TEN_SECONDS_IN_MS = 10000;
+const TWO_SECONDS_IN_MS = 2000;
+const ONE_SECONDS_IN_MS = 1000;
 
 export default {
     name: 'Home',
@@ -141,7 +144,7 @@ export default {
             if (distanceToLastSection < 100) {
                 setTimeout(() => {
                     this.showDiscoveryCallPopup();
-                }, 2000)
+                }, TWO_SECONDS_IN_MS)
             }
 
             if (this.showDiscoveryCallOnStopScrollTimeout) {
@@ -150,7 +153,7 @@ export default {
 
             this.showDiscoveryCallOnStopScrollTimeout = setTimeout(() => {
                 this.showDiscoveryCallPopup();
-            }, 20000);
+            }, TEN_SECONDS_IN_MS);
         },
         scrollToNextSection: function () {
             var route = document.querySelector('.route');
@@ -165,11 +168,11 @@ export default {
             this.isDiscoveryCallShown = true;
             setTimeout(() => {
                 this.isDiscoveryCallBeating = true;
-            }, 1000);
+            }, ONE_SECONDS_IN_MS);
 
             setTimeout(() => {
                 this.isDiscoveryCallBeating = false
-            }, 3000)
+            }, TWO_SECONDS_IN_MS)
         },
         hideDiscoveryCallPopup() {
             this.isDiscoveryCallShown = false;
@@ -192,7 +195,7 @@ export default {
             if (this.scrollDistance < 500) {
                 this.showDiscoveryCallPopup();
             }
-        }, 10000)
+        }, TEN_SECONDS_IN_MS)
     }
 };
 </script>

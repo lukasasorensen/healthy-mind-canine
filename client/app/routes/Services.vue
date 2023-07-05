@@ -1,5 +1,9 @@
 <template lang="html">
-    <div class="route services">
+    <div class="route services" ref="route-services">
+        <div class="discovery-call-attention-container"
+            :class="{ 'push-down': isDiscoveryCallShown, 'heartbeat': isDiscoveryCallBeating }" ref="discoveryCallPopup">
+            <BigDiscoveryCallButton></BigDiscoveryCallButton>
+        </div>
         <section class="section section-1">
             <div class="separation-anxiety-header-container">
                 <h1 class="separation-anxiety-header">Separation Anxiety Training <br>That Works!</h1>
@@ -218,19 +222,63 @@
 </template>
 <script>
 import Footer from "../components/Footer";
-import { useMeta } from 'vue-meta'
+import BigDiscoveryCallButton from "../components/DiscoveryCallButton";
+import { useMeta } from 'vue-meta';
+const TEN_SECONDS_IN_MS = 10000;
+const TWO_SECONDS_IN_MS = 2000;
+const ONE_SECONDS_IN_MS = 1000;
 
 export default {
     name: 'services',
     components: {
-        Footer
+        Footer,
+        BigDiscoveryCallButton
     },
     data() {
         return {
-            bounceScrollDown: false
+            bounceScrollDown: false,
+            isDiscoveryCallShown: false,
+            isDiscoveryCallBeating: false,
+            scrollDistance: 0
         }
     },
     methods: {
+        registerScrollEventListener: function () {
+            let ticking = false;
+            this.$refs['route-services'].addEventListener('scroll', event => {
+                let lastKnownScrollPosition = event.target.scrollTop;
+
+                if (!ticking) {
+                    window.requestAnimationFrame(() => {
+                        this.onScroll(lastKnownScrollPosition);
+                        ticking = false;
+                    });
+
+                    ticking = true;
+                }
+            });
+        },
+        onScroll: function (scrollDistance) {
+            this.scrollDistance = scrollDistance;
+
+            let lastSectionOffsetTop = this.$refs['section-5'].offsetTop;
+
+            let distanceToLastSection = lastSectionOffsetTop - this.scrollDistance;
+
+            if (distanceToLastSection < 100) {
+                setTimeout(() => {
+                    this.showDiscoveryCallPopup();
+                }, TWO_SECONDS_IN_MS)
+            }
+
+            if (this.showDiscoveryCallOnStopScrollTimeout) {
+                clearTimeout(this.showDiscoveryCallOnStopScrollTimeout);
+            }
+
+            this.showDiscoveryCallOnStopScrollTimeout = setTimeout(() => {
+                this.showDiscoveryCallPopup();
+            }, TEN_SECONDS_IN_MS);
+        },
         scrollTo: function (refName) {
             var element = this.$refs[refName];
             var top = element.offsetTop;
@@ -241,7 +289,7 @@ export default {
 
             setTimeout(() => {
                 this.bounceScrollDown = false;
-            }, 2000);
+            }, TWO_SECONDS_IN_MS);
         },
         scrollToNextSection: function () {
             var route = document.querySelector('.route');
@@ -257,22 +305,45 @@ export default {
         },
         goToContact: function () {
             this.$router.push('/contact')
+        },
+        showDiscoveryCallPopup() {
+            this.isDiscoveryCallShown = true;
+            setTimeout(() => {
+                this.isDiscoveryCallBeating = true;
+            }, ONE_SECONDS_IN_MS);
+
+            setTimeout(() => {
+                this.isDiscoveryCallBeating = false
+            }, TWO_SECONDS_IN_MS)
+        },
+        hideDiscoveryCallPopup() {
+            this.isDiscoveryCallShown = false;
+            this.isDiscoveryCallBeating = false
         }
     },
     mounted() {
+        this.registerScrollEventListener();
+
         if (location.hash.includes('what-is-separation-anxiety')) {
             this.scrollTo('section-2');
         }
 
         setTimeout(() => {
             this.runScrollDownAttentionAnimation();
-        }, 2000);
+        }, TWO_SECONDS_IN_MS);
     },
     setup() {
         useMeta({
             title: 'About Separation Anxiety | Healthy Mind Canine | Virtual Dog Training',
             description: 'Virtual separation anxiety dog training that actually works. No more noise complaints or household destruction. We take the guesswork out of training your dog. Learn more about our methods & how we can help you regain your freedom!'
         })
+    },
+    created() {
+        setTimeout(() => {
+            if (this.scrollDistance < 500) {
+                this.showDiscoveryCallPopup();
+            }
+        }, TEN_SECONDS_IN_MS);
     }
 };
 </script>
