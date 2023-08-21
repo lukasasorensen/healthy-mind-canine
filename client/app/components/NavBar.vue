@@ -5,6 +5,7 @@
         <router-link @click="onNavigation" to="/resources">Resources</router-link>
         <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
         <router-link @click="onNavigation" to="/contact">Contact</router-link>
+        <router-link @click="onNavigation" to="/blog">Blog</router-link>
     </div>
     <div class="nav-bar">
         <div class="nav-bar-inner row">
@@ -18,6 +19,7 @@
                         <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
                         <router-link @click="onNavigation" to="/resources">Resources</router-link>
                         <router-link @click="onNavigation" to="/faq">FAQ</router-link>
+                        <router-link @click="onNavigation" to="/blog">Blog</router-link>
                     </div>
                 </div>
                 <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
@@ -30,6 +32,7 @@
                 <router-link @click="onNavigation" to="/faq">FAQ</router-link>
                 <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
                 <router-link @click="onNavigation" to="/contact">Contact</router-link>
+                <router-link @click="onNavigation" to="/blog">Blog</router-link>
             </div>
             <div class="navbar-toggle visible-xs">
                 <button class="hamburger hamburger--squeeze" :class="{ 'is-active': isNavBarOpen }"
