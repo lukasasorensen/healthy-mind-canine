@@ -9,6 +9,7 @@ import Pricing from '../routes/Pricing.vue';
 import FAQ from '../routes/FAQ.vue';
 import Resources from '../routes/Resources.vue';
 import DIY from '../routes/DIY.vue';
+import Blog from '../routes/Blog.vue';
 
 export default createRouter({
     mode: 'hash',
@@ -21,7 +22,8 @@ export default createRouter({
         { path: '/pricing', component: Pricing },
         { path: '/faq', component: FAQ },
         { path: '/resources', component: Resources },
-        { path: '/diy', component: DIY}
+        { path: '/diy', component: DIY},
+        { path: '/blog', component: Blog }
     ],
     history: createWebHistory()
 });
