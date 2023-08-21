@@ -31,7 +31,7 @@ export default {
     .discovery-call-button {
         // background-color: #08aeea;
         // background-image: linear-gradient(336deg, #08aeea 0%, #2af598 100%);
-        color: white;
+        color: #152532;
         text-decoration: none;
     }
 }

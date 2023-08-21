@@ -1,9 +1,5 @@
 <template lang="html">
     <div class="route home">
-        <div class="discovery-call-attention-container"
-            :class="{ 'push-down': isDiscoveryCallShown, 'heartbeat': isDiscoveryCallBeating }" ref="discoveryCallPopup">
-            <BigDiscoveryCallButton></BigDiscoveryCallButton>
-        </div>
         <div class="down-icon-container" @click="scrollToNextSection">
             <div class="down-icon">
                 <font-awesome-icon class="scroll-down-icon" icon="fa-solid fa-chevron-down" />
@@ -25,6 +21,10 @@
                         else to help your dog.
                     </p>
                 </div>
+            </div>
+
+            <div class="disovery-button-container" :class="{ 'heartbeat': isDiscoveryCallBeating }">
+                <BigDiscoveryCallButton></BigDiscoveryCallButton>
             </div>
         </section>
         <section class="section section-2">
@@ -110,7 +110,6 @@ export default {
     data() {
         return {
             scrollDistance: 0,
-            isDiscoveryCallShown: false,
             isDiscoveryCallBeating: false
         }
     },
@@ -143,7 +142,7 @@ export default {
 
             if (distanceToLastSection < 100) {
                 setTimeout(() => {
-                    this.showDiscoveryCallPopup();
+                    this.triggerDiscoveryCallButtonHeartBeat();
                 }, TWO_SECONDS_IN_MS)
             }
 
@@ -152,7 +151,7 @@ export default {
             }
 
             this.showDiscoveryCallOnStopScrollTimeout = setTimeout(() => {
-                this.showDiscoveryCallPopup();
+                this.triggerDiscoveryCallButtonHeartBeat();
             }, TEN_SECONDS_IN_MS);
         },
         scrollToNextSection: function () {
@@ -164,8 +163,7 @@ export default {
         goToServices: function () {
             this.$router.push('/services')
         },
-        showDiscoveryCallPopup() {
-            this.isDiscoveryCallShown = true;
+        triggerDiscoveryCallButtonHeartBeat() {
             setTimeout(() => {
                 this.isDiscoveryCallBeating = true;
             }, ONE_SECONDS_IN_MS);
@@ -175,7 +173,6 @@ export default {
             }, TWO_SECONDS_IN_MS)
         },
         hideDiscoveryCallPopup() {
-            this.isDiscoveryCallShown = false;
             this.isDiscoveryCallBeating = false
         }
     },
@@ -193,7 +190,7 @@ export default {
     created() {
         setTimeout(() => {
             if (this.scrollDistance < 500) {
-                this.showDiscoveryCallPopup();
+                this.triggerDiscoveryCallButtonHeartBeat();
             }
         }, TEN_SECONDS_IN_MS)
     }
