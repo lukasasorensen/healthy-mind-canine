@@ -21,8 +21,10 @@
                         else to help your dog.
                     </p>
                 </div>
+            </div>
 
-
+            <div class="disovery-button-container" :class="{ 'heartbeat': isDiscoveryCallBeating }">
+                <BigDiscoveryCallButton></BigDiscoveryCallButton>
             </div>
         </section>
         <section class="section section-2">
@@ -76,14 +78,15 @@
                 </div>
             </div>
         </section>
-        <section class="section section-4">
+        <section class="section section-4" ref="lastSection">
             <div class="sleepy-dog-image-container">
                 <div class="sleepy-dog-image"></div>
             </div>
             <div class="imagine-peace-text-container">
                 <p class="imagine-peace-text">
                     Imagine coming home to a dog who has been comfortably lounging all day instead of barking,
-                    howling, or destroying your home. A dog who experiences separation anxiety <i>can</i> overcome it and learn
+                    howling, or destroying your home. A dog who experiences separation anxiety <i>can</i> overcome it and
+                    learn
                     to relax at home comfortably with the help of a specialist!
                 </p>
             </div>
@@ -96,17 +99,23 @@
 </template>
 <script>
 import Footer from "../components/Footer";
+import BigDiscoveryCallButton from '../components/DiscoveryCallButton.vue';
 import { useMeta } from "vue-meta";
+const TEN_SECONDS_IN_MS = 10000;
+const TWO_SECONDS_IN_MS = 2000;
+const ONE_SECONDS_IN_MS = 1000;
 
 export default {
     name: 'Home',
     data() {
         return {
-            scrollDistance: Number
+            scrollDistance: 0,
+            isDiscoveryCallBeating: false
         }
     },
     components: {
-        Footer
+        Footer,
+        BigDiscoveryCallButton
     },
     methods: {
         registerScrollEventListener: function () {
@@ -126,6 +135,24 @@ export default {
         },
         onScroll: function (scrollDistance) {
             this.scrollDistance = scrollDistance;
+
+            let lastSectionOffsetTop = this.$refs.lastSection.offsetTop;
+
+            let distanceToLastSection = lastSectionOffsetTop - this.scrollDistance;
+
+            if (distanceToLastSection < 100) {
+                setTimeout(() => {
+                    this.triggerDiscoveryCallButtonHeartBeat();
+                }, TWO_SECONDS_IN_MS)
+            }
+
+            if (this.showDiscoveryCallOnStopScrollTimeout) {
+                clearTimeout(this.showDiscoveryCallOnStopScrollTimeout);
+            }
+
+            this.showDiscoveryCallOnStopScrollTimeout = setTimeout(() => {
+                this.triggerDiscoveryCallButtonHeartBeat();
+            }, TEN_SECONDS_IN_MS);
         },
         scrollToNextSection: function () {
             var route = document.querySelector('.route');
@@ -135,6 +162,18 @@ export default {
         },
         goToServices: function () {
             this.$router.push('/services')
+        },
+        triggerDiscoveryCallButtonHeartBeat() {
+            setTimeout(() => {
+                this.isDiscoveryCallBeating = true;
+            }, ONE_SECONDS_IN_MS);
+
+            setTimeout(() => {
+                this.isDiscoveryCallBeating = false
+            }, TWO_SECONDS_IN_MS)
+        },
+        hideDiscoveryCallPopup() {
+            this.isDiscoveryCallBeating = false
         }
     },
     computed: {
@@ -147,6 +186,13 @@ export default {
             title: 'Healthy Mind Canine | Separation Anxiety Dog Training',
             description: 'Our certified dog separation anxiety experts provide custom coaching & training for pets and their guardians no matter where they live. We use the most effective methods available to give you the best chance of success!'
         })
+    },
+    created() {
+        setTimeout(() => {
+            if (this.scrollDistance < 500) {
+                this.triggerDiscoveryCallButtonHeartBeat();
+            }
+        }, TEN_SECONDS_IN_MS)
     }
 };
 </script>
