@@ -54,7 +54,7 @@ footer {
     background: white;
     padding: 40px;
     box-sizing: border-box;
-    z-index: 2147483647;
+    z-index: 999996;
     position: absolute;
     scroll-snap-align: end;
 
