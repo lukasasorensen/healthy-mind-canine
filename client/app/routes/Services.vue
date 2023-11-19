@@ -41,15 +41,17 @@
                     </div>
                     <div class="how-does-training-work-text-container">
                         <p class="how-does-training-work-text">
-                            Our method relies on systematic desensitization. Gradually your dog is exposed to small
-                            periods of stress-free home alone time while increasing the duration at the dogs pace.
-                            Slowly, your dog becomes more comfortable with longer stretches of time until they are able
-                            to be home alone as needed.
+                            Our training approach relies on a proven method called systematic desensitization. We introduce
+                            your dog to brief, stress-free periods of being home alone, gradually extending the duration at
+                            a pace that suits your dog's comfort level. Over time, your dog becomes increasingly at ease
+                            with longer periods of alone time, eventually reaching the point where they can be left alone as
+                            needed.
                             <br /><br />
-                            Studies support that this is not only the most humane treatment option but the only one that
-                            offers lasting results. Although fairly straightforward, implementing a desensitization
-                            training plan can be challenging for owners on their own without the guidance of a
-                            separation anxiety specialist.
+                            Research indicates that this method is not only the most humane but also the most effective way
+                            to address separation anxiety, offering lasting results. Although it sounds simple, systematic
+                            desensitization can be challenging for pet parents to implement on their own. That's why it's
+                            essential to seek the expertise of a separation anxiety specialist for effective and lasting
+                            solutions.
                             <br /><br />
                         </p>
                         <br />
