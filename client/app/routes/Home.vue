@@ -84,10 +84,8 @@
             </div>
             <div class="imagine-peace-text-container">
                 <p class="imagine-peace-text">
-                    Imagine coming home to a dog who has been comfortably lounging all day instead of barking,
-                    howling, or destroying your home. A dog who experiences separation anxiety <i>can</i> overcome it and
-                    learn
-                    to relax at home comfortably with the help of a specialist!
+                    Imagine returning home to a dog peacefully lounging, free from barking, howling, or home destruction.
+                    With a specialist's assistance, dogs with separation anxiety can learn to relax at home.
                 </p>
             </div>
             <div class="continue-button-container">
