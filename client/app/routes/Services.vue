@@ -54,14 +54,15 @@
                         <br />
                         <h2 class="virtual-training-header">Training is done 100% virtual</h2>
                         <p class="how-does-training-work-text">
-                            This way we can see your dog's true behavior in their
-                            normal environment. During training, it is absolutely essential that you do not leave your
-                            dog alone unless it's part of that day's training homework. If a dog continues to experience
-                            alone time filled with anxiety and stress, it is unlikely they will recover.
+                            Separation anxiety training is entirely virtual, allowing us to observe your dog's natural
+                            behavior in their home environment. Throughout the training program, it is important that you
+                            avoid leaving your dog alone unless it's part of the day's training assignment. Consistently
+                            subjecting your dog to stressful and anxious alone time only validates their fear and may impede
+                            or even prevent their recovery.
                             <br /><br />
-                            We can achieve
-                            this by temporarily utilizing daycares, pet sitters, family, friends, and neighbors.
-                            Treating separation anxiety requires some short term pain for long term gain.
+                            To address this, we recommend temporarily enlisting the help of daycares, pet sitters, family,
+                            friends, or neighbors. Treating separation anxiety may involve some short-term inconvenience,
+                            but it ultimately leads to long-term improvement for you and your dog's well-being.
                         </p>
                     </div>
                 </div>
@@ -347,6 +348,4 @@ export default {
     }
 };
 </script>
-<style lang="scss">
-@import "@/scss/routes/services.scss";
-</style>
+<style lang="scss">@import "@/scss/routes/services.scss";</style>
