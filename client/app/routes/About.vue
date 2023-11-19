@@ -7,22 +7,27 @@
                 <div class="about-pic-and-text-container row">
                     <div class="about-pic col-md-4 col-xs-12"></div>
                     <p class="about-text col-md-8 col-xs-12">
-                        Lauren has been professionally training dogs for 9 years. She attended the Karen Pryor
-                        Academy for professional dog trainers in 2016. She is also a Certified Pet Dog Trainer, Fear-Free
-                        Certified Trainer, and Certified Separation Anxiety Pro Trainer. She is currently working on her
-                        behavior consultant certification through the Certification Counsel For Pet Dog Trainers.
+                        Lauren, a seasoned dog trainer with almost 10 years of professional experience, is your trusted
+                        resource for separation anxiety dog training. Her certification journey began with an education from
+                        the Karen Pryor Academy For Professional Dog Trainers. She has since achieved additional
+                        certifications, including Certified Pet Dog Trainer, Fear-Free Certified Trainer, and Certified
+                        Separation Anxiety Pro Behavior Consultant. In an industry lacking official regulations, Lauren
+                        firmly believes in the importance of voluntary certification, offering peace of mind to pet parents
+                        in their pursuit of a qualified professional.
                         <br><br>
-                        Lauren has experience teaching training classes, private lessons, shelter behavior work, board and
-                        train, and day camp training. During her time working as a behavior specialist at a high volume
-                        animal shelter she saw a great need for separation anxiety resources. Separation anxiety is
-                        something that many dog trainers won't touch due to the complicated nature and the level of support
-                        that is needed. Because of this, Lauren decided to take the leap to pursue her certification to
-                        specialize in separation anxiety and open her own business where pet owners can get expert help no
-                        matter where they live!
+                        Lauren's extensive background encompasses teaching training classes, private lessons, shelter
+                        behavior work, board and train, and day camp training. Her dedication to addressing separation
+                        anxiety stems from her time as a behavior specialist at an animal shelter, where she recognized a
+                        pressing need for resources in this area. Separation anxiety is a challenge that many dog trainers
+                        shy away from due to its intricate nature and the substantial support it demands. Because of this
+                        Lauren decided to pursue specialized certification and launch her own business, ensuring pet owners
+                        worldwide can access expert help.
                         <br><br>
-                        Lauren values continuing education so she can bring clients the most effective methods available.
-                        She is committed to using only humane training methods backed by the latest scientific research.
-                        This means that she will never do anything that hurts or scares your dog.
+                        Lauren prioritizes ongoing education to provide clients with the most effective and up-to-date
+                        training methods. Her commitment centers on humane training practices, firmly grounded in the latest
+                        scientific research, assuring pet owners that she will never engage in methods that harm or distress
+                        their dogs. You can trust Lauren to be your partner in achieving a well-balanced and confident
+                        canine companion!
                     </p>
                 </div>
             </div>
