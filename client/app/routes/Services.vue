@@ -20,14 +20,15 @@
                 <h2 class="separation-anxiety-info-header visible-xs" id="what-is-separation-anxiety">What Is Separation
                     Anxiety?</h2>
                 <p class="separation-anxiety-info-text">
-                    Separation Anxiety is very similar to phobias in humans such as a fear of heights, spiders, or
-                    germs. It is exactly what it sounds like, a phobia of being left alone. Dogs with separation anxiety
-                    typically display panic induced behavior such as: pacing, panting, trembling, drooling, vocalizing,
-                    accidents, and destroying items.
+                    Separation anxiety in dogs closely resembles human phobias, akin to a fear of heights, spiders, or
+                    enclosed spaces. Essentially, It's a profound fear of being left alone. Dogs with separation anxiety
+                    often exhibit symptoms of panic, including pacing, panting, trembling, drooling, vocalizing, accidents,
+                    and destructive behaviors.
                     <br /><br />
-                    If left untreated, these symptoms can increase in intensity, and become dangerous for the dog. Rest
-                    assured your dog is not trying to spite you, they are truly panicking, and they need your help! That
-                    is where we come in.
+                    These symptoms can worsen if unaddressed, posing risks to the dog's physical and mental well-being. It's
+                    important to understand that your dog is not acting out of spite but is genuinely experiencing panic and
+                    they need your help! Our specialized services are dedicated to helping your dog overcome separation
+                    anxiety and improve their well-being.
                 </p>
             </div>
         </section>
