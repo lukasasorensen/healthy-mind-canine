@@ -2,12 +2,10 @@
     <footer>
         <div class="social-media-icons">
             <div class="social-media-icons-inner-container">
-                <a href="https://www.facebook.com/HealthyMindCanine" class="facebook-link social-media-icon"
-                    target="_blank">
+                <a href="https://www.facebook.com/HealthyMindCanine" class="facebook-link social-media-icon" target="_blank">
                     <font-awesome-icon class="fa-lg" icon="fa-brands fa-facebook" />
                 </a>
-                <a href="https://www.instagram.com/healthymindcanine/" class="instagram-link social-media-icon"
-                    target="_blank">
+                <a href="https://www.instagram.com/healthymindcanine/" class="instagram-link social-media-icon" target="_blank">
                     <font-awesome-icon class="fa-lg" icon="fa-brands fa-instagram" />
                 </a>
                 <a href="mailto:lauren@healthymindcanine.com" class="email-link social-media-icon" target="_blank">
@@ -20,20 +18,18 @@
         </div>
         <div class="contact-info">
             <div class="hidden-xs">
-                <a href="mailto:lauren@healthymindcanine.com">lauren@healthymindcanine.com</a> | <a
-                    href="tel:+16125679390">(612) 567-9390</a>
+                <a href="mailto:lauren@healthymindcanine.com">lauren@healthymindcanine.com</a> | <a href="tel:+16125679390">(612) 567-9390</a>
             </div>
             <div class="visible-xs">
-                <a href="mailto:lauren@healthymindcanine.com">lauren@healthymindcanine.com</a><br><br><a
-                    href="tel:+16125679390">(612) 567-9390</a>
+                <a href="mailto:lauren@healthymindcanine.com">lauren@healthymindcanine.com</a><br /><br /><a href="tel:+16125679390"
+                    >(612) 567-9390</a
+                >
             </div>
         </div>
         <div class="certs">
             <div class="certs-inner-container">
-                <div class="cert cpdt">
-                </div>
-                <div class="cert fear-free">
-                </div>
+                <div class="cert cpdt"></div>
+                <div class="cert fear-free"></div>
                 <div class="cert sapdt"></div>
                 <div class="cert pt"></div>
             </div>
@@ -43,10 +39,10 @@
 <script>
 export default {
     name: 'Footer'
-}
+};
 </script>
 <style lang="scss">
-@import "@/scss/_variables";
+@import '@/scss/_variables';
 
 footer {
     width: 100%;
@@ -60,7 +56,7 @@ footer {
 
     .certs {
         width: 100%;
-        height: 55px;
+        height: 85px;
         display: flex;
         justify-content: center;
         margin-top: 40px;
@@ -73,7 +69,6 @@ footer {
             height: 100%;
 
             .cert {
-                background-size: contain;
                 background-position: center;
                 background-repeat: no-repeat;
                 height: 100%;
@@ -81,7 +76,6 @@ footer {
                 display: inline-block;
             }
         }
-
     }
 
     .social-media-icons {
@@ -116,27 +110,43 @@ footer {
 }
 
 .cert {
+    background-size: contain;
+
     &.cpdt {
-        background-image: url("assets/CPDT.png");
+        background-image: url('assets/CPDT.png');
+        background-size: 90%;
     }
-    
+
     &.fear-free {
-        background-image: url("assets/FEAR_FREE_CERT.png");
+        background-image: url('assets/FEAR_FREE_CERT.png');
+        background-size: 80%;
     }
-    
+
     &.sapdt {
-        background-image: url("assets/sapdt.png");
-        
+        background-image: url('assets/sapdt.png');
     }
-    
+
     &.pt {
-        background-image: url("assets/PTbadge.png");
+        background-image: url('assets/FAMILY_DOG_MEDIATOR_LOGO.png');
     }
 }
 
 @media (max-width: $screen-md) {
     footer {
         padding: 20px 40px;
+    }
+
+    .cert {
+        background-size: 70%;
+        &.cpdt {
+            background-size: contain;
+            background-size: 70%;
+        }
+
+        &.fear-free {
+            background-size: contain;
+            background-size: 70%;
+        }
     }
 }
 </style>
