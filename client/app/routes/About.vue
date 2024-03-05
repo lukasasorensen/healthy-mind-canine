@@ -10,7 +10,7 @@
                         Lauren, a seasoned dog trainer with almost 10 years of professional experience, is your trusted
                         resource for separation anxiety dog training. Her certification journey began with an education from
                         the Karen Pryor Academy For Professional Dog Trainers. She has since achieved additional
-                        certifications, including Cerdtified Pet Dog Trainer, Fear-Free Certified Trainer, Family Dog Mediator, and Certified
+                        certifications, including Certified Pet Dog Trainer, Fear-Free Certified Trainer, Family Dog Mediator, and Certified
                         Separation Anxiety Pro Behavior Consultant. In an industry lacking official regulations, Lauren
                         firmly believes in the importance of voluntary certification, offering peace of mind to pet parents
                         in their pursuit of a qualified professional.
