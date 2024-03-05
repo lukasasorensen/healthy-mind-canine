@@ -3,14 +3,14 @@
         <div class="section">
             <div class="about-container">
                 <h1 class="about-header">Lauren Sorensen</h1>
-                <p class="certifications">SAPT • CPDT-KA • FFCP</p>
+                <p class="certifications">CSAP-BC • CPDT-KA • FFCP • FDM</p>
                 <div class="about-pic-and-text-container row">
                     <div class="about-pic col-md-4 col-xs-12"></div>
                     <p class="about-text col-md-8 col-xs-12">
                         Lauren, a seasoned dog trainer with almost 10 years of professional experience, is your trusted
                         resource for separation anxiety dog training. Her certification journey began with an education from
                         the Karen Pryor Academy For Professional Dog Trainers. She has since achieved additional
-                        certifications, including Certified Pet Dog Trainer, Fear-Free Certified Trainer, and Certified
+                        certifications, including Certified Pet Dog Trainer, Fear-Free Certified Trainer, Family Dog Mediator, and Certified
                         Separation Anxiety Pro Behavior Consultant. In an industry lacking official regulations, Lauren
                         firmly believes in the importance of voluntary certification, offering peace of mind to pet parents
                         in their pursuit of a qualified professional.
