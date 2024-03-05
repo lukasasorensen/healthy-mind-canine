@@ -32,7 +32,7 @@
                 <div class="copy-container home-copy-2-container">
                     <h2 class="home-copy-2-header copy-header">There is Hope!</h2>
                     <p class="home-copy-2">
-                        Our Certified Separation Anxiety Pro Trainers are here for you and can help even in the most
+                        Our Certified Separation Anxiety Behavior Consultants are here for you and can help even in the most
                         severe cases.
                     </p>
                     <p class="emphasis">We live & breathe separation anxiety. In fact, it's all we do!</p>
