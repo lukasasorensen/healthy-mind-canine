@@ -18,13 +18,14 @@
                             </div>
                             <div class="pricing-panel-details">
                                 <ul>
-                                    <li>90 minute private session</li>
-                                    <li>Review of your dogs history and goals</li>
-                                    <li>Assessment of your dog</li>
-                                    <li>Overview of what training will look like</li>
-                                    <li>Discuss tech set up</li>
-                                    <li>A recording of your session</li>
-                                    <li>Resources & handouts</li>
+                                    <li>1.5-2hr private Zoom session</li>
+                                    <li>Comprehensive review of your dog's history & goals</li>
+                                    <li>Live separation anxiety assessment of your dog</li>
+                                    <li>Overview of what training will look like & instructions for getting started</li>
+                                    <li>Recommendations for life adjustments to improve your dog's well-being & relationship
+                                        with you</li>
+                                    <li>Discuss tech setup</li>
+                                    <li>A recording of your session to refer back to</li>
                                 </ul>
                             </div>
                         </div>

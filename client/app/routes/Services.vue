@@ -20,14 +20,15 @@
                 <h2 class="separation-anxiety-info-header visible-xs" id="what-is-separation-anxiety">What Is Separation
                     Anxiety?</h2>
                 <p class="separation-anxiety-info-text">
-                    Separation Anxiety is very similar to phobias in humans such as a fear of heights, spiders, or
-                    germs. It is exactly what it sounds like, a phobia of being left alone. Dogs with separation anxiety
-                    typically display panic induced behavior such as: pacing, panting, trembling, drooling, vocalizing,
-                    accidents, and destroying items.
+                    Separation anxiety in dogs closely resembles human phobias, akin to a fear of heights, spiders, or
+                    enclosed spaces. Essentially, It's a profound fear of being left alone. Dogs with separation anxiety
+                    often exhibit symptoms of panic, including pacing, panting, trembling, drooling, vocalizing, accidents,
+                    and destructive behaviors.
                     <br /><br />
-                    If left untreated, these symptoms can increase in intensity, and become dangerous for the dog. Rest
-                    assured your dog is not trying to spite you, they are truly panicking, and they need your help! That
-                    is where we come in.
+                    These symptoms can worsen if unaddressed, posing risks to the dog's physical and mental well-being. It's
+                    important to understand that your dog is not acting out of spite but is genuinely experiencing panic and
+                    they need your help! Our specialized services are dedicated to helping your dog overcome separation
+                    anxiety and improve their well-being.
                 </p>
             </div>
         </section>
@@ -40,28 +41,31 @@
                     </div>
                     <div class="how-does-training-work-text-container">
                         <p class="how-does-training-work-text">
-                            Our method relies on systematic desensitization. Gradually your dog is exposed to small
-                            periods of stress-free home alone time while increasing the duration at the dogs pace.
-                            Slowly, your dog becomes more comfortable with longer stretches of time until they are able
-                            to be home alone as needed.
+                            Our training approach relies on a proven method called systematic desensitization. We introduce
+                            your dog to brief, stress-free periods of being home alone, gradually extending the duration at
+                            a pace that suits your dog's comfort level. Over time, your dog becomes increasingly at ease
+                            with longer periods of alone time, eventually reaching the point where they can be left alone as
+                            needed.
                             <br /><br />
-                            Studies support that this is not only the most humane treatment option but the only one that
-                            offers lasting results. Although fairly straightforward, implementing a desensitization
-                            training plan can be challenging for owners on their own without the guidance of a
-                            separation anxiety specialist.
+                            Research indicates that this method is not only the most humane but also the most effective way
+                            to address separation anxiety, offering lasting results. Although it sounds simple, systematic
+                            desensitization can be challenging for pet parents to implement on their own. That's why it's
+                            essential to seek the expertise of a separation anxiety specialist for effective and lasting
+                            solutions.
                             <br /><br />
                         </p>
                         <br />
                         <h2 class="virtual-training-header">Training is done 100% virtual</h2>
                         <p class="how-does-training-work-text">
-                            This way we can see your dog's true behavior in their
-                            normal environment. During training, it is absolutely essential that you do not leave your
-                            dog alone unless it's part of that day's training homework. If a dog continues to experience
-                            alone time filled with anxiety and stress, it is unlikely they will recover.
+                            Separation anxiety training is entirely virtual, allowing us to observe your dog's natural
+                            behavior in their home environment. Throughout the training program, it is important that you
+                            avoid leaving your dog alone unless it's part of the day's training assignment. Consistently
+                            subjecting your dog to stressful and anxious alone time only validates their fear and may impede
+                            or even prevent their recovery.
                             <br /><br />
-                            We can achieve
-                            this by temporarily utilizing daycares, pet sitters, family, friends, and neighbors.
-                            Treating separation anxiety requires some short term pain for long term gain.
+                            To address this, we recommend temporarily enlisting the help of daycares, pet sitters, family,
+                            friends, or neighbors. Treating separation anxiety may involve some short-term inconvenience,
+                            but it ultimately leads to long-term improvement for you and your dog's well-being.
                         </p>
                     </div>
                 </div>
@@ -347,6 +351,4 @@ export default {
     }
 };
 </script>
-<style lang="scss">
-@import "@/scss/routes/services.scss";
-</style>
+<style lang="scss">@import "@/scss/routes/services.scss";</style>
