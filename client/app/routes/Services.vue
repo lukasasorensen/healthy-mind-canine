@@ -77,9 +77,7 @@
                 <div class="pricing-header-container">
                     <h1 class="pricing-header secondary-text">Separation Anxiety Training Services</h1>
                 </div>
-                <div class="package-disclaimer w-100 text-center">
-                    <p><i>*Initial Consult is required before purchasing programs.</i></p>
-                </div>
+
                 <div class="pricing-panels-container">
                     <div class="col-xs-12 col-sm-4 pricing-panel-container">
                         <div class="pricing-panel" @click="goToContact()">
@@ -140,6 +138,10 @@
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <div class="package-disclaimer w-100 text-center">
+                    <p><i>*After a program, we can discuss other options for ongoing training.</i></p>
                 </div>
 
                 <div class="more-services">

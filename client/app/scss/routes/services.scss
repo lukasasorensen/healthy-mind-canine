@@ -371,7 +371,8 @@
             .pricing-header-container {
                 width: 100%;
                 text-align: center;
-                margin: 5px;
+                margin: 20px;
+                margin-bottom: 20px;
             }
 
             .package-disclaimer {
@@ -393,6 +394,10 @@
 
                 .pricing-panel {
                     height: auto;
+                }
+
+                .pricing-header-container {
+                    margin: 5px;
                 }
             }
         }
