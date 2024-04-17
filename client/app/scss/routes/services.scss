@@ -251,15 +251,19 @@
             padding: 10px;
 
             .pricing-panel {
-                padding: 30px 30px 20px 30px;
+                padding: 20px 30px 20px 30px;
                 background: #e1cdec;
                 border-radius: 10px;
-                min-height: 470px;
+                min-height: 490px;
                 max-width: 390px;
+                scale: 1;
+                cursor: pointer;
 
                 &:hover {
                     background: #98609e;
-                    box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
+                    box-shadow: 2px 2px 10px 2px rgb(0 0 0 / 41%);
+                    scale: 1.05;
+                    transition: scale 0.5s ease, box-shadow 0.5s ease;
 
                     .pricing-panel-details {
                         ul {
@@ -273,6 +277,7 @@
                         h2,
                         .pricing-panel-price {
                             color: #fff;
+                            font-weight: bold;
                         }
                     }
                 }
@@ -283,9 +288,17 @@
 
                     h2 {
                         font-family: Arial, Helvetica, sans-serif;
+                        margin-bottom: 10px;
                     }
 
                     .pricing-panel-price {
+                        color: $secondary-color;
+                        font-size: 20px;
+                        line-height: 35px;
+                    }
+
+                    .consult-required-text {
+                        font-size: 14px;
                     }
                 }
 

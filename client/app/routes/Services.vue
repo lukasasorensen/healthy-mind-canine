@@ -82,7 +82,7 @@
                 </div>
                 <div class="pricing-panels-container">
                     <div class="col-xs-12 col-sm-4 pricing-panel-container">
-                        <div class="pricing-panel">
+                        <div class="pricing-panel" @click="goToContact()">
                             <div class="col-xs-12 pricing-panel-header">
                                 <h2>Initial Consultation and Assessment</h2>
                                 <p class="pricing-panel-price">$200</p>
@@ -102,11 +102,11 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-4 pricing-panel-container program-panel">
-                        <div class="pricing-panel">
+                        <div class="pricing-panel" @click="goToContact()">
                             <div class="col-xs-12 pricing-panel-header">
                                 <h2>4 Week Program</h2>
-                                <p class="pricing-panel-price"><strike>$800</strike> $600</p>
-                                <p>Limited Time Offer!</p>
+                                <p class="pricing-panel-price">$600</p>
+                                <p class="consult-required-text">*Consult Required</p>
                             </div>
                             <div class="pricing-panel-details">
                                 <ul>
@@ -122,11 +122,11 @@
                     </div>
 
                     <div class="col-xs-12 col-sm-4 pricing-panel-container program-panel">
-                        <div class="pricing-panel">
+                        <div class="pricing-panel" @click="goToContact()">
                             <div class="col-xs-12 pricing-panel-header">
                                 <h2>8 Week Program</h2>
-                                <p class="pricing-panel-price"><strike>$1,350</strike> $1,075</p>
-                                <p>Limited Time Offer!</p>
+                                <p class="pricing-panel-price"><strike>$1,200</strike> $1,075</p>
+                                <p class="consult-required-text">*Consult Required</p>
                             </div>
                             <div class="pricing-panel-details">
                                 <ul>
