@@ -165,7 +165,9 @@
                         <ul>
                             <li class="col-xs-12">
                                 <div class="col-xs-3 what-do-i-need-li-icon">
-                                    <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-wifi" />
+                                    <svg class="what-do-i-need-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01"/>
+                                    </svg>
                                 </div>
                                 <div class="col-xs-9 what-do-i-need-li-text">
                                     High speed internet connection.
@@ -173,7 +175,11 @@
                             </li>
                             <li class="col-xs-12">
                                 <div class="col-xs-3 what-do-i-need-li-icon">
-                                    <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-laptop" />
+                                    <svg class="what-do-i-need-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="2" y="4" width="20" height="12" rx="2"/>
+                                        <line x1="6" y1="20" x2="18" y2="20"/>
+                                        <line x1="12" y1="16" x2="12" y2="20"/>
+                                    </svg>
                                 </div>
                                 <div class="col-xs-9 what-do-i-need-li-text">
                                     A laptop or tablet for video chat.
@@ -181,7 +187,10 @@
                             </li>
                             <li class="col-xs-12">
                                 <div class="col-xs-3 what-do-i-need-li-icon">
-                                    <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-video" />
+                                    <svg class="what-do-i-need-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <polygon points="23 7 16 12 23 17 23 7"/>
+                                        <rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                                    </svg>
                                 </div>
                                 <div class="col-xs-9 what-do-i-need-li-text">
                                     A Home Monitoring Camera <br />
@@ -196,7 +205,10 @@
                             </li>
                             <li class="col-xs-12">
                                 <div class="col-xs-3 what-do-i-need-li-icon">
-                                    <font-awesome-icon class="what-do-i-need-icon" icon="fa-solid fa-mobile" />
+                                    <svg class="what-do-i-need-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                                        <line x1="12" y1="18" x2="12.01" y2="18"/>
+                                    </svg>
                                 </div>
                                 <div class="col-xs-9 what-do-i-need-li-text">
                                     A smart phone to access our training app and your home cameras.
@@ -206,12 +218,16 @@
                     </div>
                 </div>
                 <div class="what-do-i-need-image-container col-sm-4 col-xs-12 hidden-xs"></div>
-                <div class="go-to-buttons">
-                    <p class="call-to-action">Are you ready to go from <i>chaos</i> to calm?</p>
-                    <button @click="goToContact()" class="btn btn-secondary btn-lg go-to-contact">Yes, I'm Ready!</button>
-                    <p class="or">or</p>
-                    <a href="https://calendly.com/healthymindcanine/discovery-call" target="_blank" role="button"
-                        class="btn btn-primary btn-lg">Book a FREE Discovery Call</a>
+            </div>
+            <div class="chaos-to-calm-cta">
+                <div class="chaos-to-calm-inner">
+                    <h2 class="chaos-to-calm-heading">Are you ready to go from <em>chaos</em> to <strong>calm</strong>?</h2>
+                    <div class="chaos-to-calm-buttons">
+                        <button @click="goToContact()" class="btn btn-secondary btn-lg go-to-contact">Yes, I'm Ready!</button>
+                        <span class="or-divider">or</span>
+                        <a href="https://calendly.com/healthymindcanine/discovery-call" target="_blank" role="button"
+                            class="btn btn-primary btn-lg">Book a FREE Discovery Call</a>
+                    </div>
                 </div>
             </div>
         </section>

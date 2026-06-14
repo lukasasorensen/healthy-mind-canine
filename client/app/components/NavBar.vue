@@ -12,21 +12,7 @@
             <router-link to="/">
                 <div class="nav-bar-logo col-sm-4 col-xs-8"></div>
             </router-link>
-            <div class="nav-bar-buttons col-sm-8 hidden-xs hidden-md hidden-lg hidden-xl">
-                <div class="dropdown-container" :class="{ open: isSaDropdownOpen }" @mouseenter="isSaDropdownOpen = true" @mouseleave="isSaDropdownOpen = false">
-                    <button class="separation-anxiety dropdown-button" @click="goToServices()">Separation Anxiety</button>
-                    <div class="dropdown" ref="saDropdown" v-show="isSaDropdownOpen">
-                        <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
-                        <router-link @click="onNavigation" to="/resources">Resources</router-link>
-                        <router-link @click="onNavigation" to="/faq">FAQ</router-link>
-                        <router-link @click="onNavigation" to="/blog">Blog</router-link>
-                    </div>
-                </div>
-                <router-link @click="onNavigation" to="/about">Meet the Trainer</router-link>
-                <router-link @click="onNavigation" to="/contact">Contact</router-link>
-            </div>
-
-            <div class="nav-bar-buttons col-xs-8 hidden-sm hidden-xs">
+            <div class="nav-bar-buttons desktop-nav col-xs-8">
                 <router-link @click="onNavigation" to="/separation-anxiety">Separation Anxiety</router-link>
                 <router-link @click="onNavigation" to="/resources">Resources</router-link>
                 <router-link @click="onNavigation" to="/faq">FAQ</router-link>
@@ -34,7 +20,7 @@
                 <router-link @click="onNavigation" to="/contact">Contact</router-link>
                 <router-link @click="onNavigation" to="/blog">Blog</router-link>
             </div>
-            <div class="navbar-toggle visible-xs">
+            <div class="navbar-toggle">
                 <button class="hamburger hamburger--squeeze" :class="{ 'is-active': isNavBarOpen }"
                     aria-label="Open Menu" @click="toggleNavBar" type="button">
                     <span class="hamburger-box">
@@ -49,15 +35,12 @@
 export default {
     data() {
         return {
-            isSaDropdownOpen: false,
             isNavBarOpen: false
         }
     },
     methods: {
         onNavigation: function () {
             this.closeNavBar();
-
-            this.isSaDropdownOpen = false;
         },
         openNavBar: function () {
             this.isNavBarOpen = true;
@@ -67,9 +50,6 @@ export default {
         },
         toggleNavBar: function () {
             this.isNavBarOpen ? this.closeNavBar() : this.openNavBar();
-        },
-        goToServices: function() {
-            this.$router.push('/services');
         }
     }
 }
@@ -115,20 +95,6 @@ export default {
         padding: 10px 0 0 15px;
         color: $primary-color;
 
-        button {
-            font-size: 18px;
-            color: $primary-color;
-            background: transparent;
-            border: none;
-            outline: none;
-
-            &:hover {
-                font-family: 'Satisfy', cursive;
-                color: $secondary-color;
-                font-size: 1.2em;
-            }
-        }
-
         a {
             color: $primary-color;
             text-decoration: none;
@@ -144,38 +110,38 @@ export default {
             display: none;
         }
     }
-}
 
-.dropdown-container {
-    .dropdown-button {}
-
-    .dropdown {
-        margin-left: -10px;
-        width: 220px;
-        font-size: 18px;
-        background: #fff;
-        padding: 30px 25px 15px 25px;
-        box-sizing: border-box;
-        position: absolute;
-        top: 50px;
-        z-index: 9;
-        border-radius: 5px;
-        height: auto;
-
-        a {
-            float: left;
-            clear: both;
-            display: block;
-            margin-bottom: 20px;
-        }
-    }
-
-    &.open {
-        height: 250px;
+    .navbar-toggle {
+        display: none;
     }
 }
 
 @media(max-width: $screen-md) {
+    .nav-bar {
+        .desktop-nav {
+            display: none;
+        }
+
+        .navbar-toggle {
+            display: block;
+            position: absolute;
+            top: 13px;
+            right: 5px;
+
+            .hamburger-box {
+                .hamburger-inner {
+
+                    &:before,
+                    &:after {
+                        background-color: $secondary-color;
+                    }
+
+                    background-color: $secondary-color;
+                }
+            }
+        }
+    }
+
     .nav-bar-buttons.mobile {
         margin: auto;
         display: flex;
@@ -216,24 +182,6 @@ export default {
         &.open {
             top: 83px;
             opacity: 1;
-        }
-    }
-
-    .navbar-toggle {
-        position: absolute;
-        top: 13px;
-        right: 5px;
-
-        .hamburger-box {
-            .hamburger-inner {
-
-                &:before,
-                &:after {
-                    background-color: $secondary-color;
-                }
-
-                background-color: $secondary-color;
-            }
         }
     }
 }
