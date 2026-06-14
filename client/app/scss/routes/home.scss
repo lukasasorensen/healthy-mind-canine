@@ -115,6 +115,8 @@
         width: 100%;
         height: 100%;
         scroll-snap-align: start;
+        position: relative;
+        z-index: 2;
     }
 
     .section-1 {
@@ -203,6 +205,7 @@
             width: 100%;
             height: 100%;
             position: relative;
+            background: $primary-bg;
         }
 
         .home-copy-2-container {
@@ -217,6 +220,8 @@
     }
 
     .section-3 {
+        background: $primary-bg;
+
         .why-us-list-container {
             height: 100%;
             width: 100%;
@@ -248,6 +253,12 @@
 
                 .why-us-item-icon-container {
                     margin-bottom: 20px;
+
+                    .why-us-icon {
+                        width: 64px;
+                        height: 64px;
+                        color: $secondary-color;
+                    }
                 }
 
                 .why-us-item-icon-container,

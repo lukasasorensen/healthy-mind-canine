@@ -43,7 +43,11 @@
             <div class="col-xs-12 why-us-list-container">
                 <div class="why-us-item">
                     <div class="why-us-item-icon-container">
-                        <font-awesome-icon class="fa-4x" icon="fa-solid fa-dog" />
+                        <svg class="why-us-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 5.172C10 3.782 8.423 2.679 6.5 3c-2.823.47-4.113 6.006-4 7 .08.703 1.725 1.722 3.656 1 1.261-.472 1.96-1.45 2.344-2.5M14 5.172C14 3.782 15.577 2.679 17.5 3c2.823.47 4.113 6.006 4 7-.08.703-1.725 1.722-3.656 1-1.261-.472-1.96-1.45-2.344-2.5"/>
+                            <path d="M8 14v.5M16 14v.5M11.25 16.25h1.5L12 17l-.75-.75z"/>
+                            <path d="M4.42 11.247A13.152 13.152 0 004 14.556C4 18.728 7.582 21 12 21s8-2.272 8-6.444a13.152 13.152 0 00-.42-3.309"/>
+                        </svg>
                     </div>
                     <h2 class="why-us-item-header">Customized training</h2>
                     <p class="why-us-item-text">
@@ -55,7 +59,11 @@
 
                 <div class="why-us-item">
                     <div class="why-us-item-icon-container">
-                        <font-awesome-icon class="fa-4x" icon="fa-solid fa-laptop" />
+                        <svg class="why-us-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="4" width="20" height="12" rx="2"/>
+                            <line x1="6" y1="20" x2="18" y2="20"/>
+                            <line x1="12" y1="16" x2="12" y2="20"/>
+                        </svg>
                     </div>
                     <h2 class="why-us-item-header">100% Virtual</h2>
                     <p class="why-us-item-text">
@@ -67,7 +75,9 @@
 
                 <div class="why-us-item">
                     <div class="why-us-item-icon-container">
-                        <font-awesome-icon class="fa-4x" icon="fa-solid fa-graduation-cap" />
+                        <svg class="why-us-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
                     </div>
                     <h2 class="why-us-item-header">1 on 1 Training</h2>
                     <p class="why-us-item-text">
