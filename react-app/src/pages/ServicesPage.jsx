@@ -254,15 +254,19 @@ function ServicesPage() {
             </div>
           </div>
 
-          <div className="cta-panel">
-            <p className="section-copy" style={{ maxWidth: '640px' }}>
-              Are you ready to go from <i>chaos</i> to calm?
-            </p>
-            <button type="button" className="secondary-button" onClick={() => navigate('/contact')}>
-              Yes, I&apos;m Ready!
-            </button>
-            <div className="cta-panel__or">or</div>
-            <DiscoveryCallButton />
+          <div className="chaos-to-calm-cta">
+            <div className="chaos-to-calm-inner">
+              <p className="chaos-to-calm-heading">
+                Are you ready to go from <em>chaos</em> to <strong>calm</strong>?
+              </p>
+              <div className="chaos-to-calm-buttons">
+                <button type="button" className="secondary-button" onClick={() => navigate('/contact')}>
+                  Yes, I&apos;m Ready!
+                </button>
+                <span className="or-divider">or</span>
+                <DiscoveryCallButton />
+              </div>
+            </div>
           </div>
         </div>
       </section>
